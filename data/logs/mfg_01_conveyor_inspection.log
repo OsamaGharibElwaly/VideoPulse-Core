@@ -1,0 +1,5 @@
+00:01 station=QC1 part=PART-07 status=PASS zone=inspection_belt
+00:03 station=QC1 part=PART-08 status=DEFECT defect=DENT zone=inspection_belt
+00:05 station=QC1 part=PART-09 status=PASS zone=inspection_belt
+00:07 station=QC1 part=PART-10 status=DEFECT defect=SCRATCH zone=inspection_belt
+00:09 station=QC1 part=PART-11 status=PASS zone=inspection_belt

@@ -1,0 +1,1 @@
+"""VideoPulse Core package."""

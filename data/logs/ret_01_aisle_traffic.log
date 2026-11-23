@@ -1,0 +1,4 @@
+00:01 zone=aisle_a event=entry count=6 severity=low
+00:04 zone=aisle_b event=congestion count=18 severity=high
+00:07 zone=aisle_a event=flow count=9 severity=medium
+00:09 zone=entry event=exit count=7 severity=low

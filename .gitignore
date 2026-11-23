@@ -1,0 +1,33 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Model weights and exported artefacts (never commit large binaries)
+*.pt
+*.onnx
+*.engine
+*.tflite
+*.weights
+*.pkl
+*.joblib
+
+# Generated / real media binaries (keep small text side-cars tracked)
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+data/videos/
+outputs/
+
+# Local editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp

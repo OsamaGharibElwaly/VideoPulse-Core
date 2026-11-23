@@ -1,0 +1,175 @@
+{
+  "version": "1.0.0",
+  "project": "VideoPulse Core",
+  "defaults": {
+    "fps": 12,
+    "duration_sec": 12.0,
+    "width": 320,
+    "height": 240
+  },
+  "videos": [
+    {
+      "video_id": "edu_01_slide_lecture",
+      "short_id": "edu_01",
+      "file": "edu_01_slide_lecture.mp4",
+      "industry": "Media, Education & Video Platforms",
+      "description": "Slide lecture: high-contrast slide text, slide transitions and an aligned timestamped transcript.",
+      "duration_sec": 12.0,
+      "fps": 12,
+      "width": 320,
+      "height": 240,
+      "visual_tags": ["slide", "lecture", "definition", "key term", "diagram", "step", "transcript", "lecture notes"],
+      "rois": [],
+      "transcript_file": "edu_01_slide_lecture.srt",
+      "log_file": null,
+      "sample_transcript": "00:00:01,000 --> 00:00:03,000 [slide_area] term=slide_transition action=define status=INTRO We define a slide transition.\n00:00:03,000 --> 00:00:05,000 [slide_area] step=1 term=gradient action=explain status=ACTIVE Step one, identify the key term gradient.\n00:00:05,000 --> 00:00:07,000 [slide_area] step=2 term=optical_flow action=compare status=ACTIVE Definition: optical flow measures apparent motion.\n00:00:07,000 --> 00:00:09,000 [slide_area] step=3 term=keyframe action=summarize status=DONE Keyframes mark high change frames.\n00:00:09,000 --> 00:00:11,000 [slide_area] term=visual_pulse action=recap status=DONE Summary of the lecture.",
+      "sample_log": null,
+      "content_profile": {
+        "scene": "slides",
+        "motion": "moderate",
+        "baseline_mode": "stable",
+        "text_mode": "readable",
+        "groundable": true,
+        "state_vocabulary": ["STATIC", "ACTIVE", "TRANSITION", "BURST"]
+      }
+    },
+    {
+      "video_id": "edu_02_hands_on_demo",
+      "short_id": "edu_02",
+      "file": "edu_02_hands_on_demo.mp4",
+      "industry": "Media, Education & Video Platforms",
+      "description": "Hands-on workbench demo: continuous hand/tool motion in a tool zone with small labels and step notes.",
+      "duration_sec": 12.0,
+      "fps": 12,
+      "width": 320,
+      "height": 240,
+      "visual_tags": ["hands on", "demo", "tool", "workbench", "step", "lab", "instructions"],
+      "rois": [
+        {"zone_id": "tool_zone", "kind": "box", "coords": [0.25, 0.25, 0.8, 0.85]}
+      ],
+      "transcript_file": "edu_02_hands_on_demo.srt",
+      "log_file": null,
+      "sample_transcript": "00:00:01,000 --> 00:00:03,000 [tool_zone] step=1 action=open_tool status=START Open the tool.\n00:00:03,000 --> 00:00:05,000 [tool_zone] step=2 action=align_part status=ACTIVE Align the part with the marker.\n00:00:05,000 --> 00:00:07,000 [tool_zone] step=3 action=fasten status=ACTIVE Fasten the fitting.\n00:00:07,000 --> 00:00:09,000 [tool_zone] step=4 action=verify status=DONE Verify the connection.\n00:00:09,000 --> 00:00:11,000 [tool_zone] step=5 action=cleanup status=DONE Clean up the work area.",
+      "sample_log": null,
+      "content_profile": {
+        "scene": "demo",
+        "motion": "high",
+        "baseline_mode": "continuous_motion",
+        "text_mode": "readable",
+        "groundable": false,
+        "state_vocabulary": ["STATIC", "ACTIVE", "TRANSITION", "BURST"]
+      }
+    },
+    {
+      "video_id": "mfg_01_conveyor_inspection",
+      "short_id": "mfg_01",
+      "file": "mfg_01_conveyor_inspection.mp4",
+      "industry": "Manufacturing & Industrial Operations",
+      "description": "Fixed camera conveyor with a defined inspection zone, periodic items, visual defects and a QC log.",
+      "duration_sec": 12.0,
+      "fps": 12,
+      "width": 320,
+      "height": 240,
+      "visual_tags": ["conveyor", "inspection", "qc log", "part", "defect", "station", "pass"],
+      "rois": [
+        {"zone_id": "inspection_belt", "kind": "box", "coords": [0.1, 0.35, 0.9, 0.75]}
+      ],
+      "transcript_file": null,
+      "log_file": "mfg_01_conveyor_inspection.log",
+      "sample_transcript": null,
+      "sample_log": "00:01 station=QC1 part=PART-07 status=PASS zone=inspection_belt\n00:03 station=QC1 part=PART-08 status=DEFECT defect=DENT zone=inspection_belt\n00:05 station=QC1 part=PART-09 status=PASS zone=inspection_belt\n00:07 station=QC1 part=PART-10 status=DEFECT defect=SCRATCH zone=inspection_belt\n00:09 station=QC1 part=PART-11 status=PASS zone=inspection_belt",
+      "content_profile": {
+        "scene": "conveyor",
+        "motion": "moderate",
+        "baseline_mode": "stable",
+        "text_mode": "unreadable_resolution",
+        "groundable": true,
+        "state_vocabulary": ["IDLE", "MOVING", "BURST"]
+      }
+    },
+    {
+      "video_id": "mfg_02_assembly_station",
+      "short_id": "mfg_02",
+      "file": "mfg_02_assembly_station.mp4",
+      "industry": "Manufacturing & Industrial Operations",
+      "description": "Manual assembly station with work/pause cycles, an assembly zone and an SOP step checklist.",
+      "duration_sec": 12.0,
+      "fps": 12,
+      "width": 320,
+      "height": 240,
+      "visual_tags": ["assembly", "station", "sop", "step", "operator", "workpause"],
+      "rois": [
+        {"zone_id": "assembly_zone", "kind": "box", "coords": [0.2, 0.3, 0.8, 0.8]}
+      ],
+      "transcript_file": null,
+      "log_file": "mfg_02_assembly_station.log",
+      "sample_transcript": null,
+      "sample_log": "00:01 step=1 action=position status=DONE zone=assembly_zone\n00:04 step=2 action=tighten status=DONE zone=assembly_zone\n00:07 step=3 action=inspect status=PENDING zone=assembly_zone\n00:09 step=4 action=seal status=DONE zone=assembly_zone",
+      "content_profile": {
+        "scene": "assembly",
+        "motion": "high",
+        "baseline_mode": "high_variance",
+        "text_mode": "no_text",
+        "groundable": true,
+        "state_vocabulary": ["IDLE", "MOVING", "BURST"]
+      }
+    },
+    {
+      "video_id": "ret_01_aisle_traffic",
+      "short_id": "ret_01",
+      "file": "ret_01_aisle_traffic.mp4",
+      "industry": "Retail, Security & Smart Spaces",
+      "description": "Wide retail aisle with shelf zones, shopper flow bursts and timestamped shift notes.",
+      "duration_sec": 12.0,
+      "fps": 12,
+      "width": 320,
+      "height": 240,
+      "visual_tags": ["aisle", "shelf", "traffic", "crowd", "footfall", "shift notes", "entry"],
+      "rois": [
+        {"zone_id": "aisle_a", "kind": "box", "coords": [0.05, 0.2, 0.38, 0.9]},
+        {"zone_id": "aisle_b", "kind": "box", "coords": [0.38, 0.2, 0.72, 0.9]},
+        {"zone_id": "entry", "kind": "box", "coords": [0.72, 0.2, 0.98, 0.9]}
+      ],
+      "transcript_file": null,
+      "log_file": "ret_01_aisle_traffic.log",
+      "sample_transcript": null,
+      "sample_log": "00:01 zone=aisle_a event=entry count=6 severity=low\n00:04 zone=aisle_b event=congestion count=18 severity=high\n00:07 zone=aisle_a event=flow count=9 severity=medium\n00:09 zone=entry event=exit count=7 severity=low",
+      "content_profile": {
+        "scene": "aisle",
+        "motion": "high",
+        "baseline_mode": "dynamic_scene",
+        "text_mode": "illegible_signage",
+        "groundable": true,
+        "state_vocabulary": ["QUIET", "FLOW", "CONGESTION"]
+      }
+    },
+    {
+      "video_id": "ret_02_facility_monitoring",
+      "short_id": "ret_02",
+      "file": "ret_02_facility_monitoring.mp4",
+      "industry": "Retail, Security & Smart Spaces",
+      "description": "Static facility camera over a doorway and restricted bay with isolated events and a security log.",
+      "duration_sec": 12.0,
+      "fps": 12,
+      "width": 320,
+      "height": 240,
+      "visual_tags": ["doorway", "corridor", "facility", "security log", "alert", "restricted bay"],
+      "rois": [
+        {"zone_id": "doorway", "kind": "box", "coords": [0.35, 0.15, 0.65, 0.85]},
+        {"zone_id": "restricted_bay", "kind": "box", "coords": [0.65, 0.2, 0.95, 0.8]}
+      ],
+      "transcript_file": null,
+      "log_file": "ret_02_facility_monitoring.log",
+      "sample_transcript": null,
+      "sample_log": "00:01 location=doorway alert=NONE status=NORMAL zone=doorway\n00:04 location=doorway alert=MOTION status=ALERT zone=restricted_bay\n00:07 location=corridor alert=NONE status=NORMAL zone=doorway\n00:09 location=restricted_bay alert=ENTRY status=ALERT zone=restricted_bay",
+      "content_profile": {
+        "scene": "facility",
+        "motion": "moderate",
+        "baseline_mode": "stable",
+        "text_mode": "no_text",
+        "groundable": true,
+        "state_vocabulary": ["QUIET", "FLOW", "CONGESTION"]
+      }
+    }
+  ]
+}

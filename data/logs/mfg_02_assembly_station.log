@@ -1,0 +1,4 @@
+00:01 step=1 action=position status=DONE zone=assembly_zone
+00:04 step=2 action=tighten status=DONE zone=assembly_zone
+00:07 step=3 action=inspect status=PENDING zone=assembly_zone
+00:09 step=4 action=seal status=DONE zone=assembly_zone

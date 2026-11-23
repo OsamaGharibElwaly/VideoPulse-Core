@@ -1,0 +1,4 @@
+00:01 location=doorway alert=NONE status=NORMAL zone=doorway
+00:04 location=doorway alert=MOTION status=ALERT zone=restricted_bay
+00:07 location=corridor alert=NONE status=NORMAL zone=doorway
+00:09 location=restricted_bay alert=ENTRY status=ALERT zone=restricted_bay

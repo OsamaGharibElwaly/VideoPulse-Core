@@ -1,0 +1,5 @@
+00:00:01,000 --> 00:00:03,000 [tool_zone] step=1 action=open_tool status=START Open the tool.
+00:00:03,000 --> 00:00:05,000 [tool_zone] step=2 action=align_part status=ACTIVE Align the part with the marker.
+00:00:05,000 --> 00:00:07,000 [tool_zone] step=3 action=fasten status=ACTIVE Fasten the fitting.
+00:00:07,000 --> 00:00:09,000 [tool_zone] step=4 action=verify status=DONE Verify the connection.
+00:00:09,000 --> 00:00:11,000 [tool_zone] step=5 action=cleanup status=DONE Clean up the work area.

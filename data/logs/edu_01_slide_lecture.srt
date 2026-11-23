@@ -1,0 +1,5 @@
+00:00:01,000 --> 00:00:03,000 [slide_area] term=slide_transition action=define status=INTRO We define a slide transition.
+00:00:03,000 --> 00:00:05,000 [slide_area] step=1 term=gradient action=explain status=ACTIVE Step one, identify the key term gradient.
+00:00:05,000 --> 00:00:07,000 [slide_area] step=2 term=optical_flow action=compare status=ACTIVE Definition: optical flow measures apparent motion.
+00:00:07,000 --> 00:00:09,000 [slide_area] step=3 term=keyframe action=summarize status=DONE Keyframes mark high change frames.
+00:00:09,000 --> 00:00:11,000 [slide_area] term=visual_pulse action=recap status=DONE Summary of the lecture.
