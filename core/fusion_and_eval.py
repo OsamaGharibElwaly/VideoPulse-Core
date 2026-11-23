@@ -10,6 +10,7 @@ from typing import Any
 from core import cv_pipeline, nlp_pipeline
 from core.feature_router import CV_FEATURES, build_feature_plan
 from core.media_probe import MediaContext, find_video_entry, probe_media
+from core.yolo_detector import DetectorConfig, build_detector
 
 REPORT_FIELD = {
     "motion_keyframe_extraction": "keyframes",
@@ -46,6 +47,7 @@ def _empty_report(context: MediaContext) -> dict[str, Any]:
         "graph_edges": [],
         "grounding_checks": [],
         "retrieval_results": [],
+        "detector": {},
         "telemetry": {},
     }
 
@@ -63,19 +65,47 @@ def process_video(
     logs_dir: Path,
     output_dir: Path,
     query: str = "",
+    real_dir: Path | None = None,
+    model: str | None = None,
+    detector: Any | None = None,
 ) -> dict[str, Any]:
-    """Run the gated CV+NLP pipeline for one video and persist its report."""
+    """Run the gated CV+NLP pipeline for one video and persist its report.
+
+    ``real_dir`` prefers a real video plus side-cars; ``model`` selects the
+    Ultralytics weights name. An injected ``detector`` lets tests supply a
+    stub YOLO model without downloading anything.
+    """
     entry = find_video_entry(config, video_id)
     run_start = time.perf_counter()
     probe_start = time.perf_counter()
-    context = probe_media(entry, videos_dir=videos_dir, logs_dir=logs_dir)
+    context = probe_media(entry, videos_dir=videos_dir, logs_dir=logs_dir, real_dir=real_dir)
     probe_ms = _elapsed_ms(probe_start)
 
+    selected_model = (
+        model
+        or entry.get("yolo_model")
+        or config.get("defaults", {}).get("model")
+        or "yolo26n.pt"
+    )
+    detector = detector or build_detector(DetectorConfig(model=str(selected_model)))
+    detection = detector.detect(
+        context.sampled_frames,
+        context.timestamps,
+        width=context.width,
+        height=context.height,
+        rois=context.rois,
+        scene=context.scene,
+        auto_zones=context.auto_zones,
+    )
+    context.detected_zone_ids = [str(zone.get("zone_id", "")) for zone in detection.zones]
+
     report = _empty_report(context)
+    report["detector"] = detection.to_dict()
     plan = build_feature_plan(context)
     report["skipped_features"] = [dict(item) for item in plan.skipped]
     per_feature_ms = {name: 0.0 for name in REPORT_FIELD}
     cv_results: dict[str, list[dict[str, Any]]] = {key: [] for key in REPORT_FIELD}
+    cv_results["object_detections"] = detection.detections
     nlp_state: dict[str, list[dict[str, Any]]] = {
         "aligned_segments": [],
         "parsed_events": [],
@@ -85,7 +115,7 @@ def process_video(
         start = time.perf_counter()
         try:
             if name in CV_FEATURES:
-                items, stats = cv_pipeline.run_cv_feature(name, context)
+                items, stats = cv_pipeline.run_cv_feature(name, context, detection)
             else:
                 items, stats = nlp_pipeline.run_nlp_feature(
                     name,
@@ -129,6 +159,11 @@ def process_video(
         "per_feature_ms": per_feature_ms,
         "frames_skipped_ratio": frames_skipped_ratio,
         "grounding_match_rate": float(grounding_stats.get("grounding_match_rate", 0.0)),
+        "detector_mode": detection.mode,
+        "detector_reason": detection.reason,
+        "detector_model": detection.model,
+        "detector_latency_ms": detection.latency_ms,
+        "object_detections": len(detection.detections),
         "active_feature_count": len(report["executed_features"]),
         "skipped_feature_count": len(report["skipped_features"]),
     }
@@ -152,6 +187,8 @@ def run_all_videos(
     logs_dir: Path,
     output_dir: Path,
     query: str = "",
+    real_dir: Path | None = None,
+    model: str | None = None,
 ) -> list[dict[str, Any]]:
     """Process every manifest video in order."""
     return [
@@ -162,6 +199,8 @@ def run_all_videos(
             logs_dir=logs_dir,
             output_dir=output_dir,
             query=query,
+            real_dir=real_dir,
+            model=model,
         )
         for entry in config.get("videos", [])
     ]

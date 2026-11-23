@@ -1,0 +1,560 @@
+{
+  "video_id": "ret_01_aisle_traffic",
+  "industry": "Retail, Security & Smart Spaces",
+  "description": "Wide retail aisle with shelf zones, shopper flow bursts and timestamped shift notes.",
+  "duration_sec": 12.0,
+  "processed_fps": 12.0,
+  "media": {
+    "video_id": "ret_01_aisle_traffic",
+    "industry": "Retail, Security & Smart Spaces",
+    "media_available": true,
+    "source": "file",
+    "probe_error": "",
+    "fps": 12.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 144,
+    "duration_sec": 12.0,
+    "motion_energy": 4.1261,
+    "edge_density": 0.0515,
+    "text_region_density": 0.0,
+    "roi_presence": true,
+    "transcript_available": false,
+    "log_available": true,
+    "transcript_source": "none",
+    "log_source": "file",
+    "use_real": false,
+    "ingest_status": "REAL_VIDEO_NOT_FOUND",
+    "sidecar_sources": [],
+    "has_audio_stream": null
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "visual_anomaly_scoring",
+      "status": "SKIPPED",
+      "reason": "DYNAMIC_SCENE_BASELINE"
+    },
+    {
+      "feature": "on_screen_text_detection",
+      "status": "SKIPPED",
+      "reason": "NO_LEGIBLE_SIGNAGE"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "motion_score": 4.8652,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "motion_score": 6.1015,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "motion_score": 6.1649,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "motion_score": 6.2223,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "motion_score": 6.6016,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "motion_score": 5.9959,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "motion_score": 5.1379,
+      "object_labels": [
+        "bird"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.2756
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "aisle_a",
+      "kind": "box",
+      "bounds_px": [
+        16,
+        48,
+        121,
+        216
+      ],
+      "mean_energy": 5.6902,
+      "peak_energy": 10.7561,
+      "peak_timestamp_sec": 5.0,
+      "active_timestamps": [
+        1.0,
+        1.5,
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0,
+        6.5
+      ],
+      "active_frames": 8,
+      "object_count": 0,
+      "object_labels": [],
+      "object_timestamps": [],
+      "max_confidence": 0.0
+    },
+    {
+      "zone_id": "aisle_b",
+      "kind": "box",
+      "bounds_px": [
+        121,
+        48,
+        230,
+        216
+      ],
+      "mean_energy": 6.0571,
+      "peak_energy": 11.7558,
+      "peak_timestamp_sec": 7.0,
+      "active_timestamps": [
+        1.5,
+        2.0,
+        5.5,
+        6.0,
+        6.5,
+        7.0,
+        8.0
+      ],
+      "active_frames": 7,
+      "object_count": 2,
+      "object_labels": [
+        "bird",
+        "stop sign"
+      ],
+      "object_timestamps": [
+        7.0,
+        9.5
+      ],
+      "max_confidence": 0.2912
+    },
+    {
+      "zone_id": "entry",
+      "kind": "box",
+      "bounds_px": [
+        230,
+        48,
+        313,
+        216
+      ],
+      "mean_energy": 4.6121,
+      "peak_energy": 9.9296,
+      "peak_timestamp_sec": 5.5,
+      "active_timestamps": [
+        2.5,
+        3.0,
+        5.0,
+        5.5,
+        6.0,
+        9.5,
+        10.0,
+        10.5
+      ],
+      "active_frames": 8,
+      "object_count": 0,
+      "object_labels": [],
+      "object_timestamps": [],
+      "max_confidence": 0.0
+    }
+  ],
+  "anomalies": [],
+  "text_regions": [],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "state": "FLOW",
+      "motion_mean": 2.6041,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "state": "FLOW",
+      "motion_mean": 3.3119,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "state": "CONGESTION",
+      "motion_mean": 5.8385,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "state": "FLOW",
+      "motion_mean": 5.1613,
+      "object_count": 1,
+      "top_labels": [
+        "bird"
+      ]
+    },
+    {
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "state": "FLOW",
+      "motion_mean": 3.3723,
+      "object_count": 1,
+      "top_labels": [
+        "stop sign"
+      ]
+    },
+    {
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "state": "FLOW",
+      "motion_mean": 3.4372,
+      "object_count": 0,
+      "top_labels": []
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:01 zone=aisle_a event=entry count=6 severity=low",
+      "line_no": 1
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:04 zone=aisle_b event=congestion count=18 severity=high",
+      "line_no": 2
+    },
+    {
+      "source": "log",
+      "start_sec": 7.0,
+      "end_sec": 9.0,
+      "text": "00:07 zone=aisle_a event=flow count=9 severity=medium",
+      "line_no": 3
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:09 zone=entry event=exit count=7 severity=low",
+      "line_no": 4
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "log_L1",
+      "timestamp_sec": 1.0,
+      "end_sec": 3.0,
+      "entity": "",
+      "action": "entry",
+      "status": "low",
+      "zone": "aisle_a",
+      "defect": "",
+      "step": null,
+      "claim": "00:01 zone=aisle_a event=entry count=6 severity=low",
+      "fields": {
+        "zone": "aisle_a",
+        "event": "entry",
+        "count": "6",
+        "severity": "low"
+      },
+      "raw_text": "00:01 zone=aisle_a event=entry count=6 severity=low"
+    },
+    {
+      "event_id": "log_L2",
+      "timestamp_sec": 4.0,
+      "end_sec": 6.0,
+      "entity": "",
+      "action": "congestion",
+      "status": "high",
+      "zone": "aisle_b",
+      "defect": "",
+      "step": null,
+      "claim": "00:04 zone=aisle_b event=congestion count=18 severity=high",
+      "fields": {
+        "zone": "aisle_b",
+        "event": "congestion",
+        "count": "18",
+        "severity": "high"
+      },
+      "raw_text": "00:04 zone=aisle_b event=congestion count=18 severity=high"
+    },
+    {
+      "event_id": "log_L3",
+      "timestamp_sec": 7.0,
+      "end_sec": 9.0,
+      "entity": "",
+      "action": "flow",
+      "status": "medium",
+      "zone": "aisle_a",
+      "defect": "",
+      "step": null,
+      "claim": "00:07 zone=aisle_a event=flow count=9 severity=medium",
+      "fields": {
+        "zone": "aisle_a",
+        "event": "flow",
+        "count": "9",
+        "severity": "medium"
+      },
+      "raw_text": "00:07 zone=aisle_a event=flow count=9 severity=medium"
+    },
+    {
+      "event_id": "log_L4",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "",
+      "action": "exit",
+      "status": "low",
+      "zone": "entry",
+      "defect": "",
+      "step": null,
+      "claim": "00:09 zone=entry event=exit count=7 severity=low",
+      "fields": {
+        "zone": "entry",
+        "event": "exit",
+        "count": "7",
+        "severity": "low"
+      },
+      "raw_text": "00:09 zone=entry event=exit count=7 severity=low"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "log_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:aisle_a"
+    },
+    {
+      "source": "log_L1",
+      "relation": "HAS_ACTION",
+      "target": "act:entry"
+    },
+    {
+      "source": "log_L1",
+      "relation": "HAS_STATUS",
+      "target": "stat:low"
+    },
+    {
+      "source": "log_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:aisle_b"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_ACTION",
+      "target": "act:congestion"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_STATUS",
+      "target": "stat:high"
+    },
+    {
+      "source": "log_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:aisle_a"
+    },
+    {
+      "source": "log_L3",
+      "relation": "HAS_ACTION",
+      "target": "act:flow"
+    },
+    {
+      "source": "log_L3",
+      "relation": "HAS_STATUS",
+      "target": "stat:medium"
+    },
+    {
+      "source": "log_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:entry"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_ACTION",
+      "target": "act:exit"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_STATUS",
+      "target": "stat:low"
+    },
+    {
+      "source": "zone:aisle_a",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:aisle"
+    },
+    {
+      "source": "zone:aisle_a",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:entry"
+    },
+    {
+      "source": "zone:aisle_b",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:aisle"
+    },
+    {
+      "source": "zone:aisle_b",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:entry"
+    },
+    {
+      "source": "zone:entry",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:aisle"
+    },
+    {
+      "source": "zone:entry",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:entry"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "log_L1",
+      "claim": "00:01 zone=aisle_a event=entry count=6 severity=low",
+      "expected_timestamp_sec": 1.0,
+      "zone": "aisle_a",
+      "status": "PARTIAL_GROUNDING",
+      "supporting_evidence": [
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L2",
+      "claim": "00:04 zone=aisle_b event=congestion count=18 severity=high",
+      "expected_timestamp_sec": 4.0,
+      "zone": "aisle_b",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L3",
+      "claim": "00:07 zone=aisle_a event=flow count=9 severity=medium",
+      "expected_timestamp_sec": 7.0,
+      "zone": "aisle_a",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L4",
+      "claim": "00:09 zone=entry event=exit count=7 severity=low",
+      "expected_timestamp_sec": 9.0,
+      "zone": "entry",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "zone_motion"
+      ]
+    }
+  ],
+  "retrieval_results": [],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 2,
+    "zones": [
+      "aisle_a",
+      "aisle_b",
+      "entry"
+    ],
+    "frames_analyzed": 24,
+    "latency_ms": 716.757
+  },
+  "telemetry": {
+    "total_ms": 870.437,
+    "probe_ms": 58.62,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 4.564,
+      "roi_zone_tracking": 4.476,
+      "visual_anomaly_scoring": 0.0,
+      "on_screen_text_detection": 0.0,
+      "action_state_indexing": 4.223,
+      "transcript_log_alignment": 0.043,
+      "multimodal_bm25_tfidf_retrieval": 1.953,
+      "rule_schema_event_parsing": 0.07,
+      "entity_graph_linking": 0.137,
+      "grounding_consistency_check": 0.048
+    },
+    "frames_skipped_ratio": 0.7083,
+    "grounding_match_rate": 0.875,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 716.757,
+    "object_detections": 2,
+    "active_feature_count": 8,
+    "skipped_feature_count": 2
+  },
+  "retrieval_stats": {
+    "documents_indexed": 5,
+    "query": "defect alert slide step",
+    "scorer": "BM25+TFIDF",
+    "results": 0
+  },
+  "grounding_stats": {
+    "checks": 4,
+    "grounded": 3,
+    "partial": 1,
+    "ungrounded": 0,
+    "grounding_match_rate": 0.875,
+    "window_sec": 2.5
+  }
+}

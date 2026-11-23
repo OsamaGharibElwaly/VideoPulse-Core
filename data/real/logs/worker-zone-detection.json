@@ -1,0 +1,194 @@
+{
+  "video_id": "real_mfg_worker_zone",
+  "generated_by": "tools/prepare_real_data.py",
+  "source_dataset": "Intel OpenVINO sample-videos (worker-zone-detection.mp4)",
+  "detector_mode": "yolo",
+  "model": "yolo26n.pt",
+  "sampled_frames": 25,
+  "events": [
+    {
+      "timestamp_sec": 3.153,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9081,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 6.306,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8159,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 12.613,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.724,
+      "zone": "restricted_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 15.766,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9024,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 18.919,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9109,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 22.072,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9182,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 25.225,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9085,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 28.378,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8879,
+      "zone": "restricted_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 34.685,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.2852,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 34.685,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.6544,
+      "zone": "restricted_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 34.685,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.3166,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 37.838,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8766,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 40.991,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8376,
+      "zone": "restricted_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 40.991,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.885,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 44.144,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.3002,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 50.45,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.2778,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 50.45,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8649,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 59.91,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9055,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 63.063,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8508,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 66.216,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8493,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 69.369,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8886,
+      "zone": "work_zone",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 72.522,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.3414,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 72.522,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9043,
+      "zone": "restricted_zone",
+      "source": "yolo26n.pt:real_frames"
+    }
+  ]
+}

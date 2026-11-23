@@ -1,0 +1,633 @@
+{
+  "video_id": "mfg_01_conveyor_inspection",
+  "industry": "Manufacturing & Industrial Operations",
+  "description": "Fixed camera conveyor with a defined inspection zone, periodic items, visual defects and a QC log.",
+  "duration_sec": 12.0,
+  "processed_fps": 12.0,
+  "media": {
+    "video_id": "mfg_01_conveyor_inspection",
+    "industry": "Manufacturing & Industrial Operations",
+    "media_available": true,
+    "source": "file",
+    "probe_error": "",
+    "fps": 12.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 144,
+    "duration_sec": 12.0,
+    "motion_energy": 7.0927,
+    "edge_density": 0.0039,
+    "text_region_density": 0.4449,
+    "roi_presence": true,
+    "transcript_available": false,
+    "log_available": true,
+    "transcript_source": "none",
+    "log_source": "file",
+    "use_real": false,
+    "ingest_status": "REAL_VIDEO_NOT_FOUND",
+    "sidecar_sources": [],
+    "has_audio_stream": null
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "visual_anomaly_scoring",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "on_screen_text_detection",
+      "status": "SKIPPED",
+      "reason": "NO_READABLE_TEXT"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "motion_score": 8.2597,
+      "object_labels": [
+        "sports ball"
+      ],
+      "object_count": 3,
+      "max_confidence": 0.4385
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "motion_score": 8.1957,
+      "object_labels": [
+        "sports ball"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.3086
+    },
+    {
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "motion_score": 7.9595,
+      "object_labels": [
+        "sports ball"
+      ],
+      "object_count": 3,
+      "max_confidence": 0.5764
+    },
+    {
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "motion_score": 8.4393,
+      "object_labels": [
+        "sports ball"
+      ],
+      "object_count": 3,
+      "max_confidence": 0.4684
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "inspection_belt",
+      "kind": "box",
+      "bounds_px": [
+        32,
+        84,
+        288,
+        180
+      ],
+      "mean_energy": 16.9663,
+      "peak_energy": 20.1031,
+      "peak_timestamp_sec": 4.0,
+      "active_timestamps": [
+        2.0,
+        3.5,
+        4.0,
+        5.5,
+        6.0,
+        6.5,
+        10.0,
+        11.5
+      ],
+      "active_frames": 8,
+      "object_count": 45,
+      "object_labels": [
+        "sports ball"
+      ],
+      "object_timestamps": [
+        0.5,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0,
+        6.5,
+        7.0,
+        7.5,
+        8.0,
+        8.5,
+        9.5,
+        10.0,
+        10.5,
+        11.0,
+        11.5
+      ],
+      "max_confidence": 0.5764
+    }
+  ],
+  "anomalies": [
+    {
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "score": 6.503,
+      "colour_outlier_pixels": 0,
+      "z_score": 4.9892,
+      "kind": "object_outlier"
+    },
+    {
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "score": 3.7639,
+      "colour_outlier_pixels": 1760,
+      "z_score": 1760.0,
+      "kind": "object_outlier"
+    },
+    {
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "score": 4.4673,
+      "colour_outlier_pixels": 1428,
+      "z_score": 1428.0,
+      "kind": "object_outlier"
+    }
+  ],
+  "text_regions": [],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "state": "MOVING",
+      "motion_mean": 4.8624,
+      "object_count": 8,
+      "top_labels": [
+        "sports ball"
+      ]
+    },
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "state": "MOVING",
+      "motion_mean": 7.2858,
+      "object_count": 12,
+      "top_labels": [
+        "sports ball"
+      ]
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "state": "MOVING",
+      "motion_mean": 7.443,
+      "object_count": 9,
+      "top_labels": [
+        "sports ball"
+      ]
+    },
+    {
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "state": "MOVING",
+      "motion_mean": 7.2404,
+      "object_count": 12,
+      "top_labels": [
+        "sports ball"
+      ]
+    },
+    {
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "state": "MOVING",
+      "motion_mean": 6.4906,
+      "object_count": 9,
+      "top_labels": [
+        "sports ball"
+      ]
+    },
+    {
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "state": "MOVING",
+      "motion_mean": 7.4606,
+      "object_count": 9,
+      "top_labels": [
+        "sports ball"
+      ]
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:01 station=QC1 part=PART-07 status=PASS zone=inspection_belt",
+      "line_no": 1
+    },
+    {
+      "source": "log",
+      "start_sec": 3.0,
+      "end_sec": 5.0,
+      "text": "00:03 station=QC1 part=PART-08 status=DEFECT defect=DENT zone=inspection_belt",
+      "line_no": 2
+    },
+    {
+      "source": "log",
+      "start_sec": 5.0,
+      "end_sec": 7.0,
+      "text": "00:05 station=QC1 part=PART-09 status=PASS zone=inspection_belt",
+      "line_no": 3
+    },
+    {
+      "source": "log",
+      "start_sec": 7.0,
+      "end_sec": 9.0,
+      "text": "00:07 station=QC1 part=PART-10 status=DEFECT defect=SCRATCH zone=inspection_belt",
+      "line_no": 4
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:09 station=QC1 part=PART-11 status=PASS zone=inspection_belt",
+      "line_no": 5
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "log_L1",
+      "timestamp_sec": 1.0,
+      "end_sec": 3.0,
+      "entity": "PART-07",
+      "action": "",
+      "status": "PASS",
+      "zone": "inspection_belt",
+      "defect": "",
+      "step": null,
+      "claim": "00:01 station=QC1 part=PART-07 status=PASS zone=inspection_belt",
+      "fields": {
+        "station": "QC1",
+        "part": "PART-07",
+        "status": "PASS",
+        "zone": "inspection_belt"
+      },
+      "raw_text": "00:01 station=QC1 part=PART-07 status=PASS zone=inspection_belt"
+    },
+    {
+      "event_id": "log_L2",
+      "timestamp_sec": 3.0,
+      "end_sec": 5.0,
+      "entity": "PART-08",
+      "action": "",
+      "status": "DEFECT",
+      "zone": "inspection_belt",
+      "defect": "DENT",
+      "step": null,
+      "claim": "00:03 station=QC1 part=PART-08 status=DEFECT defect=DENT zone=inspection_belt",
+      "fields": {
+        "station": "QC1",
+        "part": "PART-08",
+        "status": "DEFECT",
+        "defect": "DENT",
+        "zone": "inspection_belt"
+      },
+      "raw_text": "00:03 station=QC1 part=PART-08 status=DEFECT defect=DENT zone=inspection_belt"
+    },
+    {
+      "event_id": "log_L3",
+      "timestamp_sec": 5.0,
+      "end_sec": 7.0,
+      "entity": "PART-09",
+      "action": "",
+      "status": "PASS",
+      "zone": "inspection_belt",
+      "defect": "",
+      "step": null,
+      "claim": "00:05 station=QC1 part=PART-09 status=PASS zone=inspection_belt",
+      "fields": {
+        "station": "QC1",
+        "part": "PART-09",
+        "status": "PASS",
+        "zone": "inspection_belt"
+      },
+      "raw_text": "00:05 station=QC1 part=PART-09 status=PASS zone=inspection_belt"
+    },
+    {
+      "event_id": "log_L4",
+      "timestamp_sec": 7.0,
+      "end_sec": 9.0,
+      "entity": "PART-10",
+      "action": "",
+      "status": "DEFECT",
+      "zone": "inspection_belt",
+      "defect": "SCRATCH",
+      "step": null,
+      "claim": "00:07 station=QC1 part=PART-10 status=DEFECT defect=SCRATCH zone=inspection_belt",
+      "fields": {
+        "station": "QC1",
+        "part": "PART-10",
+        "status": "DEFECT",
+        "defect": "SCRATCH",
+        "zone": "inspection_belt"
+      },
+      "raw_text": "00:07 station=QC1 part=PART-10 status=DEFECT defect=SCRATCH zone=inspection_belt"
+    },
+    {
+      "event_id": "log_L5",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "PART-11",
+      "action": "",
+      "status": "PASS",
+      "zone": "inspection_belt",
+      "defect": "",
+      "step": null,
+      "claim": "00:09 station=QC1 part=PART-11 status=PASS zone=inspection_belt",
+      "fields": {
+        "station": "QC1",
+        "part": "PART-11",
+        "status": "PASS",
+        "zone": "inspection_belt"
+      },
+      "raw_text": "00:09 station=QC1 part=PART-11 status=PASS zone=inspection_belt"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "log_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:inspection_belt"
+    },
+    {
+      "source": "log_L1",
+      "relation": "HAS_STATUS",
+      "target": "stat:PASS"
+    },
+    {
+      "source": "log_L1",
+      "relation": "MENTIONS",
+      "target": "ent:PART-07"
+    },
+    {
+      "source": "log_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:inspection_belt"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_DEFECT",
+      "target": "defect:DENT"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_STATUS",
+      "target": "stat:DEFECT"
+    },
+    {
+      "source": "log_L2",
+      "relation": "MENTIONS",
+      "target": "ent:PART-08"
+    },
+    {
+      "source": "log_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:inspection_belt"
+    },
+    {
+      "source": "log_L3",
+      "relation": "HAS_STATUS",
+      "target": "stat:PASS"
+    },
+    {
+      "source": "log_L3",
+      "relation": "MENTIONS",
+      "target": "ent:PART-09"
+    },
+    {
+      "source": "log_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:inspection_belt"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_DEFECT",
+      "target": "defect:SCRATCH"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_STATUS",
+      "target": "stat:DEFECT"
+    },
+    {
+      "source": "log_L4",
+      "relation": "MENTIONS",
+      "target": "ent:PART-10"
+    },
+    {
+      "source": "log_L5",
+      "relation": "AT_ZONE",
+      "target": "zone:inspection_belt"
+    },
+    {
+      "source": "log_L5",
+      "relation": "HAS_STATUS",
+      "target": "stat:PASS"
+    },
+    {
+      "source": "log_L5",
+      "relation": "MENTIONS",
+      "target": "ent:PART-11"
+    },
+    {
+      "source": "object:sports ball",
+      "relation": "DETECTED_IN",
+      "target": "zone:inspection_belt"
+    },
+    {
+      "source": "zone:inspection_belt",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:defect"
+    },
+    {
+      "source": "zone:inspection_belt",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:inspection"
+    },
+    {
+      "source": "zone:inspection_belt",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:part"
+    },
+    {
+      "source": "zone:inspection_belt",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:pass"
+    },
+    {
+      "source": "zone:inspection_belt",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:station"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "log_L1",
+      "claim": "00:01 station=QC1 part=PART-07 status=PASS zone=inspection_belt",
+      "expected_timestamp_sec": 1.0,
+      "zone": "inspection_belt",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L2",
+      "claim": "00:03 station=QC1 part=PART-08 status=DEFECT defect=DENT zone=inspection_belt",
+      "expected_timestamp_sec": 3.0,
+      "zone": "inspection_belt",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L3",
+      "claim": "00:05 station=QC1 part=PART-09 status=PASS zone=inspection_belt",
+      "expected_timestamp_sec": 5.0,
+      "zone": "inspection_belt",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L4",
+      "claim": "00:07 station=QC1 part=PART-10 status=DEFECT defect=SCRATCH zone=inspection_belt",
+      "expected_timestamp_sec": 7.0,
+      "zone": "inspection_belt",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L5",
+      "claim": "00:09 station=QC1 part=PART-11 status=PASS zone=inspection_belt",
+      "expected_timestamp_sec": 9.0,
+      "zone": "inspection_belt",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    }
+  ],
+  "retrieval_results": [
+    {
+      "start_sec": 3.0,
+      "end_sec": 5.0,
+      "source": "log",
+      "text": "00:03 station=QC1 part=PART-08 status=DEFECT defect=DENT zone=inspection_belt",
+      "bm25_score": 0.0,
+      "tfidf_score": 0.5434,
+      "score": 0.5
+    },
+    {
+      "start_sec": 7.0,
+      "end_sec": 9.0,
+      "source": "log",
+      "text": "00:07 station=QC1 part=PART-10 status=DEFECT defect=SCRATCH zone=inspection_belt",
+      "bm25_score": 0.0,
+      "tfidf_score": 0.5434,
+      "score": 0.5
+    },
+    {
+      "start_sec": 0.0,
+      "end_sec": 12.0,
+      "source": "visual_tags",
+      "text": "motion keyframe zone inspection_belt anomaly object_outlier MOVING sports ball object conveyor inspection qc log part defect station pass",
+      "bm25_score": 0.0,
+      "tfidf_score": 0.1876,
+      "score": 0.1554
+    }
+  ],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 47,
+    "zones": [
+      "inspection_belt"
+    ],
+    "frames_analyzed": 24,
+    "latency_ms": 967.059
+  },
+  "telemetry": {
+    "total_ms": 1301.237,
+    "probe_ms": 48.776,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 5.053,
+      "roi_zone_tracking": 3.065,
+      "visual_anomaly_scoring": 191.305,
+      "on_screen_text_detection": 0.0,
+      "action_state_indexing": 4.8,
+      "transcript_log_alignment": 0.061,
+      "multimodal_bm25_tfidf_retrieval": 1.943,
+      "rule_schema_event_parsing": 0.085,
+      "entity_graph_linking": 0.291,
+      "grounding_consistency_check": 0.149
+    },
+    "frames_skipped_ratio": 0.8333,
+    "grounding_match_rate": 1.0,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 967.059,
+    "object_detections": 47,
+    "active_feature_count": 9,
+    "skipped_feature_count": 1
+  },
+  "retrieval_stats": {
+    "documents_indexed": 6,
+    "query": "defect alert slide step",
+    "scorer": "BM25+TFIDF",
+    "results": 3
+  },
+  "grounding_stats": {
+    "checks": 5,
+    "grounded": 5,
+    "partial": 0,
+    "ungrounded": 0,
+    "grounding_match_rate": 1.0,
+    "window_sec": 2.5
+  }
+}

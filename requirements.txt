@@ -4,3 +4,4 @@ scikit-learn
 pillow
 networkx
 rank-bm25
+ultralytics>=8.4.0

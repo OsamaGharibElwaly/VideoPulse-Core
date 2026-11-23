@@ -1,0 +1,90 @@
+{
+  "video_id": "real_sec_people",
+  "generated_by": "tools/prepare_real_data.py",
+  "source_dataset": "Intel OpenVINO sample-videos (people-detection.mp4)",
+  "detector_mode": "yolo",
+  "model": "yolo26n.pt",
+  "sampled_frames": 25,
+  "events": [
+    {
+      "timestamp_sec": 2.0,
+      "label": "dog",
+      "count": 1,
+      "confidence": 0.4382,
+      "zone": "walkway_center",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 2.0,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.4744,
+      "zone": "walkway_center",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 6.0,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.3509,
+      "zone": "walkway_right",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 16.0,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8197,
+      "zone": "walkway_center",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 16.0,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8897,
+      "zone": "walkway_left",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 18.0,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8659,
+      "zone": "walkway_left",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 30.0,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8544,
+      "zone": "walkway_center",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 30.0,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.9083,
+      "zone": "walkway_left",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 32.0,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8715,
+      "zone": "walkway_left",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 32.0,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8846,
+      "zone": "walkway_right",
+      "source": "yolo26n.pt:real_frames"
+    }
+  ]
+}

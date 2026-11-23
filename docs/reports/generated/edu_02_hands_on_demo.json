@@ -1,0 +1,1200 @@
+{
+  "video_id": "edu_02_hands_on_demo",
+  "industry": "Media, Education & Video Platforms",
+  "description": "Hands-on workbench demo: continuous hand/tool motion in a tool zone with small labels and step notes.",
+  "duration_sec": 12.0,
+  "processed_fps": 12.0,
+  "media": {
+    "video_id": "edu_02_hands_on_demo",
+    "industry": "Media, Education & Video Platforms",
+    "media_available": true,
+    "source": "file",
+    "probe_error": "",
+    "fps": 12.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 144,
+    "duration_sec": 12.0,
+    "motion_energy": 2.1145,
+    "edge_density": 0.0162,
+    "text_region_density": 0.4503,
+    "roi_presence": true,
+    "transcript_available": true,
+    "log_available": false,
+    "transcript_source": "file",
+    "log_source": "none",
+    "use_real": false,
+    "ingest_status": "REAL_VIDEO_NOT_FOUND",
+    "sidecar_sources": [],
+    "has_audio_stream": null
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "on_screen_text_detection",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking"
+  ],
+  "skipped_features": [
+    {
+      "feature": "visual_anomaly_scoring",
+      "status": "SKIPPED",
+      "reason": "NO_STABLE_BASELINE"
+    },
+    {
+      "feature": "grounding_consistency_check",
+      "status": "SKIPPED",
+      "reason": "INSUFFICIENT_VISUAL_LABELS"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "motion_score": 2.4099,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "motion_score": 2.4068,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "motion_score": 2.4034,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "motion_score": 2.4199,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "motion_score": 2.411,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "motion_score": 2.3544,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "motion_score": 2.4589,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "motion_score": 2.4166,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "motion_score": 2.4086,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "motion_score": 2.4054,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "tool_zone",
+      "kind": "box",
+      "bounds_px": [
+        80,
+        60,
+        256,
+        204
+      ],
+      "mean_energy": 6.0735,
+      "peak_energy": 7.3218,
+      "peak_timestamp_sec": 8.0,
+      "active_timestamps": [
+        0.5,
+        1.5,
+        2.0,
+        2.5,
+        4.0,
+        4.5,
+        5.0,
+        6.0,
+        7.5,
+        8.0,
+        8.5,
+        10.0
+      ],
+      "active_frames": 12,
+      "object_count": 0,
+      "object_labels": [],
+      "object_timestamps": [],
+      "max_confidence": 0.0
+    }
+  ],
+  "anomalies": [],
+  "text_regions": [
+    {
+      "region_id": "f0_r0",
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f0_r1",
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f1_r0",
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f1_r1",
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f2_r0",
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f2_r1",
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f3_r0",
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f3_r1",
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f4_r0",
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f4_r1",
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f5_r0",
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f5_r1",
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f6_r0",
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f6_r1",
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f7_r0",
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f7_r1",
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f8_r0",
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f8_r1",
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f9_r0",
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f9_r1",
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f10_r0",
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f10_r1",
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f11_r0",
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f11_r1",
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f12_r0",
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f12_r1",
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f13_r0",
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f13_r1",
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f14_r0",
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f14_r1",
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f15_r0",
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f15_r1",
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f16_r0",
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f16_r1",
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f17_r0",
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f17_r1",
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f18_r0",
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f18_r1",
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f19_r0",
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f19_r1",
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f20_r0",
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f20_r1",
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f21_r0",
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f21_r1",
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f22_r0",
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f22_r1",
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f23_r0",
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "bbox": [
+        6,
+        31,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f23_r1",
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "bbox": [
+        7,
+        11,
+        39,
+        15
+      ],
+      "confidence": 0.617,
+      "text": null,
+      "nearby_objects": []
+    }
+  ],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "state": "ACTIVE",
+      "motion_mean": 1.7424,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "state": "ACTIVE",
+      "motion_mean": 2.0373,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "state": "TRANSITION",
+      "motion_mean": 2.2785,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "state": "ACTIVE",
+      "motion_mean": 2.1061,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "state": "ACTIVE",
+      "motion_mean": 2.1368,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "state": "ACTIVE",
+      "motion_mean": 1.8572,
+      "object_count": 0,
+      "top_labels": []
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "transcript",
+      "start_sec": 1,
+      "end_sec": 3,
+      "text": "[tool_zone] step=1 action=open_tool status=START Open the tool.",
+      "line_no": 1
+    },
+    {
+      "source": "transcript",
+      "start_sec": 3,
+      "end_sec": 5,
+      "text": "[tool_zone] step=2 action=align_part status=ACTIVE Align the part with the marker.",
+      "line_no": 2
+    },
+    {
+      "source": "transcript",
+      "start_sec": 5,
+      "end_sec": 7,
+      "text": "[tool_zone] step=3 action=fasten status=ACTIVE Fasten the fitting.",
+      "line_no": 3
+    },
+    {
+      "source": "transcript",
+      "start_sec": 7,
+      "end_sec": 9,
+      "text": "[tool_zone] step=4 action=verify status=DONE Verify the connection.",
+      "line_no": 4
+    },
+    {
+      "source": "transcript",
+      "start_sec": 9,
+      "end_sec": 11,
+      "text": "[tool_zone] step=5 action=cleanup status=DONE Clean up the work area.",
+      "line_no": 5
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "transcript_L1",
+      "timestamp_sec": 1,
+      "end_sec": 3,
+      "entity": "",
+      "action": "open_tool",
+      "status": "START",
+      "zone": "tool_zone",
+      "defect": "",
+      "step": 1,
+      "claim": "[tool_zone] step=1 action=open_tool status=START Open the tool.",
+      "fields": {
+        "step": "1",
+        "action": "open_tool",
+        "status": "START"
+      },
+      "raw_text": "[tool_zone] step=1 action=open_tool status=START Open the tool."
+    },
+    {
+      "event_id": "transcript_L2",
+      "timestamp_sec": 3,
+      "end_sec": 5,
+      "entity": "",
+      "action": "align_part",
+      "status": "ACTIVE",
+      "zone": "tool_zone",
+      "defect": "",
+      "step": 2,
+      "claim": "[tool_zone] step=2 action=align_part status=ACTIVE Align the part with the marker.",
+      "fields": {
+        "step": "2",
+        "action": "align_part",
+        "status": "ACTIVE"
+      },
+      "raw_text": "[tool_zone] step=2 action=align_part status=ACTIVE Align the part with the marker."
+    },
+    {
+      "event_id": "transcript_L3",
+      "timestamp_sec": 5,
+      "end_sec": 7,
+      "entity": "",
+      "action": "fasten",
+      "status": "ACTIVE",
+      "zone": "tool_zone",
+      "defect": "",
+      "step": 3,
+      "claim": "[tool_zone] step=3 action=fasten status=ACTIVE Fasten the fitting.",
+      "fields": {
+        "step": "3",
+        "action": "fasten",
+        "status": "ACTIVE"
+      },
+      "raw_text": "[tool_zone] step=3 action=fasten status=ACTIVE Fasten the fitting."
+    },
+    {
+      "event_id": "transcript_L4",
+      "timestamp_sec": 7,
+      "end_sec": 9,
+      "entity": "",
+      "action": "verify",
+      "status": "DONE",
+      "zone": "tool_zone",
+      "defect": "",
+      "step": 4,
+      "claim": "[tool_zone] step=4 action=verify status=DONE Verify the connection.",
+      "fields": {
+        "step": "4",
+        "action": "verify",
+        "status": "DONE"
+      },
+      "raw_text": "[tool_zone] step=4 action=verify status=DONE Verify the connection."
+    },
+    {
+      "event_id": "transcript_L5",
+      "timestamp_sec": 9,
+      "end_sec": 11,
+      "entity": "",
+      "action": "cleanup",
+      "status": "DONE",
+      "zone": "tool_zone",
+      "defect": "",
+      "step": 5,
+      "claim": "[tool_zone] step=5 action=cleanup status=DONE Clean up the work area.",
+      "fields": {
+        "step": "5",
+        "action": "cleanup",
+        "status": "DONE"
+      },
+      "raw_text": "[tool_zone] step=5 action=cleanup status=DONE Clean up the work area."
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "transcript_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:tool_zone"
+    },
+    {
+      "source": "transcript_L1",
+      "relation": "HAS_ACTION",
+      "target": "act:open_tool"
+    },
+    {
+      "source": "transcript_L1",
+      "relation": "HAS_STATUS",
+      "target": "stat:START"
+    },
+    {
+      "source": "transcript_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:tool_zone"
+    },
+    {
+      "source": "transcript_L2",
+      "relation": "HAS_ACTION",
+      "target": "act:align_part"
+    },
+    {
+      "source": "transcript_L2",
+      "relation": "HAS_STATUS",
+      "target": "stat:ACTIVE"
+    },
+    {
+      "source": "transcript_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:tool_zone"
+    },
+    {
+      "source": "transcript_L3",
+      "relation": "HAS_ACTION",
+      "target": "act:fasten"
+    },
+    {
+      "source": "transcript_L3",
+      "relation": "HAS_STATUS",
+      "target": "stat:ACTIVE"
+    },
+    {
+      "source": "transcript_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:tool_zone"
+    },
+    {
+      "source": "transcript_L4",
+      "relation": "HAS_ACTION",
+      "target": "act:verify"
+    },
+    {
+      "source": "transcript_L4",
+      "relation": "HAS_STATUS",
+      "target": "stat:DONE"
+    },
+    {
+      "source": "transcript_L5",
+      "relation": "AT_ZONE",
+      "target": "zone:tool_zone"
+    },
+    {
+      "source": "transcript_L5",
+      "relation": "HAS_ACTION",
+      "target": "act:cleanup"
+    },
+    {
+      "source": "transcript_L5",
+      "relation": "HAS_STATUS",
+      "target": "stat:DONE"
+    },
+    {
+      "source": "zone:tool_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:step"
+    },
+    {
+      "source": "zone:tool_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:tool"
+    }
+  ],
+  "grounding_checks": [],
+  "retrieval_results": [
+    {
+      "start_sec": 1,
+      "end_sec": 3,
+      "source": "transcript",
+      "text": "[tool_zone] step=1 action=open_tool status=START Open the tool.",
+      "bm25_score": 0.2324,
+      "tfidf_score": 0.1835,
+      "score": 1.0
+    },
+    {
+      "start_sec": 5,
+      "end_sec": 7,
+      "source": "transcript",
+      "text": "[tool_zone] step=3 action=fasten status=ACTIVE Fasten the fitting.",
+      "bm25_score": 0.2324,
+      "tfidf_score": 0.1604,
+      "score": 0.9371
+    },
+    {
+      "start_sec": 7,
+      "end_sec": 9,
+      "source": "transcript",
+      "text": "[tool_zone] step=4 action=verify status=DONE Verify the connection.",
+      "bm25_score": 0.2324,
+      "tfidf_score": 0.1584,
+      "score": 0.9317
+    },
+    {
+      "start_sec": 9,
+      "end_sec": 11,
+      "source": "transcript",
+      "text": "[tool_zone] step=5 action=cleanup status=DONE Clean up the work area.",
+      "bm25_score": 0.2148,
+      "tfidf_score": 0.1584,
+      "score": 0.8939
+    },
+    {
+      "start_sec": 3,
+      "end_sec": 5,
+      "source": "transcript",
+      "text": "[tool_zone] step=2 action=align_part status=ACTIVE Align the part with the marker.",
+      "bm25_score": 0.207,
+      "tfidf_score": 0.1527,
+      "score": 0.8616
+    }
+  ],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 0,
+    "zones": [
+      "tool_zone"
+    ],
+    "frames_analyzed": 24,
+    "latency_ms": 656.4
+  },
+  "telemetry": {
+    "total_ms": 880.068,
+    "probe_ms": 57.195,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 4.03,
+      "roi_zone_tracking": 2.543,
+      "visual_anomaly_scoring": 0.0,
+      "on_screen_text_detection": 60.459,
+      "action_state_indexing": 4.278,
+      "transcript_log_alignment": 0.083,
+      "multimodal_bm25_tfidf_retrieval": 2.084,
+      "rule_schema_event_parsing": 0.09,
+      "entity_graph_linking": 0.191,
+      "grounding_consistency_check": 0.0
+    },
+    "frames_skipped_ratio": 0.5833,
+    "grounding_match_rate": 0.0,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 656.4,
+    "object_detections": 0,
+    "active_feature_count": 8,
+    "skipped_feature_count": 2
+  },
+  "retrieval_stats": {
+    "documents_indexed": 6,
+    "query": "defect alert slide step",
+    "scorer": "BM25+TFIDF",
+    "results": 5
+  }
+}

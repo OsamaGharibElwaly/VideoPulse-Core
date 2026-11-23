@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "project": "VideoPulse Core - real footage track",
+  "defaults": {
+    "model": "yolo26n.pt",
+    "fps": 12,
+    "width": 320,
+    "height": 240
+  },
+  "videos": [
+    {
+      "video_id": "real_edu_classroom",
+      "short_id": "real_edu",
+      "file": "classroom.mp4",
+      "source_dataset": "Intel OpenVINO sample-videos (classroom.mp4)",
+      "source_url": "https://github.com/intel-iot-devkit/sample-videos/blob/master/classroom.mp4",
+      "industry": "Media, Education & Video Platforms",
+      "description": "Real classroom footage with a teacher, students and a fixed front-of-room camera.",
+      "duration_sec": 32.8,
+      "fps": 30.0,
+      "width": 1920,
+      "height": 1080,
+      "visual_tags": ["classroom", "teacher", "students", "presentation", "lecture"],
+      "rois": [
+        {"zone_id": "front_board", "kind": "box", "coords": [0.25, 0.10, 0.75, 0.55]},
+        {"zone_id": "student_area", "kind": "box", "coords": [0.10, 0.50, 0.90, 0.95]}
+      ],
+      "content_profile": {
+        "scene": "demo",
+        "baseline_mode": "continuous_motion",
+        "text_mode": "no_text",
+        "groundable": true,
+        "state_vocabulary": ["STATIC", "ACTIVE", "TRANSITION", "BURST"]
+      }
+    },
+    {
+      "video_id": "real_mfg_worker_zone",
+      "short_id": "real_mfg",
+      "file": "worker-zone-detection.mp4",
+      "source_dataset": "Intel OpenVINO sample-videos (worker-zone-detection.mp4)",
+      "source_url": "https://github.com/intel-iot-devkit/sample-videos/blob/master/worker-zone-detection.mp4",
+      "industry": "Manufacturing & Industrial Operations",
+      "description": "Real factory-floor footage of workers moving through marked operational zones.",
+      "duration_sec": 75.88,
+      "fps": 59.9,
+      "width": 1920,
+      "height": 1080,
+      "visual_tags": ["worker", "factory", "safety", "zone", "person", "helmet"],
+      "rois": [
+        {"zone_id": "work_zone", "kind": "box", "coords": [0.10, 0.25, 0.60, 0.90]},
+        {"zone_id": "restricted_zone", "kind": "box", "coords": [0.60, 0.20, 0.95, 0.85]}
+      ],
+      "content_profile": {
+        "scene": "assembly",
+        "baseline_mode": "high_variance",
+        "text_mode": "no_text",
+        "groundable": true,
+        "state_vocabulary": ["IDLE", "MOVING", "BURST"]
+      }
+    },
+    {
+      "video_id": "real_ret_store_aisle",
+      "short_id": "real_ret",
+      "file": "store-aisle-detection.mp4",
+      "source_dataset": "Intel OpenVINO sample-videos (store-aisle-detection.mp4)",
+      "source_url": "https://github.com/intel-iot-devkit/sample-videos/blob/master/store-aisle-detection.mp4",
+      "industry": "Retail, Security & Smart Spaces",
+      "description": "Real retail aisle footage with shoppers moving between shelves.",
+      "duration_sec": 65.42,
+      "fps": 59.9,
+      "width": 720,
+      "height": 404,
+      "visual_tags": ["aisle", "shelf", "shopper", "traffic", "retail"],
+      "rois": [
+        {"zone_id": "aisle_left", "kind": "box", "coords": [0.05, 0.15, 0.45, 0.92]},
+        {"zone_id": "aisle_right", "kind": "box", "coords": [0.45, 0.15, 0.95, 0.92]}
+      ],
+      "content_profile": {
+        "scene": "aisle",
+        "baseline_mode": "dynamic_scene",
+        "text_mode": "illegible_signage",
+        "groundable": true,
+        "state_vocabulary": ["QUIET", "FLOW", "CONGESTION"]
+      }
+    },
+    {
+      "video_id": "real_sec_people",
+      "short_id": "real_sec",
+      "file": "people_detection.mp4",
+      "source_dataset": "Intel OpenVINO sample-videos (people-detection.mp4)",
+      "source_url": "https://github.com/intel-iot-devkit/sample-videos/blob/master/people-detection.mp4",
+      "industry": "Retail, Security & Smart Spaces",
+      "description": "Real fixed-camera pedestrian monitoring footage used for public-space analytics.",
+      "duration_sec": 49.67,
+      "fps": 12.0,
+      "width": 768,
+      "height": 432,
+      "visual_tags": ["people", "pedestrian", "monitoring", "walkway", "facility"],
+      "rois": [
+        {"zone_id": "walkway_left", "kind": "box", "coords": [0.02, 0.25, 0.35, 0.92]},
+        {"zone_id": "walkway_center", "kind": "box", "coords": [0.35, 0.20, 0.68, 0.92]},
+        {"zone_id": "walkway_right", "kind": "box", "coords": [0.68, 0.25, 0.98, 0.92]}
+      ],
+      "content_profile": {
+        "scene": "facility",
+        "baseline_mode": "stable",
+        "text_mode": "no_text",
+        "groundable": true,
+        "state_vocabulary": ["QUIET", "FLOW", "CONGESTION"]
+      }
+    }
+  ]
+}

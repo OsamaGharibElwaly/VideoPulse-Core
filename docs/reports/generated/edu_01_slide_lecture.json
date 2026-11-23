@@ -1,0 +1,2680 @@
+{
+  "video_id": "edu_01_slide_lecture",
+  "industry": "Media, Education & Video Platforms",
+  "description": "Slide lecture: high-contrast slide text, slide transitions and an aligned timestamped transcript.",
+  "duration_sec": 12.0,
+  "processed_fps": 12.0,
+  "media": {
+    "video_id": "edu_01_slide_lecture",
+    "industry": "Media, Education & Video Platforms",
+    "media_available": true,
+    "source": "file",
+    "probe_error": "",
+    "fps": 12.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 144,
+    "duration_sec": 12.0,
+    "motion_energy": 1.0136,
+    "edge_density": 0.0685,
+    "text_region_density": 0.765,
+    "roi_presence": false,
+    "transcript_available": true,
+    "log_available": false,
+    "transcript_source": "file",
+    "log_source": "none",
+    "use_real": false,
+    "ingest_status": "REAL_VIDEO_NOT_FOUND",
+    "sidecar_sources": [],
+    "has_audio_stream": null
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "visual_anomaly_scoring",
+    "on_screen_text_detection",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "roi_zone_tracking",
+      "status": "SKIPPED",
+      "reason": "NO_SPATIAL_ZONES"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "motion_score": 4.3623,
+      "object_labels": [
+        "book"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.2949
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "motion_score": 4.6546,
+      "object_labels": [
+        "book"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.4109
+    },
+    {
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "motion_score": 4.4191,
+      "object_labels": [
+        "book"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.3944
+    }
+  ],
+  "zones": [],
+  "anomalies": [
+    {
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "score": 0.9429,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.2687,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "score": 1.1726,
+      "colour_outlier_pixels": 82,
+      "z_score": 202.6273,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "score": 0.8524,
+      "colour_outlier_pixels": 82,
+      "z_score": 128.891,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "score": 0.9412,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3433,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "score": 0.9425,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3658,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "score": 4.209,
+      "colour_outlier_pixels": 82,
+      "z_score": 901.6791,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "score": 4.2083,
+      "colour_outlier_pixels": 82,
+      "z_score": 901.5202,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "score": 0.9494,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3771,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "score": 0.9506,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.2728,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "score": 0.9475,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.388,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "score": 0.9493,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.395,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "score": 4.4968,
+      "colour_outlier_pixels": 82,
+      "z_score": 967.939,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "score": 4.495,
+      "colour_outlier_pixels": 82,
+      "z_score": 967.5283,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "score": 0.9487,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.4519,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "score": 0.9531,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.4421,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "score": 0.9468,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.4499,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "score": 0.9493,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3955,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "score": 4.2667,
+      "colour_outlier_pixels": 82,
+      "z_score": 914.9592,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "score": 4.2687,
+      "colour_outlier_pixels": 78,
+      "z_score": 915.4269,
+      "kind": "layout_shift"
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "score": 0.9454,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3504,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "score": 0.9513,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3384,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "score": 0.9445,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3561,
+          "zone_id": ""
+        }
+      ]
+    },
+    {
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "score": 0.9435,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "book",
+          "confidence": 0.3291,
+          "zone_id": ""
+        }
+      ]
+    }
+  ],
+  "text_regions": [
+    {
+      "region_id": "f0_r0",
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "bbox": [
+        15,
+        22,
+        196,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f0_r1",
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f0_r2",
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f0_r3",
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f0_r4",
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "bbox": [
+        19,
+        59,
+        198,
+        15
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f1_r0",
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "bbox": [
+        15,
+        22,
+        196,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f1_r1",
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f1_r2",
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f1_r3",
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f1_r4",
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "bbox": [
+        19,
+        59,
+        198,
+        15
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f2_r0",
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "bbox": [
+        19,
+        177,
+        41,
+        27
+      ],
+      "confidence": 0.7214,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f2_r1",
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f2_r2",
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f2_r3",
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f2_r4",
+      "frame_index": 2,
+      "timestamp_sec": 1.0,
+      "bbox": [
+        19,
+        59,
+        198,
+        15
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f3_r0",
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "bbox": [
+        19,
+        177,
+        52,
+        27
+      ],
+      "confidence": 0.7808,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f3_r1",
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f3_r2",
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f3_r3",
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f3_r4",
+      "frame_index": 3,
+      "timestamp_sec": 1.5,
+      "bbox": [
+        19,
+        59,
+        198,
+        15
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f4_r0",
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "bbox": [
+        19,
+        177,
+        41,
+        19
+      ],
+      "confidence": 0.6558,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f4_r1",
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f4_r2",
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f4_r3",
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f4_r4",
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "bbox": [
+        19,
+        59,
+        198,
+        15
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f5_r0",
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "bbox": [
+        19,
+        177,
+        48,
+        18
+      ],
+      "confidence": 0.6728,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f5_r1",
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f5_r2",
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f5_r3",
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f5_r4",
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "bbox": [
+        19,
+        59,
+        198,
+        15
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f6_r0",
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "bbox": [
+        16,
+        22,
+        184,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f6_r1",
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "bbox": [
+        19,
+        177,
+        56,
+        19
+      ],
+      "confidence": 0.7128,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f6_r2",
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f6_r3",
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f6_r4",
+      "frame_index": 6,
+      "timestamp_sec": 3.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f7_r0",
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "bbox": [
+        16,
+        22,
+        184,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f7_r1",
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "bbox": [
+        19,
+        177,
+        63,
+        19
+      ],
+      "confidence": 0.7394,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f7_r2",
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f7_r3",
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f7_r4",
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f8_r0",
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "bbox": [
+        16,
+        22,
+        184,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f8_r1",
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "bbox": [
+        19,
+        177,
+        70,
+        18
+      ],
+      "confidence": 0.752,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f8_r2",
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f8_r3",
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f8_r4",
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f9_r0",
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "bbox": [
+        16,
+        22,
+        184,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f9_r1",
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "bbox": [
+        19,
+        177,
+        77,
+        18
+      ],
+      "confidence": 0.7772,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f9_r2",
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f9_r3",
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f9_r4",
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f10_r0",
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "bbox": [
+        16,
+        22,
+        184,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f10_r1",
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "bbox": [
+        19,
+        177,
+        86,
+        19
+      ],
+      "confidence": 0.8268,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f10_r2",
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f10_r3",
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f10_r4",
+      "frame_index": 10,
+      "timestamp_sec": 5.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f11_r0",
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "bbox": [
+        16,
+        22,
+        184,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f11_r1",
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "bbox": [
+        19,
+        177,
+        93,
+        19
+      ],
+      "confidence": 0.8534,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f11_r2",
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f11_r3",
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f11_r4",
+      "frame_index": 11,
+      "timestamp_sec": 5.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f12_r0",
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "bbox": [
+        16,
+        22,
+        131,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f12_r1",
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "bbox": [
+        19,
+        177,
+        101,
+        19
+      ],
+      "confidence": 0.8838,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f12_r2",
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f12_r3",
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f12_r4",
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f13_r0",
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "bbox": [
+        16,
+        22,
+        131,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f13_r1",
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "bbox": [
+        19,
+        177,
+        108,
+        18
+      ],
+      "confidence": 0.8888,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f13_r2",
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f13_r3",
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f13_r4",
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f14_r0",
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "bbox": [
+        16,
+        22,
+        131,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f14_r1",
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "bbox": [
+        19,
+        177,
+        115,
+        18
+      ],
+      "confidence": 0.914,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f14_r2",
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f14_r3",
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f14_r4",
+      "frame_index": 14,
+      "timestamp_sec": 7.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f15_r0",
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "bbox": [
+        16,
+        22,
+        131,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f15_r1",
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "bbox": [
+        19,
+        177,
+        123,
+        18
+      ],
+      "confidence": 0.9428,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f15_r2",
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f15_r3",
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f15_r4",
+      "frame_index": 15,
+      "timestamp_sec": 7.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f16_r0",
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "bbox": [
+        16,
+        22,
+        131,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f16_r1",
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "bbox": [
+        19,
+        177,
+        131,
+        18
+      ],
+      "confidence": 0.9716,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f16_r2",
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f16_r3",
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f16_r4",
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f17_r0",
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "bbox": [
+        16,
+        22,
+        131,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f17_r1",
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "bbox": [
+        19,
+        177,
+        138,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f17_r2",
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f17_r3",
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f17_r4",
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f18_r0",
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "bbox": [
+        16,
+        22,
+        187,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f18_r1",
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "bbox": [
+        19,
+        177,
+        145,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f18_r2",
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f18_r3",
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f18_r4",
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f19_r0",
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "bbox": [
+        16,
+        22,
+        187,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f19_r1",
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "bbox": [
+        19,
+        177,
+        153,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f19_r2",
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f19_r3",
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f19_r4",
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f20_r0",
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "bbox": [
+        16,
+        22,
+        187,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f20_r1",
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "bbox": [
+        19,
+        177,
+        161,
+        19
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f20_r2",
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f20_r3",
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f20_r4",
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f21_r0",
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "bbox": [
+        16,
+        22,
+        187,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f21_r1",
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "bbox": [
+        19,
+        177,
+        167,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f21_r2",
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f21_r3",
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f21_r4",
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f22_r0",
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "bbox": [
+        16,
+        22,
+        187,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f22_r1",
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "bbox": [
+        19,
+        177,
+        176,
+        19
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f22_r2",
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f22_r3",
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f22_r4",
+      "frame_index": 22,
+      "timestamp_sec": 11.0,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f23_r0",
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "bbox": [
+        16,
+        22,
+        187,
+        21
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f23_r1",
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "bbox": [
+        19,
+        177,
+        183,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f23_r2",
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "bbox": [
+        19,
+        139,
+        15,
+        11
+      ],
+      "confidence": 0.533,
+      "text": null,
+      "nearby_objects": []
+    },
+    {
+      "region_id": "f23_r3",
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "bbox": [
+        19,
+        111,
+        191,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    },
+    {
+      "region_id": "f23_r4",
+      "frame_index": 23,
+      "timestamp_sec": 11.5,
+      "bbox": [
+        19,
+        85,
+        147,
+        18
+      ],
+      "confidence": 0.99,
+      "text": null,
+      "nearby_objects": [
+        "book"
+      ]
+    }
+  ],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "state": "ACTIVE",
+      "motion_mean": 0.5849,
+      "object_count": 4,
+      "top_labels": [
+        "book"
+      ]
+    },
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "state": "BURST",
+      "motion_mean": 1.4221,
+      "object_count": 5,
+      "top_labels": [
+        "book"
+      ]
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "state": "STATIC",
+      "motion_mean": 0.4443,
+      "object_count": 5,
+      "top_labels": [
+        "book"
+      ]
+    },
+    {
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "state": "BURST",
+      "motion_mean": 1.4962,
+      "object_count": 5,
+      "top_labels": [
+        "book"
+      ]
+    },
+    {
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "state": "BURST",
+      "motion_mean": 1.4361,
+      "object_count": 5,
+      "top_labels": [
+        "book"
+      ]
+    },
+    {
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "state": "STATIC",
+      "motion_mean": 0.4445,
+      "object_count": 4,
+      "top_labels": [
+        "book"
+      ]
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "transcript",
+      "start_sec": 1,
+      "end_sec": 3,
+      "text": "[slide_area] term=slide_transition action=define status=INTRO We define a slide transition.",
+      "line_no": 1
+    },
+    {
+      "source": "transcript",
+      "start_sec": 3,
+      "end_sec": 5,
+      "text": "[slide_area] step=1 term=gradient action=explain status=ACTIVE Step one, identify the key term gradient.",
+      "line_no": 2
+    },
+    {
+      "source": "transcript",
+      "start_sec": 5,
+      "end_sec": 7,
+      "text": "[slide_area] step=2 term=optical_flow action=compare status=ACTIVE Definition: optical flow measures apparent motion.",
+      "line_no": 3
+    },
+    {
+      "source": "transcript",
+      "start_sec": 7,
+      "end_sec": 9,
+      "text": "[slide_area] step=3 term=keyframe action=summarize status=DONE Keyframes mark high change frames.",
+      "line_no": 4
+    },
+    {
+      "source": "transcript",
+      "start_sec": 9,
+      "end_sec": 11,
+      "text": "[slide_area] term=visual_pulse action=recap status=DONE Summary of the lecture.",
+      "line_no": 5
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "transcript_L1",
+      "timestamp_sec": 1,
+      "end_sec": 3,
+      "entity": "slide_transition",
+      "action": "define",
+      "status": "INTRO",
+      "zone": "slide_area",
+      "defect": "",
+      "step": null,
+      "claim": "[slide_area] term=slide_transition action=define status=INTRO We define a slide transition.",
+      "fields": {
+        "term": "slide_transition",
+        "action": "define",
+        "status": "INTRO"
+      },
+      "raw_text": "[slide_area] term=slide_transition action=define status=INTRO We define a slide transition."
+    },
+    {
+      "event_id": "transcript_L2",
+      "timestamp_sec": 3,
+      "end_sec": 5,
+      "entity": "gradient",
+      "action": "explain",
+      "status": "ACTIVE",
+      "zone": "slide_area",
+      "defect": "",
+      "step": 1,
+      "claim": "[slide_area] step=1 term=gradient action=explain status=ACTIVE Step one, identify the key term gradient.",
+      "fields": {
+        "step": "1",
+        "term": "gradient",
+        "action": "explain",
+        "status": "ACTIVE"
+      },
+      "raw_text": "[slide_area] step=1 term=gradient action=explain status=ACTIVE Step one, identify the key term gradient."
+    },
+    {
+      "event_id": "transcript_L3",
+      "timestamp_sec": 5,
+      "end_sec": 7,
+      "entity": "optical_flow",
+      "action": "compare",
+      "status": "ACTIVE",
+      "zone": "slide_area",
+      "defect": "",
+      "step": 2,
+      "claim": "optical flow measures apparent motion",
+      "fields": {
+        "step": "2",
+        "term": "optical_flow",
+        "action": "compare",
+        "status": "ACTIVE"
+      },
+      "raw_text": "[slide_area] step=2 term=optical_flow action=compare status=ACTIVE Definition: optical flow measures apparent motion."
+    },
+    {
+      "event_id": "transcript_L4",
+      "timestamp_sec": 7,
+      "end_sec": 9,
+      "entity": "keyframe",
+      "action": "summarize",
+      "status": "DONE",
+      "zone": "slide_area",
+      "defect": "",
+      "step": 3,
+      "claim": "[slide_area] step=3 term=keyframe action=summarize status=DONE Keyframes mark high change frames.",
+      "fields": {
+        "step": "3",
+        "term": "keyframe",
+        "action": "summarize",
+        "status": "DONE"
+      },
+      "raw_text": "[slide_area] step=3 term=keyframe action=summarize status=DONE Keyframes mark high change frames."
+    },
+    {
+      "event_id": "transcript_L5",
+      "timestamp_sec": 9,
+      "end_sec": 11,
+      "entity": "visual_pulse",
+      "action": "recap",
+      "status": "DONE",
+      "zone": "slide_area",
+      "defect": "",
+      "step": null,
+      "claim": "[slide_area] term=visual_pulse action=recap status=DONE Summary of the lecture.",
+      "fields": {
+        "term": "visual_pulse",
+        "action": "recap",
+        "status": "DONE"
+      },
+      "raw_text": "[slide_area] term=visual_pulse action=recap status=DONE Summary of the lecture."
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "transcript_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:slide_area"
+    },
+    {
+      "source": "transcript_L1",
+      "relation": "HAS_ACTION",
+      "target": "act:define"
+    },
+    {
+      "source": "transcript_L1",
+      "relation": "HAS_STATUS",
+      "target": "stat:INTRO"
+    },
+    {
+      "source": "transcript_L1",
+      "relation": "MENTIONS",
+      "target": "ent:slide_transition"
+    },
+    {
+      "source": "transcript_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:slide_area"
+    },
+    {
+      "source": "transcript_L2",
+      "relation": "HAS_ACTION",
+      "target": "act:explain"
+    },
+    {
+      "source": "transcript_L2",
+      "relation": "HAS_STATUS",
+      "target": "stat:ACTIVE"
+    },
+    {
+      "source": "transcript_L2",
+      "relation": "MENTIONS",
+      "target": "ent:gradient"
+    },
+    {
+      "source": "transcript_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:slide_area"
+    },
+    {
+      "source": "transcript_L3",
+      "relation": "HAS_ACTION",
+      "target": "act:compare"
+    },
+    {
+      "source": "transcript_L3",
+      "relation": "HAS_STATUS",
+      "target": "stat:ACTIVE"
+    },
+    {
+      "source": "transcript_L3",
+      "relation": "MENTIONS",
+      "target": "ent:optical_flow"
+    },
+    {
+      "source": "transcript_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:slide_area"
+    },
+    {
+      "source": "transcript_L4",
+      "relation": "HAS_ACTION",
+      "target": "act:summarize"
+    },
+    {
+      "source": "transcript_L4",
+      "relation": "HAS_STATUS",
+      "target": "stat:DONE"
+    },
+    {
+      "source": "transcript_L4",
+      "relation": "MENTIONS",
+      "target": "ent:keyframe"
+    },
+    {
+      "source": "transcript_L5",
+      "relation": "AT_ZONE",
+      "target": "zone:slide_area"
+    },
+    {
+      "source": "transcript_L5",
+      "relation": "HAS_ACTION",
+      "target": "act:recap"
+    },
+    {
+      "source": "transcript_L5",
+      "relation": "HAS_STATUS",
+      "target": "stat:DONE"
+    },
+    {
+      "source": "transcript_L5",
+      "relation": "MENTIONS",
+      "target": "ent:visual_pulse"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "transcript_L1",
+      "claim": "[slide_area] term=slide_transition action=define status=INTRO We define a slide transition.",
+      "expected_timestamp_sec": 1.0,
+      "zone": "slide_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "text_region"
+      ]
+    },
+    {
+      "event_id": "transcript_L2",
+      "claim": "[slide_area] step=1 term=gradient action=explain status=ACTIVE Step one, identify the key term gradient.",
+      "expected_timestamp_sec": 3.0,
+      "zone": "slide_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "text_region"
+      ]
+    },
+    {
+      "event_id": "transcript_L3",
+      "claim": "optical flow measures apparent motion",
+      "expected_timestamp_sec": 5.0,
+      "zone": "slide_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "text_region"
+      ]
+    },
+    {
+      "event_id": "transcript_L4",
+      "claim": "[slide_area] step=3 term=keyframe action=summarize status=DONE Keyframes mark high change frames.",
+      "expected_timestamp_sec": 7.0,
+      "zone": "slide_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "text_region"
+      ]
+    },
+    {
+      "event_id": "transcript_L5",
+      "claim": "[slide_area] term=visual_pulse action=recap status=DONE Summary of the lecture.",
+      "expected_timestamp_sec": 9.0,
+      "zone": "slide_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "text_region"
+      ]
+    }
+  ],
+  "retrieval_results": [
+    {
+      "start_sec": 1,
+      "end_sec": 3,
+      "source": "transcript",
+      "text": "[slide_area] term=slide_transition action=define status=INTRO We define a slide transition.",
+      "bm25_score": 0.6459,
+      "tfidf_score": 0.2035,
+      "score": 0.9162
+    },
+    {
+      "start_sec": 0.0,
+      "end_sec": 12.0,
+      "source": "visual_tags",
+      "text": "motion keyframe anomaly size_outlier layout_shift text region ACTIVE BURST STATIC book object slide lecture definition key term diagram step transcript lecture notes",
+      "bm25_score": 0.6771,
+      "tfidf_score": 0.2317,
+      "score": 0.9
+    },
+    {
+      "start_sec": 3,
+      "end_sec": 5,
+      "source": "transcript",
+      "text": "[slide_area] step=1 term=gradient action=explain status=ACTIVE Step one, identify the key term gradient.",
+      "bm25_score": 0.3237,
+      "tfidf_score": 0.1943,
+      "score": 0.6584
+    },
+    {
+      "start_sec": 7,
+      "end_sec": 9,
+      "source": "transcript",
+      "text": "[slide_area] step=3 term=keyframe action=summarize status=DONE Keyframes mark high change frames.",
+      "bm25_score": 0.2386,
+      "tfidf_score": 0.1118,
+      "score": 0.4174
+    },
+    {
+      "start_sec": 5,
+      "end_sec": 7,
+      "source": "transcript",
+      "text": "[slide_area] step=2 term=optical_flow action=compare status=ACTIVE Definition: optical flow measures apparent motion.",
+      "bm25_score": 0.2315,
+      "tfidf_score": 0.1091,
+      "score": 0.4063
+    }
+  ],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 23,
+    "zones": [],
+    "frames_analyzed": 24,
+    "latency_ms": 941.966
+  },
+  "telemetry": {
+    "total_ms": 7336.918,
+    "probe_ms": 83.567,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 5.15,
+      "roi_zone_tracking": 0.0,
+      "visual_anomaly_scoring": 186.683,
+      "on_screen_text_detection": 103.316,
+      "action_state_indexing": 4.558,
+      "transcript_log_alignment": 0.236,
+      "multimodal_bm25_tfidf_retrieval": 3.122,
+      "rule_schema_event_parsing": 0.399,
+      "entity_graph_linking": 0.495,
+      "grounding_consistency_check": 0.209
+    },
+    "frames_skipped_ratio": 0.875,
+    "grounding_match_rate": 1.0,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 941.966,
+    "object_detections": 23,
+    "active_feature_count": 9,
+    "skipped_feature_count": 1
+  },
+  "retrieval_stats": {
+    "documents_indexed": 6,
+    "query": "defect alert slide step",
+    "scorer": "BM25+TFIDF",
+    "results": 5
+  },
+  "grounding_stats": {
+    "checks": 5,
+    "grounded": 5,
+    "partial": 0,
+    "ungrounded": 0,
+    "grounding_match_rate": 1.0,
+    "window_sec": 2.5
+  }
+}

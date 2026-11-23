@@ -125,6 +125,11 @@ def _visual_tag_terms(cv_results: dict[str, list[dict[str, Any]]]) -> list[str]:
         _ = region
     for state in cv_results.get("action_states", []):
         terms.append(str(state.get("state", "")))
+    # Phase 2: real detector labels are searchable, with confidence gating.
+    for detection in cv_results.get("object_detections", []):
+        if float(detection.get("confidence", 0.0)) >= 0.35:
+            terms.append(str(detection.get("label", "")).lower())
+            terms.append("object")
     return list(dict.fromkeys(t for t in terms if t))
 
 
@@ -278,8 +283,9 @@ def entity_graph_linking(
     context: MediaContext,
     aligned: list[dict[str, Any]],
     events: list[dict[str, Any]],
+    object_detections: list[dict[str, Any]] | None = None,
 ) -> FeatureOutput:
-    """Connect events, zones, entities and matching visual tags in a graph."""
+    """Connect events, zones, entities and detected objects in a graph."""
     graph = nx.DiGraph()
     for roi in context.rois:
         graph.add_node(_node_id("zone", str(roi.get("zone_id", "zone"))), node_type="zone")
@@ -300,6 +306,22 @@ def entity_graph_linking(
             target = _node_id(prefix, value)
             graph.add_node(target, node_type=prefix)
             graph.add_edge(event["event_id"], target, relation=relation)
+
+    # Phase 2: link confident detector labels to zones and to claims that
+    # mention them, so graph traversal reflects what was actually seen.
+    for detection in object_detections or []:
+        label = str(detection.get("label", "")).strip()
+        if not label or float(detection.get("confidence", 0.0)) < 0.35:
+            continue
+        object_node = _node_id("object", label)
+        graph.add_node(object_node, node_type="object", confidence=detection.get("confidence"))
+        zone_id = str(detection.get("zone_id", "")).strip()
+        zone_node = _node_id("zone", zone_id)
+        if zone_id and graph.has_node(zone_node):
+            graph.add_edge(object_node, zone_node, relation="DETECTED_IN")
+        for event in events:
+            if label.lower() in str(event.get("raw_text", "")).lower():
+                graph.add_edge(event["event_id"], object_node, relation="SUPPORTED_BY_OBJECT")
 
     corpus = " ".join(segment["text"].lower() for segment in aligned)
     for tag in context.visual_tags:
@@ -350,6 +372,16 @@ def _visual_evidence(cv_results: dict[str, list[dict[str, Any]]]) -> list[tuple[
         if str(state.get("state", "")).upper() in _ACTIVE_STATES:
             midpoint = (float(state["start_sec"]) + float(state["end_sec"])) / 2.0
             evidence.append((midpoint, "action_state", ""))
+    # Phase 2: detector output provides timestamped, zone-aware evidence.
+    for detection in cv_results.get("object_detections", []):
+        if float(detection.get("confidence", 0.0)) >= 0.35:
+            evidence.append(
+                (
+                    float(detection.get("timestamp_sec", 0.0)),
+                    "object_detection",
+                    str(detection.get("zone_id", "")),
+                )
+            )
     return evidence
 
 
@@ -373,6 +405,20 @@ def grounding_consistency_check(
             if evidence_zone and claim_zone and evidence_zone != claim_zone:
                 continue
             matched.add(evidence_type)
+        # A claimed object is only credited when a confident detection of that
+        # exact label exists near the claim (and in the same zone, if stated).
+        claim_lower = str(event.get("claim", "")).lower()
+        for detection in cv_results.get("object_detections", []):
+            label = str(detection.get("label", "")).strip().lower()
+            if not label or float(detection.get("confidence", 0.0)) < 0.35:
+                continue
+            if abs(float(detection.get("timestamp_sec", 0.0)) - timestamp) > window_sec:
+                continue
+            detected_zone = str(detection.get("zone_id", ""))
+            if detected_zone and claim_zone and detected_zone != claim_zone:
+                continue
+            if label in claim_lower:
+                matched.add(f"object:{label}")
         if len(matched) >= 2:
             status = "GROUNDED"
         elif len(matched) == 1:
@@ -408,7 +454,7 @@ DISPATCH: dict[str, Callable[..., FeatureOutput]] = {
     "transcript_log_alignment": lambda context, aligned, events, cv_results, query: align_transcript_log(context),
     "multimodal_bm25_tfidf_retrieval": lambda context, aligned, events, cv_results, query: multimodal_bm25_tfidf_retrieval(context, aligned, cv_results, query),
     "rule_schema_event_parsing": lambda context, aligned, events, cv_results, query: rule_schema_event_parsing(context, aligned),
-    "entity_graph_linking": lambda context, aligned, events, cv_results, query: entity_graph_linking(context, aligned, events),
+    "entity_graph_linking": lambda context, aligned, events, cv_results, query: entity_graph_linking(context, aligned, events, cv_results.get("object_detections", [])),
     "grounding_consistency_check": lambda context, aligned, events, cv_results, query: grounding_consistency_check(context, events, cv_results),
 }
 

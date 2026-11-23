@@ -15,6 +15,7 @@ from typing import Any
 import cv2
 import numpy as np
 
+from core.real_media_ingest import ingest_real
 from core.synthetic_media import render_frame
 
 SAMPLE_FRAMES = 24
@@ -55,6 +56,14 @@ class MediaContext:
     rois: list[dict[str, Any]] = field(default_factory=list)
     sampled_frames: list[np.ndarray] = field(default_factory=list)
     timestamps: list[float] = field(default_factory=list)
+    # Phase 2: real-ingestion and detector-derived context.
+    use_real: bool = False
+    ingest_status: str = "not_requested"
+    sidecar_sources: list[str] = field(default_factory=list)
+    sidecar_records: list[dict[str, Any]] = field(default_factory=list)
+    has_audio_stream: bool | None = None
+    auto_zones: bool = False
+    detected_zone_ids: list[str] = field(default_factory=list)
 
     @property
     def scene(self) -> str:
@@ -87,6 +96,10 @@ class MediaContext:
             "log_available": self.log_available,
             "transcript_source": self.transcript_source,
             "log_source": self.log_source,
+            "use_real": self.use_real,
+            "ingest_status": self.ingest_status,
+            "sidecar_sources": list(self.sidecar_sources),
+            "has_audio_stream": self.has_audio_stream,
         }
 
 
@@ -110,12 +123,14 @@ def probe_media(
     videos_dir: Path,
     logs_dir: Path,
     sample_count: int = SAMPLE_FRAMES,
+    real_dir: Path | None = None,
 ) -> MediaContext:
     """Probe one manifest entry and return a content-aware context.
 
-    Missing or unreadable media is reported, never fatal. Synthetic frames
-    are rendered with the same signal profile as the real clip so the whole
-    pipeline stays runnable before assets are generated.
+    With ``real_dir`` set, a real video and its side-cars are preferred. Any
+    ingestion problem becomes an explicit status code and the Phase 1 sample
+    / synthetic path takes over, so missing media is never fatal. Real videos
+    never inherit the manifest's sample transcript text.
     """
     defaults = {"fps": 12, "duration_sec": 12.0, "width": 320, "height": 240}
     video_id = str(entry["video_id"])
@@ -126,12 +141,28 @@ def probe_media(
     duration = float(entry.get("duration_sec", defaults["duration_sec"]))
     media_path = Path(videos_dir) / str(entry.get("file", f"{video_id}.mp4"))
 
-    transcript_path, transcript_text, transcript_source = _resolve_text(
-        entry, "transcript_file", "sample_transcript", logs_dir
-    )
-    log_path, log_text, log_source = _resolve_text(
-        entry, "log_file", "sample_log", logs_dir
-    )
+    real_ingest = None
+    if real_dir is not None:
+        real_ingest = ingest_real(
+            entry, Path(real_dir), Path(logs_dir), sample_count, target_size=(width, height)
+        )
+    real_ok = real_ingest is not None and real_ingest.status == "ok"
+
+    if real_ok:
+        sidecars = real_ingest.sidecars  # type: ignore[union-attr]
+        transcript_text = sidecars.transcript_text
+        log_text = sidecars.log_text
+        transcript_path = sidecars.transcript_path
+        log_path = sidecars.log_path
+        transcript_source = sidecars.transcript_source
+        log_source = sidecars.log_source
+    else:
+        transcript_path, transcript_text, transcript_source = _resolve_text(
+            entry, "transcript_file", "sample_transcript", logs_dir
+        )
+        log_path, log_text, log_source = _resolve_text(
+            entry, "log_file", "sample_log", logs_dir
+        )
 
     context = MediaContext(
         video_id=video_id,
@@ -154,19 +185,50 @@ def probe_media(
         log_path=log_path,
         transcript_text=transcript_text,
         log_text=log_text,
+        use_real=real_ok,
+        ingest_status=(
+            "ok"
+            if real_ok
+            else (real_ingest.status if real_ingest else "REAL_VIDEO_NOT_FOUND")
+        ),
+        sidecar_sources=[
+            source
+            for source in (
+                transcript_source if real_ok else "none",
+                log_source if real_ok else "none",
+            )
+            if source != "none"
+        ],
+        sidecar_records=list(real_ingest.sidecars.records) if real_ok else [],
+        has_audio_stream=real_ingest.stream.has_audio_stream if real_ok else None,
+        auto_zones=bool(profile.get("auto_zones", False)),
     )
 
-    observed = _observe_video(media_path, context, sample_count)
-    if observed is None:
-        frames, timestamps, measured_frame_count = _synthetic_observations(context, sample_count)
-        context.media_available = False
-        context.source = "synthetic_fallback"
-        if not media_path.exists():
-            context.probe_error = f"media file not found: {media_path}"
-    else:
-        frames, timestamps, measured_frame_count = observed
+    if real_ok:
+        frames = list(real_ingest.frames)  # type: ignore[union-attr]
+        timestamps = list(real_ingest.timestamps)  # type: ignore[union-attr]
+        measured_frame_count = real_ingest.stream.frame_count  # type: ignore[union-attr]
         context.media_available = True
-        context.source = "file"
+        context.source = "real_file"
+        context.media_path = real_ingest.paths.video_path  # type: ignore[union-attr]
+        context.fps = real_ingest.stream.fps or fps  # type: ignore[union-attr]
+        context.width = real_ingest.stream.width or width  # type: ignore[union-attr]
+        context.height = real_ingest.stream.height or height  # type: ignore[union-attr]
+        context.probe_error = real_ingest.sidecars.reason  # type: ignore[union-attr]
+    else:
+        observed = _observe_video(media_path, context, sample_count)
+        if real_ingest is not None:
+            context.probe_error = real_ingest.reason
+        if observed is None:
+            frames, timestamps, measured_frame_count = _synthetic_observations(context, sample_count)
+            context.media_available = False
+            context.source = "synthetic_fallback"
+            if not media_path.exists() and not context.probe_error:
+                context.probe_error = f"media file not found: {media_path}"
+        else:
+            frames, timestamps, measured_frame_count = observed
+            context.media_available = True
+            context.source = "file"
     context.sampled_frames = frames
     context.timestamps = timestamps
     context.frame_count = measured_frame_count or max(int(fps * duration), 1)

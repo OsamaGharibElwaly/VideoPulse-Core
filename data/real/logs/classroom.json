@@ -1,0 +1,866 @@
+{
+  "video_id": "real_edu_classroom",
+  "generated_by": "tools/prepare_real_data.py",
+  "source_dataset": "Intel OpenVINO sample-videos (classroom.mp4)",
+  "detector_mode": "yolo",
+  "model": "yolo26n.pt",
+  "sampled_frames": 24,
+  "events": [
+    {
+      "timestamp_sec": 0.0,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.5151,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 0.0,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7748,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 0.0,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.5412,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 0.0,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8508,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 1.367,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.5344,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 1.367,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7826,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 1.367,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.6476,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 1.367,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8391,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 2.733,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.5616,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 2.733,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7852,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 2.733,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.6666,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 2.733,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.2842,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 2.733,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8683,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 4.1,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.481,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 4.1,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7491,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 4.1,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4818,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 4.1,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.4468,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 4.1,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8402,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 5.467,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.5223,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 5.467,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.6263,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 5.467,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.683,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 5.467,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.332,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 5.467,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8802,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 6.833,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.5286,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 6.833,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.6905,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 6.833,
+      "label": "chair",
+      "count": 6,
+      "confidence": 0.6835,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 6.833,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.326,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 6.833,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8915,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 8.2,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.5289,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 8.2,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.4853,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 8.2,
+      "label": "chair",
+      "count": 6,
+      "confidence": 0.6718,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 8.2,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.2741,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 8.2,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8591,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 9.567,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.523,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 9.567,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.3065,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 9.567,
+      "label": "chair",
+      "count": 6,
+      "confidence": 0.6829,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 9.567,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.3019,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 9.567,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8855,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 10.933,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.5126,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 10.933,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8234,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 10.933,
+      "label": "chair",
+      "count": 6,
+      "confidence": 0.6966,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 10.933,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.2833,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 10.933,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8875,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 12.3,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.5186,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 12.3,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.2535,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 12.3,
+      "label": "chair",
+      "count": 6,
+      "confidence": 0.7224,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 12.3,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.2735,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 12.3,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.9031,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 13.667,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.4742,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 13.667,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.5506,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 13.667,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.7157,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 13.667,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.3111,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 13.667,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8899,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 15.033,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.5025,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 15.033,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7005,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 15.033,
+      "label": "chair",
+      "count": 6,
+      "confidence": 0.6453,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 15.033,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.2604,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 15.033,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8996,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 16.4,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.4981,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 16.4,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8034,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 16.4,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.6755,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 16.4,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8844,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 17.767,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.5038,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 17.767,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.5849,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 17.767,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.6592,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 17.767,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8477,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 19.133,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4817,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 19.133,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.6022,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 19.133,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.6436,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 19.133,
+      "label": "dining table",
+      "count": 1,
+      "confidence": 0.2574,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 19.133,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8532,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 20.5,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4658,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 20.5,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.2687,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 20.5,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.634,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 20.5,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8638,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 21.867,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4569,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 21.867,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.8178,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 21.867,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.6266,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 21.867,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8508,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 23.233,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4548,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 23.233,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8449,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 23.233,
+      "label": "chair",
+      "count": 5,
+      "confidence": 0.6372,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 23.233,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8442,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 24.6,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4402,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 24.6,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8437,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 24.6,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.6055,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 24.6,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8499,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 25.967,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4307,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 25.967,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8535,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 25.967,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.6043,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 25.967,
+      "label": "person",
+      "count": 2,
+      "confidence": 0.8421,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 27.333,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4578,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 27.333,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7314,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 27.333,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.5847,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 27.333,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.837,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 28.7,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4469,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 28.7,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 28.7,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.6413,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 28.7,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8578,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 30.067,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4729,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 30.067,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.6957,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 30.067,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.6079,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 30.067,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8362,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 31.433,
+      "label": "chair",
+      "count": 3,
+      "confidence": 0.4851,
+      "zone": "",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 31.433,
+      "label": "person",
+      "count": 1,
+      "confidence": 0.7102,
+      "zone": "front_board",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 31.433,
+      "label": "chair",
+      "count": 4,
+      "confidence": 0.6588,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    },
+    {
+      "timestamp_sec": 31.433,
+      "label": "person",
+      "count": 3,
+      "confidence": 0.8304,
+      "zone": "student_area",
+      "source": "yolo26n.pt:real_frames"
+    }
+  ]
+}

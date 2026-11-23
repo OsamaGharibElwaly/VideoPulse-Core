@@ -27,6 +27,11 @@ env/
 data/videos/
 outputs/
 
+# Processed analysis reels are deliberately tracked; raw source media is not.
+!docs/videos/
+!docs/videos/**/
+!docs/videos/**/*.mp4
+
 # Local editor / OS noise
 .DS_Store
 Thumbs.db

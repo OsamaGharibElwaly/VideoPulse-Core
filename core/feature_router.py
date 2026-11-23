@@ -66,7 +66,9 @@ def can_run_motion_keyframe_extraction(context: MediaContext) -> tuple[bool, str
 
 
 def can_run_roi_zone_tracking(context: MediaContext) -> tuple[bool, str]:
-    """Need at least one authored ROI/zone definition."""
+    """Need an authored ROI or a zone derived from real detections."""
+    if context.detected_zone_ids:
+        return True, "ZONES_DETECTED"
     if not context.roi_presence or not context.rois:
         return False, "NO_SPATIAL_ZONES"
     return True, "ZONES_DEFINED"
@@ -139,8 +141,8 @@ def can_run_rule_schema_event_parsing(context: MediaContext) -> tuple[bool, str]
 
 
 def can_run_entity_graph_linking(context: MediaContext) -> tuple[bool, str]:
-    """Need entities from text or zones to connect."""
-    if not context.text_source_available and not context.rois:
+    """Need entities from text, authored zones or detector-derived zones."""
+    if not context.text_source_available and not context.rois and not context.detected_zone_ids:
         return False, "NO_LINKABLE_ENTITIES"
     return True, "ENTITIES_AVAILABLE"
 

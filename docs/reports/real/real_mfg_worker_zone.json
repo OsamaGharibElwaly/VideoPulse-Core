@@ -1,0 +1,1385 @@
+{
+  "video_id": "real_mfg_worker_zone",
+  "industry": "Manufacturing & Industrial Operations",
+  "description": "Real factory-floor footage of workers moving through marked operational zones.",
+  "duration_sec": 75.927,
+  "processed_fps": 59.94,
+  "media": {
+    "video_id": "real_mfg_worker_zone",
+    "industry": "Manufacturing & Industrial Operations",
+    "media_available": true,
+    "source": "real_file",
+    "probe_error": "",
+    "fps": 59.94,
+    "width": 1920,
+    "height": 1080,
+    "frame_count": 4548,
+    "duration_sec": 75.927,
+    "motion_energy": 8.7205,
+    "edge_density": 0.0175,
+    "text_region_density": 0.2971,
+    "roi_presence": true,
+    "transcript_available": false,
+    "log_available": true,
+    "transcript_source": "none",
+    "log_source": "file:worker-zone-detection.json",
+    "use_real": true,
+    "ingest_status": "ok",
+    "sidecar_sources": [
+      "file:worker-zone-detection.json"
+    ],
+    "has_audio_stream": false
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "visual_anomaly_scoring",
+      "status": "SKIPPED",
+      "reason": "HIGH_MOTION_VARIANCE"
+    },
+    {
+      "feature": "on_screen_text_detection",
+      "status": "SKIPPED",
+      "reason": "NO_TEXT_REGION"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 2,
+      "timestamp_sec": 6.306,
+      "motion_score": 13.7294,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.8694
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 15.766,
+      "motion_score": 13.4017,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.8711
+    },
+    {
+      "frame_index": 6,
+      "timestamp_sec": 18.919,
+      "motion_score": 5.9098,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.9137
+    },
+    {
+      "frame_index": 7,
+      "timestamp_sec": 22.072,
+      "motion_score": 3.9244,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.9157
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 34.685,
+      "motion_score": 11.3569,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 3,
+      "max_confidence": 0.8323
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 37.838,
+      "motion_score": 15.2705,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 3,
+      "max_confidence": 0.8918
+    },
+    {
+      "frame_index": 19,
+      "timestamp_sec": 59.91,
+      "motion_score": 11.7334,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 2,
+      "max_confidence": 0.889
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 63.063,
+      "motion_score": 13.1119,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 2,
+      "max_confidence": 0.8566
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "work_zone",
+      "kind": "box",
+      "bounds_px": [
+        192,
+        270,
+        1152,
+        972
+      ],
+      "mean_energy": 10.0906,
+      "peak_energy": 21.2755,
+      "peak_timestamp_sec": 37.838,
+      "active_timestamps": [
+        6.306,
+        15.766,
+        28.378,
+        37.838,
+        40.991,
+        59.91,
+        63.063
+      ],
+      "active_frames": 7,
+      "object_count": 15,
+      "object_labels": [
+        "person"
+      ],
+      "object_timestamps": [
+        3.153,
+        6.306,
+        15.766,
+        18.919,
+        22.072,
+        25.225,
+        34.685,
+        37.838,
+        40.991,
+        50.45,
+        59.91,
+        63.063,
+        66.216,
+        69.369
+      ],
+      "max_confidence": 0.9157
+    },
+    {
+      "zone_id": "restricted_zone",
+      "kind": "box",
+      "bounds_px": [
+        1152,
+        216,
+        1824,
+        918
+      ],
+      "mean_energy": 7.2445,
+      "peak_energy": 12.305,
+      "peak_timestamp_sec": 37.838,
+      "active_timestamps": [
+        12.613,
+        15.766,
+        31.532,
+        34.685,
+        37.838,
+        40.991,
+        44.144,
+        59.91,
+        63.063,
+        72.522,
+        75.676
+      ],
+      "active_frames": 11,
+      "object_count": 6,
+      "object_labels": [
+        "person"
+      ],
+      "object_timestamps": [
+        12.613,
+        28.378,
+        34.685,
+        40.991,
+        53.604,
+        72.522
+      ],
+      "max_confidence": 0.9041
+    }
+  ],
+  "anomalies": [],
+  "text_regions": [],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 12.655,
+      "state": "MOVING",
+      "motion_mean": 8.2871,
+      "object_count": 4,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 12.655,
+      "end_sec": 25.309,
+      "state": "MOVING",
+      "motion_mean": 6.9274,
+      "object_count": 4,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 25.309,
+      "end_sec": 37.964,
+      "state": "MOVING",
+      "motion_mean": 11.1773,
+      "object_count": 8,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 37.964,
+      "end_sec": 50.618,
+      "state": "MOVING",
+      "motion_mean": 7.2359,
+      "object_count": 7,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 50.618,
+      "end_sec": 63.273,
+      "state": "MOVING",
+      "motion_mean": 9.3556,
+      "object_count": 7,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 63.273,
+      "end_sec": 75.927,
+      "state": "MOVING",
+      "motion_mean": 7.2679,
+      "object_count": 5,
+      "top_labels": [
+        "person"
+      ]
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "log",
+      "start_sec": 3.0,
+      "end_sec": 5.0,
+      "text": "00:00:03,153 label=person count=1 confidence=0.9081 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 1
+    },
+    {
+      "source": "log",
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "text": "00:00:06,306 label=person count=1 confidence=0.8159 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 2
+    },
+    {
+      "source": "log",
+      "start_sec": 12.0,
+      "end_sec": 14.0,
+      "text": "00:00:12,613 label=person count=1 confidence=0.724 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "line_no": 3
+    },
+    {
+      "source": "log",
+      "start_sec": 15.0,
+      "end_sec": 17.0,
+      "text": "00:00:15,766 label=person count=1 confidence=0.9024 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 4
+    },
+    {
+      "source": "log",
+      "start_sec": 18.0,
+      "end_sec": 20.0,
+      "text": "00:00:18,919 label=person count=1 confidence=0.9109 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 5
+    },
+    {
+      "source": "log",
+      "start_sec": 22.0,
+      "end_sec": 24.0,
+      "text": "00:00:22,072 label=person count=1 confidence=0.9182 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 6
+    },
+    {
+      "source": "log",
+      "start_sec": 25.0,
+      "end_sec": 27.0,
+      "text": "00:00:25,225 label=person count=1 confidence=0.9085 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 7
+    },
+    {
+      "source": "log",
+      "start_sec": 28.0,
+      "end_sec": 30.0,
+      "text": "00:00:28,378 label=person count=1 confidence=0.8879 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "line_no": 8
+    },
+    {
+      "source": "log",
+      "start_sec": 34.0,
+      "end_sec": 36.0,
+      "text": "00:00:34,685 label=person count=2 confidence=0.2852 source=yolo26n.pt:real_frames",
+      "line_no": 9
+    },
+    {
+      "source": "log",
+      "start_sec": 34.0,
+      "end_sec": 36.0,
+      "text": "00:00:34,685 label=person count=1 confidence=0.6544 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "line_no": 10
+    },
+    {
+      "source": "log",
+      "start_sec": 34.0,
+      "end_sec": 36.0,
+      "text": "00:00:34,685 label=person count=1 confidence=0.3166 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 11
+    },
+    {
+      "source": "log",
+      "start_sec": 37.0,
+      "end_sec": 39.0,
+      "text": "00:00:37,838 label=person count=2 confidence=0.8766 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 12
+    },
+    {
+      "source": "log",
+      "start_sec": 40.0,
+      "end_sec": 42.0,
+      "text": "00:00:40,991 label=person count=1 confidence=0.8376 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "line_no": 13
+    },
+    {
+      "source": "log",
+      "start_sec": 40.0,
+      "end_sec": 42.0,
+      "text": "00:00:40,991 label=person count=1 confidence=0.885 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 14
+    },
+    {
+      "source": "log",
+      "start_sec": 44.0,
+      "end_sec": 46.0,
+      "text": "00:00:44,144 label=person count=1 confidence=0.3002 source=yolo26n.pt:real_frames",
+      "line_no": 15
+    },
+    {
+      "source": "log",
+      "start_sec": 50.0,
+      "end_sec": 52.0,
+      "text": "00:00:50,450 label=person count=1 confidence=0.2778 source=yolo26n.pt:real_frames",
+      "line_no": 16
+    },
+    {
+      "source": "log",
+      "start_sec": 50.0,
+      "end_sec": 52.0,
+      "text": "00:00:50,450 label=person count=1 confidence=0.8649 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 17
+    },
+    {
+      "source": "log",
+      "start_sec": 59.0,
+      "end_sec": 61.0,
+      "text": "00:00:59,910 label=person count=1 confidence=0.9055 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 18
+    },
+    {
+      "source": "log",
+      "start_sec": 63.0,
+      "end_sec": 65.0,
+      "text": "00:01:03,063 label=person count=1 confidence=0.8508 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 19
+    },
+    {
+      "source": "log",
+      "start_sec": 66.0,
+      "end_sec": 68.0,
+      "text": "00:01:06,216 label=person count=1 confidence=0.8493 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 20
+    },
+    {
+      "source": "log",
+      "start_sec": 69.0,
+      "end_sec": 71.0,
+      "text": "00:01:09,369 label=person count=1 confidence=0.8886 zone=work_zone source=yolo26n.pt:real_frames",
+      "line_no": 21
+    },
+    {
+      "source": "log",
+      "start_sec": 72.0,
+      "end_sec": 74.0,
+      "text": "00:01:12,522 label=person count=1 confidence=0.3414 source=yolo26n.pt:real_frames",
+      "line_no": 22
+    },
+    {
+      "source": "log",
+      "start_sec": 72.0,
+      "end_sec": 74.0,
+      "text": "00:01:12,522 label=person count=1 confidence=0.9043 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "line_no": 23
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "log_L1",
+      "timestamp_sec": 3.0,
+      "end_sec": 5.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:03,153 label=person count=1 confidence=0.9081 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9081",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:03,153 label=person count=1 confidence=0.9081 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L2",
+      "timestamp_sec": 6.0,
+      "end_sec": 8.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:06,306 label=person count=1 confidence=0.8159 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8159",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:06,306 label=person count=1 confidence=0.8159 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L3",
+      "timestamp_sec": 12.0,
+      "end_sec": 14.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "restricted_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:12,613 label=person count=1 confidence=0.724 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.724",
+        "zone": "restricted_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:12,613 label=person count=1 confidence=0.724 zone=restricted_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L4",
+      "timestamp_sec": 15.0,
+      "end_sec": 17.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:15,766 label=person count=1 confidence=0.9024 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9024",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:15,766 label=person count=1 confidence=0.9024 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L5",
+      "timestamp_sec": 18.0,
+      "end_sec": 20.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:18,919 label=person count=1 confidence=0.9109 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9109",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:18,919 label=person count=1 confidence=0.9109 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L6",
+      "timestamp_sec": 22.0,
+      "end_sec": 24.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:22,072 label=person count=1 confidence=0.9182 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9182",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:22,072 label=person count=1 confidence=0.9182 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L7",
+      "timestamp_sec": 25.0,
+      "end_sec": 27.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:25,225 label=person count=1 confidence=0.9085 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9085",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:25,225 label=person count=1 confidence=0.9085 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L8",
+      "timestamp_sec": 28.0,
+      "end_sec": 30.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "restricted_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:28,378 label=person count=1 confidence=0.8879 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8879",
+        "zone": "restricted_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:28,378 label=person count=1 confidence=0.8879 zone=restricted_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L10",
+      "timestamp_sec": 34.0,
+      "end_sec": 36.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "restricted_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:34,685 label=person count=1 confidence=0.6544 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.6544",
+        "zone": "restricted_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:34,685 label=person count=1 confidence=0.6544 zone=restricted_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L11",
+      "timestamp_sec": 34.0,
+      "end_sec": 36.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:34,685 label=person count=1 confidence=0.3166 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.3166",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:34,685 label=person count=1 confidence=0.3166 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L12",
+      "timestamp_sec": 37.0,
+      "end_sec": 39.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:37,838 label=person count=2 confidence=0.8766 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8766",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:37,838 label=person count=2 confidence=0.8766 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L13",
+      "timestamp_sec": 40.0,
+      "end_sec": 42.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "restricted_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:40,991 label=person count=1 confidence=0.8376 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8376",
+        "zone": "restricted_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:40,991 label=person count=1 confidence=0.8376 zone=restricted_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L14",
+      "timestamp_sec": 40.0,
+      "end_sec": 42.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:40,991 label=person count=1 confidence=0.885 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.885",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:40,991 label=person count=1 confidence=0.885 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L17",
+      "timestamp_sec": 50.0,
+      "end_sec": 52.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:50,450 label=person count=1 confidence=0.8649 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8649",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:50,450 label=person count=1 confidence=0.8649 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L18",
+      "timestamp_sec": 59.0,
+      "end_sec": 61.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:59,910 label=person count=1 confidence=0.9055 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9055",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:59,910 label=person count=1 confidence=0.9055 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L19",
+      "timestamp_sec": 63.0,
+      "end_sec": 65.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:01:03,063 label=person count=1 confidence=0.8508 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8508",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:01:03,063 label=person count=1 confidence=0.8508 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L20",
+      "timestamp_sec": 66.0,
+      "end_sec": 68.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:01:06,216 label=person count=1 confidence=0.8493 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8493",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:01:06,216 label=person count=1 confidence=0.8493 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L21",
+      "timestamp_sec": 69.0,
+      "end_sec": 71.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "work_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:01:09,369 label=person count=1 confidence=0.8886 zone=work_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8886",
+        "zone": "work_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:01:09,369 label=person count=1 confidence=0.8886 zone=work_zone source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L23",
+      "timestamp_sec": 72.0,
+      "end_sec": 74.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "restricted_zone",
+      "defect": "",
+      "step": null,
+      "claim": "00:01:12,522 label=person count=1 confidence=0.9043 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9043",
+        "zone": "restricted_zone",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:01:12,522 label=person count=1 confidence=0.9043 zone=restricted_zone source=yolo26n.pt:real_frames"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "log_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L1",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L10",
+      "relation": "AT_ZONE",
+      "target": "zone:restricted_zone"
+    },
+    {
+      "source": "log_L10",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L11",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L11",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L12",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L12",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L13",
+      "relation": "AT_ZONE",
+      "target": "zone:restricted_zone"
+    },
+    {
+      "source": "log_L13",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L14",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L14",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L17",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L17",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L18",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L18",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L19",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L19",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L2",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L20",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L20",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L21",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L21",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L23",
+      "relation": "AT_ZONE",
+      "target": "zone:restricted_zone"
+    },
+    {
+      "source": "log_L23",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:restricted_zone"
+    },
+    {
+      "source": "log_L3",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L4",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L5",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L5",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L6",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L6",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L7",
+      "relation": "AT_ZONE",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "log_L7",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L8",
+      "relation": "AT_ZONE",
+      "target": "zone:restricted_zone"
+    },
+    {
+      "source": "log_L8",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "object:person",
+      "relation": "DETECTED_IN",
+      "target": "zone:restricted_zone"
+    },
+    {
+      "source": "object:person",
+      "relation": "DETECTED_IN",
+      "target": "zone:work_zone"
+    },
+    {
+      "source": "zone:restricted_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:person"
+    },
+    {
+      "source": "zone:restricted_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:zone"
+    },
+    {
+      "source": "zone:work_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:person"
+    },
+    {
+      "source": "zone:work_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:zone"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "log_L1",
+      "claim": "00:00:03,153 label=person count=1 confidence=0.9081 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 3.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L2",
+      "claim": "00:00:06,306 label=person count=1 confidence=0.8159 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 6.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L3",
+      "claim": "00:00:12,613 label=person count=1 confidence=0.724 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 12.0,
+      "zone": "restricted_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L4",
+      "claim": "00:00:15,766 label=person count=1 confidence=0.9024 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 15.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L5",
+      "claim": "00:00:18,919 label=person count=1 confidence=0.9109 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 18.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L6",
+      "claim": "00:00:22,072 label=person count=1 confidence=0.9182 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 22.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L7",
+      "claim": "00:00:25,225 label=person count=1 confidence=0.9085 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 25.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L8",
+      "claim": "00:00:28,378 label=person count=1 confidence=0.8879 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 28.0,
+      "zone": "restricted_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L10",
+      "claim": "00:00:34,685 label=person count=1 confidence=0.6544 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 34.0,
+      "zone": "restricted_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L11",
+      "claim": "00:00:34,685 label=person count=1 confidence=0.3166 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 34.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L12",
+      "claim": "00:00:37,838 label=person count=2 confidence=0.8766 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 37.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L13",
+      "claim": "00:00:40,991 label=person count=1 confidence=0.8376 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 40.0,
+      "zone": "restricted_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L14",
+      "claim": "00:00:40,991 label=person count=1 confidence=0.885 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 40.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L17",
+      "claim": "00:00:50,450 label=person count=1 confidence=0.8649 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 50.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L18",
+      "claim": "00:00:59,910 label=person count=1 confidence=0.9055 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 59.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L19",
+      "claim": "00:01:03,063 label=person count=1 confidence=0.8508 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 63.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L20",
+      "claim": "00:01:06,216 label=person count=1 confidence=0.8493 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 66.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L21",
+      "claim": "00:01:09,369 label=person count=1 confidence=0.8886 zone=work_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 69.0,
+      "zone": "work_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L23",
+      "claim": "00:01:12,522 label=person count=1 confidence=0.9043 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 72.0,
+      "zone": "restricted_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    }
+  ],
+  "retrieval_results": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 75.927,
+      "source": "visual_tags",
+      "text": "motion keyframe zone work_zone restricted_zone MOVING person object worker factory safety zone person helmet",
+      "bm25_score": 4.2844,
+      "tfidf_score": 0.4143,
+      "score": 0.9
+    },
+    {
+      "start_sec": 34.0,
+      "end_sec": 36.0,
+      "source": "log",
+      "text": "00:00:34,685 label=person count=1 confidence=0.3166 zone=work_zone source=yolo26n.pt:real_frames",
+      "bm25_score": 0.8731,
+      "tfidf_score": 0.09,
+      "score": 0.2105
+    },
+    {
+      "start_sec": 34.0,
+      "end_sec": 36.0,
+      "source": "log",
+      "text": "00:00:34,685 label=person count=1 confidence=0.6544 zone=restricted_zone source=yolo26n.pt:real_frames",
+      "bm25_score": 0.8731,
+      "tfidf_score": 0.0872,
+      "score": 0.2071
+    },
+    {
+      "start_sec": 40.0,
+      "end_sec": 42.0,
+      "source": "log",
+      "text": "00:00:40,991 label=person count=1 confidence=0.885 zone=work_zone source=yolo26n.pt:real_frames",
+      "bm25_score": 0.8731,
+      "tfidf_score": 0.0869,
+      "score": 0.2067
+    },
+    {
+      "start_sec": 50.0,
+      "end_sec": 52.0,
+      "source": "log",
+      "text": "00:00:50,450 label=person count=1 confidence=0.8649 zone=work_zone source=yolo26n.pt:real_frames",
+      "bm25_score": 0.8731,
+      "tfidf_score": 0.0869,
+      "score": 0.2067
+    }
+  ],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 35,
+    "zones": [
+      "work_zone",
+      "restricted_zone"
+    ],
+    "frames_analyzed": 25,
+    "latency_ms": 637.462
+  },
+  "telemetry": {
+    "total_ms": 30326.001,
+    "probe_ms": 29324.993,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 120.754,
+      "roi_zone_tracking": 72.321,
+      "visual_anomaly_scoring": 0.0,
+      "on_screen_text_detection": 0.0,
+      "action_state_indexing": 101.227,
+      "transcript_log_alignment": 0.108,
+      "multimodal_bm25_tfidf_retrieval": 2.321,
+      "rule_schema_event_parsing": 0.244,
+      "entity_graph_linking": 0.818,
+      "grounding_consistency_check": 0.245
+    },
+    "frames_skipped_ratio": 0.68,
+    "grounding_match_rate": 1.0,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 637.462,
+    "object_detections": 35,
+    "active_feature_count": 8,
+    "skipped_feature_count": 2
+  },
+  "retrieval_stats": {
+    "documents_indexed": 24,
+    "query": "person zone worker shopper classroom",
+    "scorer": "BM25+TFIDF",
+    "results": 5
+  },
+  "grounding_stats": {
+    "checks": 19,
+    "grounded": 19,
+    "partial": 0,
+    "ungrounded": 0,
+    "grounding_match_rate": 1.0,
+    "window_sec": 2.5
+  }
+}

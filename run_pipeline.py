@@ -25,6 +25,31 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--video-id", metavar="ID", help="Process one full id or short alias.")
     parser.add_argument("--query", default="", metavar="TEXT", help="Query indexed moments.")
     parser.add_argument("--generate-samples", action="store_true", help="Create local sample assets first.")
+    parser.add_argument(
+        "--real-dir",
+        metavar="DIR",
+        help="Folder containing real videos and optional .srt/.vtt/.json/.csv/.log side-cars.",
+    )
+    parser.add_argument(
+        "--model",
+        metavar="NAME",
+        help="Ultralytics weights name for YOLO26 (default: yolo26n.pt). No implicit downloads.",
+    )
+    parser.add_argument(
+        "--manifest",
+        metavar="PATH",
+        help="Manifest JSON (default: config/videos_manifest.json). Use config/real_videos_manifest.json for real footage.",
+    )
+    parser.add_argument(
+        "--logs-dir",
+        metavar="DIR",
+        help="Directory holding sidecar transcripts/logs (default: data/logs).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        metavar="DIR",
+        help="Report root (default: outputs). Use outputs/real for real footage.",
+    )
     return parser
 
 
@@ -37,8 +62,10 @@ def _print_summary(report: dict[str, Any], query: str) -> None:
         f"skipped={telemetry['skipped_feature_count']} "
         f"grounding={telemetry['grounding_match_rate']:.2f} "
         f"total_ms={telemetry['total_ms']:.1f} "
-        f"frame_skip={telemetry['frames_skipped_ratio']:.2f}"
+        f"frame_skip={telemetry['frames_skipped_ratio']:.2f} "
+        f"detector={telemetry.get('detector_mode', 'unknown')}"
     )
+    print(f"  media={report['media']['source']} detector_reason={telemetry.get('detector_reason', '')}")
     if report["skipped_features"]:
         skipped = ", ".join(
             f"{item['feature']}({item['reason']})" for item in report["skipped_features"]
@@ -52,10 +79,18 @@ def _print_summary(report: dict[str, Any], query: str) -> None:
 def main(argv: Sequence[str] | None = None) -> int:
     """Run the CLI and return a process exit code."""
     args = build_parser().parse_args(argv)
-    config_path = ROOT / "config" / "videos_manifest.json"
+
+    def resolve(path: str | None, default: Path) -> Path:
+        candidate = Path(path) if path else default
+        return candidate if candidate.is_absolute() else ROOT / candidate
+
+    config_path = resolve(args.manifest, ROOT / "config" / "videos_manifest.json")
     videos_dir = ROOT / "data" / "videos"
-    logs_dir = ROOT / "data" / "logs"
-    output_dir = ROOT / "outputs"
+    logs_dir = resolve(args.logs_dir, ROOT / "data" / "logs")
+    output_dir = resolve(args.output_dir, ROOT / "outputs")
+    real_dir = Path(args.real_dir) if args.real_dir else None
+    if real_dir is not None and not real_dir.is_absolute():
+        real_dir = ROOT / real_dir
     try:
         config = load_manifest(config_path)
         if args.generate_samples:
@@ -73,6 +108,8 @@ def main(argv: Sequence[str] | None = None) -> int:
                     logs_dir=logs_dir,
                     output_dir=output_dir,
                     query=args.query,
+                    real_dir=real_dir,
+                    model=args.model,
                 )
             ]
         else:
@@ -82,6 +119,8 @@ def main(argv: Sequence[str] | None = None) -> int:
                 logs_dir=logs_dir,
                 output_dir=output_dir,
                 query=args.query,
+                real_dir=real_dir,
+                model=args.model,
             )
     except (OSError, RuntimeError, KeyError, ValueError) as exc:
         print(f"error: {exc}")

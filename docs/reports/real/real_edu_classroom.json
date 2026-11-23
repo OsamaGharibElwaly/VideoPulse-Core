@@ -1,0 +1,4682 @@
+{
+  "video_id": "real_edu_classroom",
+  "industry": "Media, Education & Video Platforms",
+  "description": "Real classroom footage with a teacher, students and a fixed front-of-room camera.",
+  "duration_sec": 32.8,
+  "processed_fps": 30.0,
+  "media": {
+    "video_id": "real_edu_classroom",
+    "industry": "Media, Education & Video Platforms",
+    "media_available": true,
+    "source": "real_file",
+    "probe_error": "",
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "frame_count": 984,
+    "duration_sec": 32.8,
+    "motion_energy": 3.8168,
+    "edge_density": 0.0227,
+    "text_region_density": 0.1557,
+    "roi_presence": true,
+    "transcript_available": false,
+    "log_available": true,
+    "transcript_source": "none",
+    "log_source": "file:classroom.json",
+    "use_real": true,
+    "ingest_status": "ok",
+    "sidecar_sources": [
+      "file:classroom.json"
+    ],
+    "has_audio_stream": false
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "visual_anomaly_scoring",
+      "status": "SKIPPED",
+      "reason": "NO_STABLE_BASELINE"
+    },
+    {
+      "feature": "on_screen_text_detection",
+      "status": "SKIPPED",
+      "reason": "NO_TEXT_REGION"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 4,
+      "timestamp_sec": 5.467,
+      "motion_score": 8.6174,
+      "object_labels": [
+        "chair",
+        "person"
+      ],
+      "object_count": 7,
+      "max_confidence": 0.8382
+    },
+    {
+      "frame_index": 6,
+      "timestamp_sec": 8.2,
+      "motion_score": 11.0001,
+      "object_labels": [
+        "chair",
+        "dining table",
+        "person"
+      ],
+      "object_count": 12,
+      "max_confidence": 0.8808
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 15.033,
+      "motion_score": 8.4283,
+      "object_labels": [
+        "chair",
+        "person"
+      ],
+      "object_count": 7,
+      "max_confidence": 0.9021
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 16.4,
+      "motion_score": 5.9865,
+      "object_labels": [
+        "chair",
+        "dining table",
+        "person"
+      ],
+      "object_count": 11,
+      "max_confidence": 0.9069
+    },
+    {
+      "frame_index": 21,
+      "timestamp_sec": 28.7,
+      "motion_score": 8.8197,
+      "object_labels": [
+        "chair",
+        "person"
+      ],
+      "object_count": 10,
+      "max_confidence": 0.8456
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "front_board",
+      "kind": "box",
+      "bounds_px": [
+        480,
+        108,
+        1440,
+        594
+      ],
+      "mean_energy": 4.7662,
+      "peak_energy": 12.8748,
+      "peak_timestamp_sec": 8.2,
+      "active_timestamps": [
+        4.1,
+        5.467,
+        8.2,
+        15.033,
+        16.4,
+        28.7
+      ],
+      "active_frames": 6,
+      "object_count": 33,
+      "object_labels": [
+        "person"
+      ],
+      "object_timestamps": [
+        0.0,
+        1.367,
+        2.733,
+        4.1,
+        6.833,
+        8.2,
+        9.567,
+        10.933,
+        12.3,
+        13.667,
+        15.033,
+        16.4,
+        17.767,
+        19.133,
+        20.5,
+        21.867,
+        23.233,
+        24.6,
+        25.967,
+        27.333,
+        28.7,
+        30.067,
+        31.433
+      ],
+      "max_confidence": 0.8224
+    },
+    {
+      "zone_id": "student_area",
+      "kind": "box",
+      "bounds_px": [
+        192,
+        540,
+        1728,
+        1026
+      ],
+      "mean_energy": 5.9484,
+      "peak_energy": 16.584,
+      "peak_timestamp_sec": 5.467,
+      "active_timestamps": [
+        4.1,
+        5.467,
+        8.2,
+        15.033,
+        16.4,
+        28.7
+      ],
+      "active_frames": 6,
+      "object_count": 134,
+      "object_labels": [
+        "chair",
+        "dining table",
+        "person"
+      ],
+      "object_timestamps": [
+        0.0,
+        1.367,
+        2.733,
+        4.1,
+        5.467,
+        6.833,
+        8.2,
+        9.567,
+        10.933,
+        12.3,
+        13.667,
+        15.033,
+        16.4,
+        17.767,
+        19.133,
+        20.5,
+        21.867,
+        23.233,
+        24.6,
+        25.967,
+        27.333,
+        28.7,
+        30.067,
+        31.433
+      ],
+      "max_confidence": 0.9069
+    }
+  ],
+  "anomalies": [],
+  "text_regions": [],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 5.467,
+      "state": "STATIC",
+      "motion_mean": 2.0964,
+      "object_count": 35,
+      "top_labels": [
+        "chair",
+        "person"
+      ]
+    },
+    {
+      "start_sec": 5.467,
+      "end_sec": 10.933,
+      "state": "BURST",
+      "motion_mean": 6.2478,
+      "object_count": 49,
+      "top_labels": [
+        "chair",
+        "person",
+        "dining table"
+      ]
+    },
+    {
+      "start_sec": 10.933,
+      "end_sec": 16.4,
+      "state": "TRANSITION",
+      "motion_mean": 4.1912,
+      "object_count": 28,
+      "top_labels": [
+        "chair",
+        "person"
+      ]
+    },
+    {
+      "start_sec": 16.4,
+      "end_sec": 21.867,
+      "state": "ACTIVE",
+      "motion_mean": 3.8766,
+      "object_count": 31,
+      "top_labels": [
+        "chair",
+        "person",
+        "dining table"
+      ]
+    },
+    {
+      "start_sec": 21.867,
+      "end_sec": 27.333,
+      "state": "STATIC",
+      "motion_mean": 1.8634,
+      "object_count": 52,
+      "top_labels": [
+        "chair",
+        "person"
+      ]
+    },
+    {
+      "start_sec": 27.333,
+      "end_sec": 32.8,
+      "state": "ACTIVE",
+      "motion_mean": 3.6711,
+      "object_count": 28,
+      "top_labels": [
+        "chair",
+        "person"
+      ]
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "log",
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "text": "00:00:00,000 label=chair count=3 confidence=0.5151 source=yolo26n.pt:real_frames",
+      "line_no": 1
+    },
+    {
+      "source": "log",
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "text": "00:00:00,000 label=person count=1 confidence=0.7748 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 2
+    },
+    {
+      "source": "log",
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "text": "00:00:00,000 label=chair count=5 confidence=0.5412 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 3
+    },
+    {
+      "source": "log",
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "text": "00:00:00,000 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 4
+    },
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:00:01,367 label=chair count=4 confidence=0.5344 source=yolo26n.pt:real_frames",
+      "line_no": 5
+    },
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:00:01,367 label=person count=1 confidence=0.7826 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 6
+    },
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:00:01,367 label=chair count=5 confidence=0.6476 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 7
+    },
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:00:01,367 label=person count=3 confidence=0.8391 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 8
+    },
+    {
+      "source": "log",
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "text": "00:00:02,733 label=chair count=4 confidence=0.5616 source=yolo26n.pt:real_frames",
+      "line_no": 9
+    },
+    {
+      "source": "log",
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "text": "00:00:02,733 label=person count=1 confidence=0.7852 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 10
+    },
+    {
+      "source": "log",
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "text": "00:00:02,733 label=chair count=5 confidence=0.6666 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 11
+    },
+    {
+      "source": "log",
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "text": "00:00:02,733 label=dining table count=1 confidence=0.2842 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 12
+    },
+    {
+      "source": "log",
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "text": "00:00:02,733 label=person count=3 confidence=0.8683 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 13
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:00:04,100 label=chair count=3 confidence=0.481 source=yolo26n.pt:real_frames",
+      "line_no": 14
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:00:04,100 label=person count=1 confidence=0.7491 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 15
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:00:04,100 label=chair count=3 confidence=0.4818 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 16
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:00:04,100 label=dining table count=1 confidence=0.4468 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 17
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:00:04,100 label=person count=3 confidence=0.8402 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 18
+    },
+    {
+      "source": "log",
+      "start_sec": 5.0,
+      "end_sec": 7.0,
+      "text": "00:00:05,467 label=chair count=3 confidence=0.5223 source=yolo26n.pt:real_frames",
+      "line_no": 19
+    },
+    {
+      "source": "log",
+      "start_sec": 5.0,
+      "end_sec": 7.0,
+      "text": "00:00:05,467 label=person count=1 confidence=0.6263 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 20
+    },
+    {
+      "source": "log",
+      "start_sec": 5.0,
+      "end_sec": 7.0,
+      "text": "00:00:05,467 label=chair count=5 confidence=0.683 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 21
+    },
+    {
+      "source": "log",
+      "start_sec": 5.0,
+      "end_sec": 7.0,
+      "text": "00:00:05,467 label=dining table count=1 confidence=0.332 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 22
+    },
+    {
+      "source": "log",
+      "start_sec": 5.0,
+      "end_sec": 7.0,
+      "text": "00:00:05,467 label=person count=3 confidence=0.8802 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 23
+    },
+    {
+      "source": "log",
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "text": "00:00:06,833 label=chair count=4 confidence=0.5286 source=yolo26n.pt:real_frames",
+      "line_no": 24
+    },
+    {
+      "source": "log",
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "text": "00:00:06,833 label=person count=1 confidence=0.6905 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 25
+    },
+    {
+      "source": "log",
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "text": "00:00:06,833 label=chair count=6 confidence=0.6835 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 26
+    },
+    {
+      "source": "log",
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "text": "00:00:06,833 label=dining table count=1 confidence=0.326 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 27
+    },
+    {
+      "source": "log",
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "text": "00:00:06,833 label=person count=3 confidence=0.8915 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 28
+    },
+    {
+      "source": "log",
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "text": "00:00:08,200 label=chair count=4 confidence=0.5289 source=yolo26n.pt:real_frames",
+      "line_no": 29
+    },
+    {
+      "source": "log",
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "text": "00:00:08,200 label=person count=1 confidence=0.4853 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 30
+    },
+    {
+      "source": "log",
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "text": "00:00:08,200 label=chair count=6 confidence=0.6718 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 31
+    },
+    {
+      "source": "log",
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "text": "00:00:08,200 label=dining table count=1 confidence=0.2741 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 32
+    },
+    {
+      "source": "log",
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "text": "00:00:08,200 label=person count=3 confidence=0.8591 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 33
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:00:09,567 label=chair count=4 confidence=0.523 source=yolo26n.pt:real_frames",
+      "line_no": 34
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:00:09,567 label=person count=1 confidence=0.3065 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 35
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:00:09,567 label=chair count=6 confidence=0.6829 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 36
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:00:09,567 label=dining table count=1 confidence=0.3019 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 37
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:00:09,567 label=person count=3 confidence=0.8855 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 38
+    },
+    {
+      "source": "log",
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "text": "00:00:10,933 label=chair count=3 confidence=0.5126 source=yolo26n.pt:real_frames",
+      "line_no": 39
+    },
+    {
+      "source": "log",
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "text": "00:00:10,933 label=person count=2 confidence=0.8234 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 40
+    },
+    {
+      "source": "log",
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "text": "00:00:10,933 label=chair count=6 confidence=0.6966 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 41
+    },
+    {
+      "source": "log",
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "text": "00:00:10,933 label=dining table count=1 confidence=0.2833 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 42
+    },
+    {
+      "source": "log",
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "text": "00:00:10,933 label=person count=2 confidence=0.8875 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 43
+    },
+    {
+      "source": "log",
+      "start_sec": 12.0,
+      "end_sec": 14.0,
+      "text": "00:00:12,300 label=chair count=3 confidence=0.5186 source=yolo26n.pt:real_frames",
+      "line_no": 44
+    },
+    {
+      "source": "log",
+      "start_sec": 12.0,
+      "end_sec": 14.0,
+      "text": "00:00:12,300 label=person count=1 confidence=0.2535 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 45
+    },
+    {
+      "source": "log",
+      "start_sec": 12.0,
+      "end_sec": 14.0,
+      "text": "00:00:12,300 label=chair count=6 confidence=0.7224 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 46
+    },
+    {
+      "source": "log",
+      "start_sec": 12.0,
+      "end_sec": 14.0,
+      "text": "00:00:12,300 label=dining table count=1 confidence=0.2735 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 47
+    },
+    {
+      "source": "log",
+      "start_sec": 12.0,
+      "end_sec": 14.0,
+      "text": "00:00:12,300 label=person count=3 confidence=0.9031 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 48
+    },
+    {
+      "source": "log",
+      "start_sec": 13.0,
+      "end_sec": 15.0,
+      "text": "00:00:13,667 label=chair count=4 confidence=0.4742 source=yolo26n.pt:real_frames",
+      "line_no": 49
+    },
+    {
+      "source": "log",
+      "start_sec": 13.0,
+      "end_sec": 15.0,
+      "text": "00:00:13,667 label=person count=1 confidence=0.5506 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 50
+    },
+    {
+      "source": "log",
+      "start_sec": 13.0,
+      "end_sec": 15.0,
+      "text": "00:00:13,667 label=chair count=5 confidence=0.7157 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 51
+    },
+    {
+      "source": "log",
+      "start_sec": 13.0,
+      "end_sec": 15.0,
+      "text": "00:00:13,667 label=dining table count=1 confidence=0.3111 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 52
+    },
+    {
+      "source": "log",
+      "start_sec": 13.0,
+      "end_sec": 15.0,
+      "text": "00:00:13,667 label=person count=3 confidence=0.8899 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 53
+    },
+    {
+      "source": "log",
+      "start_sec": 15.0,
+      "end_sec": 17.0,
+      "text": "00:00:15,033 label=chair count=4 confidence=0.5025 source=yolo26n.pt:real_frames",
+      "line_no": 54
+    },
+    {
+      "source": "log",
+      "start_sec": 15.0,
+      "end_sec": 17.0,
+      "text": "00:00:15,033 label=person count=1 confidence=0.7005 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 55
+    },
+    {
+      "source": "log",
+      "start_sec": 15.0,
+      "end_sec": 17.0,
+      "text": "00:00:15,033 label=chair count=6 confidence=0.6453 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 56
+    },
+    {
+      "source": "log",
+      "start_sec": 15.0,
+      "end_sec": 17.0,
+      "text": "00:00:15,033 label=dining table count=1 confidence=0.2604 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 57
+    },
+    {
+      "source": "log",
+      "start_sec": 15.0,
+      "end_sec": 17.0,
+      "text": "00:00:15,033 label=person count=3 confidence=0.8996 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 58
+    },
+    {
+      "source": "log",
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "text": "00:00:16,400 label=chair count=4 confidence=0.4981 source=yolo26n.pt:real_frames",
+      "line_no": 59
+    },
+    {
+      "source": "log",
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "text": "00:00:16,400 label=person count=2 confidence=0.8034 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 60
+    },
+    {
+      "source": "log",
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "text": "00:00:16,400 label=chair count=5 confidence=0.6755 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 61
+    },
+    {
+      "source": "log",
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "text": "00:00:16,400 label=person count=2 confidence=0.8844 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 62
+    },
+    {
+      "source": "log",
+      "start_sec": 17.0,
+      "end_sec": 19.0,
+      "text": "00:00:17,767 label=chair count=3 confidence=0.5038 source=yolo26n.pt:real_frames",
+      "line_no": 63
+    },
+    {
+      "source": "log",
+      "start_sec": 17.0,
+      "end_sec": 19.0,
+      "text": "00:00:17,767 label=person count=1 confidence=0.5849 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 64
+    },
+    {
+      "source": "log",
+      "start_sec": 17.0,
+      "end_sec": 19.0,
+      "text": "00:00:17,767 label=chair count=5 confidence=0.6592 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 65
+    },
+    {
+      "source": "log",
+      "start_sec": 17.0,
+      "end_sec": 19.0,
+      "text": "00:00:17,767 label=person count=3 confidence=0.8477 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 66
+    },
+    {
+      "source": "log",
+      "start_sec": 19.0,
+      "end_sec": 21.0,
+      "text": "00:00:19,133 label=chair count=3 confidence=0.4817 source=yolo26n.pt:real_frames",
+      "line_no": 67
+    },
+    {
+      "source": "log",
+      "start_sec": 19.0,
+      "end_sec": 21.0,
+      "text": "00:00:19,133 label=person count=1 confidence=0.6022 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 68
+    },
+    {
+      "source": "log",
+      "start_sec": 19.0,
+      "end_sec": 21.0,
+      "text": "00:00:19,133 label=chair count=5 confidence=0.6436 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 69
+    },
+    {
+      "source": "log",
+      "start_sec": 19.0,
+      "end_sec": 21.0,
+      "text": "00:00:19,133 label=dining table count=1 confidence=0.2574 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 70
+    },
+    {
+      "source": "log",
+      "start_sec": 19.0,
+      "end_sec": 21.0,
+      "text": "00:00:19,133 label=person count=3 confidence=0.8532 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 71
+    },
+    {
+      "source": "log",
+      "start_sec": 20.0,
+      "end_sec": 22.0,
+      "text": "00:00:20,500 label=chair count=3 confidence=0.4658 source=yolo26n.pt:real_frames",
+      "line_no": 72
+    },
+    {
+      "source": "log",
+      "start_sec": 20.0,
+      "end_sec": 22.0,
+      "text": "00:00:20,500 label=person count=1 confidence=0.2687 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 73
+    },
+    {
+      "source": "log",
+      "start_sec": 20.0,
+      "end_sec": 22.0,
+      "text": "00:00:20,500 label=chair count=4 confidence=0.634 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 74
+    },
+    {
+      "source": "log",
+      "start_sec": 20.0,
+      "end_sec": 22.0,
+      "text": "00:00:20,500 label=person count=3 confidence=0.8638 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 75
+    },
+    {
+      "source": "log",
+      "start_sec": 21.0,
+      "end_sec": 23.0,
+      "text": "00:00:21,867 label=chair count=3 confidence=0.4569 source=yolo26n.pt:real_frames",
+      "line_no": 76
+    },
+    {
+      "source": "log",
+      "start_sec": 21.0,
+      "end_sec": 23.0,
+      "text": "00:00:21,867 label=person count=1 confidence=0.8178 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 77
+    },
+    {
+      "source": "log",
+      "start_sec": 21.0,
+      "end_sec": 23.0,
+      "text": "00:00:21,867 label=chair count=5 confidence=0.6266 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 78
+    },
+    {
+      "source": "log",
+      "start_sec": 21.0,
+      "end_sec": 23.0,
+      "text": "00:00:21,867 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 79
+    },
+    {
+      "source": "log",
+      "start_sec": 23.0,
+      "end_sec": 25.0,
+      "text": "00:00:23,233 label=chair count=3 confidence=0.4548 source=yolo26n.pt:real_frames",
+      "line_no": 80
+    },
+    {
+      "source": "log",
+      "start_sec": 23.0,
+      "end_sec": 25.0,
+      "text": "00:00:23,233 label=person count=2 confidence=0.8449 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 81
+    },
+    {
+      "source": "log",
+      "start_sec": 23.0,
+      "end_sec": 25.0,
+      "text": "00:00:23,233 label=chair count=5 confidence=0.6372 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 82
+    },
+    {
+      "source": "log",
+      "start_sec": 23.0,
+      "end_sec": 25.0,
+      "text": "00:00:23,233 label=person count=2 confidence=0.8442 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 83
+    },
+    {
+      "source": "log",
+      "start_sec": 24.0,
+      "end_sec": 26.0,
+      "text": "00:00:24,600 label=chair count=3 confidence=0.4402 source=yolo26n.pt:real_frames",
+      "line_no": 84
+    },
+    {
+      "source": "log",
+      "start_sec": 24.0,
+      "end_sec": 26.0,
+      "text": "00:00:24,600 label=person count=2 confidence=0.8437 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 85
+    },
+    {
+      "source": "log",
+      "start_sec": 24.0,
+      "end_sec": 26.0,
+      "text": "00:00:24,600 label=chair count=4 confidence=0.6055 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 86
+    },
+    {
+      "source": "log",
+      "start_sec": 24.0,
+      "end_sec": 26.0,
+      "text": "00:00:24,600 label=person count=2 confidence=0.8499 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 87
+    },
+    {
+      "source": "log",
+      "start_sec": 25.0,
+      "end_sec": 27.0,
+      "text": "00:00:25,967 label=chair count=3 confidence=0.4307 source=yolo26n.pt:real_frames",
+      "line_no": 88
+    },
+    {
+      "source": "log",
+      "start_sec": 25.0,
+      "end_sec": 27.0,
+      "text": "00:00:25,967 label=person count=2 confidence=0.8535 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 89
+    },
+    {
+      "source": "log",
+      "start_sec": 25.0,
+      "end_sec": 27.0,
+      "text": "00:00:25,967 label=chair count=4 confidence=0.6043 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 90
+    },
+    {
+      "source": "log",
+      "start_sec": 25.0,
+      "end_sec": 27.0,
+      "text": "00:00:25,967 label=person count=2 confidence=0.8421 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 91
+    },
+    {
+      "source": "log",
+      "start_sec": 27.0,
+      "end_sec": 29.0,
+      "text": "00:00:27,333 label=chair count=3 confidence=0.4578 source=yolo26n.pt:real_frames",
+      "line_no": 92
+    },
+    {
+      "source": "log",
+      "start_sec": 27.0,
+      "end_sec": 29.0,
+      "text": "00:00:27,333 label=person count=1 confidence=0.7314 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 93
+    },
+    {
+      "source": "log",
+      "start_sec": 27.0,
+      "end_sec": 29.0,
+      "text": "00:00:27,333 label=chair count=4 confidence=0.5847 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 94
+    },
+    {
+      "source": "log",
+      "start_sec": 27.0,
+      "end_sec": 29.0,
+      "text": "00:00:27,333 label=person count=3 confidence=0.837 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 95
+    },
+    {
+      "source": "log",
+      "start_sec": 28.0,
+      "end_sec": 30.0,
+      "text": "00:00:28,700 label=chair count=3 confidence=0.4469 source=yolo26n.pt:real_frames",
+      "line_no": 96
+    },
+    {
+      "source": "log",
+      "start_sec": 28.0,
+      "end_sec": 30.0,
+      "text": "00:00:28,700 label=person count=1 confidence=0.7 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 97
+    },
+    {
+      "source": "log",
+      "start_sec": 28.0,
+      "end_sec": 30.0,
+      "text": "00:00:28,700 label=chair count=4 confidence=0.6413 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 98
+    },
+    {
+      "source": "log",
+      "start_sec": 28.0,
+      "end_sec": 30.0,
+      "text": "00:00:28,700 label=person count=3 confidence=0.8578 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 99
+    },
+    {
+      "source": "log",
+      "start_sec": 30.0,
+      "end_sec": 32.0,
+      "text": "00:00:30,067 label=chair count=3 confidence=0.4729 source=yolo26n.pt:real_frames",
+      "line_no": 100
+    },
+    {
+      "source": "log",
+      "start_sec": 30.0,
+      "end_sec": 32.0,
+      "text": "00:00:30,067 label=person count=1 confidence=0.6957 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 101
+    },
+    {
+      "source": "log",
+      "start_sec": 30.0,
+      "end_sec": 32.0,
+      "text": "00:00:30,067 label=chair count=4 confidence=0.6079 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 102
+    },
+    {
+      "source": "log",
+      "start_sec": 30.0,
+      "end_sec": 32.0,
+      "text": "00:00:30,067 label=person count=3 confidence=0.8362 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 103
+    },
+    {
+      "source": "log",
+      "start_sec": 31.0,
+      "end_sec": 33.0,
+      "text": "00:00:31,433 label=chair count=3 confidence=0.4851 source=yolo26n.pt:real_frames",
+      "line_no": 104
+    },
+    {
+      "source": "log",
+      "start_sec": 31.0,
+      "end_sec": 33.0,
+      "text": "00:00:31,433 label=person count=1 confidence=0.7102 zone=front_board source=yolo26n.pt:real_frames",
+      "line_no": 105
+    },
+    {
+      "source": "log",
+      "start_sec": 31.0,
+      "end_sec": 33.0,
+      "text": "00:00:31,433 label=chair count=4 confidence=0.6588 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 106
+    },
+    {
+      "source": "log",
+      "start_sec": 31.0,
+      "end_sec": 33.0,
+      "text": "00:00:31,433 label=person count=3 confidence=0.8304 zone=student_area source=yolo26n.pt:real_frames",
+      "line_no": 107
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "log_L2",
+      "timestamp_sec": 0.0,
+      "end_sec": 2.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:00,000 label=person count=1 confidence=0.7748 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7748",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:00,000 label=person count=1 confidence=0.7748 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L3",
+      "timestamp_sec": 0.0,
+      "end_sec": 2.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:00,000 label=chair count=5 confidence=0.5412 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.5412",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:00,000 label=chair count=5 confidence=0.5412 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L4",
+      "timestamp_sec": 0.0,
+      "end_sec": 2.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:00,000 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8508",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:00,000 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L6",
+      "timestamp_sec": 1.0,
+      "end_sec": 3.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:01,367 label=person count=1 confidence=0.7826 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7826",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:01,367 label=person count=1 confidence=0.7826 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L7",
+      "timestamp_sec": 1.0,
+      "end_sec": 3.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:01,367 label=chair count=5 confidence=0.6476 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.6476",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:01,367 label=chair count=5 confidence=0.6476 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L8",
+      "timestamp_sec": 1.0,
+      "end_sec": 3.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:01,367 label=person count=3 confidence=0.8391 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8391",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:01,367 label=person count=3 confidence=0.8391 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L10",
+      "timestamp_sec": 2.0,
+      "end_sec": 4.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:02,733 label=person count=1 confidence=0.7852 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7852",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:02,733 label=person count=1 confidence=0.7852 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L11",
+      "timestamp_sec": 2.0,
+      "end_sec": 4.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:02,733 label=chair count=5 confidence=0.6666 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.6666",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:02,733 label=chair count=5 confidence=0.6666 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L12",
+      "timestamp_sec": 2.0,
+      "end_sec": 4.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:02,733 label=dining table count=1 confidence=0.2842 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.2842",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:02,733 label=dining table count=1 confidence=0.2842 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L13",
+      "timestamp_sec": 2.0,
+      "end_sec": 4.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:02,733 label=person count=3 confidence=0.8683 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8683",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:02,733 label=person count=3 confidence=0.8683 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L15",
+      "timestamp_sec": 4.0,
+      "end_sec": 6.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:04,100 label=person count=1 confidence=0.7491 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7491",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:04,100 label=person count=1 confidence=0.7491 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L16",
+      "timestamp_sec": 4.0,
+      "end_sec": 6.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:04,100 label=chair count=3 confidence=0.4818 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "3",
+        "confidence": "0.4818",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:04,100 label=chair count=3 confidence=0.4818 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L17",
+      "timestamp_sec": 4.0,
+      "end_sec": 6.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:04,100 label=dining table count=1 confidence=0.4468 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.4468",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:04,100 label=dining table count=1 confidence=0.4468 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L18",
+      "timestamp_sec": 4.0,
+      "end_sec": 6.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:04,100 label=person count=3 confidence=0.8402 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8402",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:04,100 label=person count=3 confidence=0.8402 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L20",
+      "timestamp_sec": 5.0,
+      "end_sec": 7.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:05,467 label=person count=1 confidence=0.6263 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.6263",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:05,467 label=person count=1 confidence=0.6263 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L21",
+      "timestamp_sec": 5.0,
+      "end_sec": 7.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:05,467 label=chair count=5 confidence=0.683 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.683",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:05,467 label=chair count=5 confidence=0.683 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L22",
+      "timestamp_sec": 5.0,
+      "end_sec": 7.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:05,467 label=dining table count=1 confidence=0.332 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.332",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:05,467 label=dining table count=1 confidence=0.332 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L23",
+      "timestamp_sec": 5.0,
+      "end_sec": 7.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:05,467 label=person count=3 confidence=0.8802 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8802",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:05,467 label=person count=3 confidence=0.8802 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L25",
+      "timestamp_sec": 6.0,
+      "end_sec": 8.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:06,833 label=person count=1 confidence=0.6905 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.6905",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:06,833 label=person count=1 confidence=0.6905 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L26",
+      "timestamp_sec": 6.0,
+      "end_sec": 8.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:06,833 label=chair count=6 confidence=0.6835 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "6",
+        "confidence": "0.6835",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:06,833 label=chair count=6 confidence=0.6835 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L27",
+      "timestamp_sec": 6.0,
+      "end_sec": 8.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:06,833 label=dining table count=1 confidence=0.326 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.326",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:06,833 label=dining table count=1 confidence=0.326 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L28",
+      "timestamp_sec": 6.0,
+      "end_sec": 8.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:06,833 label=person count=3 confidence=0.8915 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8915",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:06,833 label=person count=3 confidence=0.8915 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L30",
+      "timestamp_sec": 8.0,
+      "end_sec": 10.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:08,200 label=person count=1 confidence=0.4853 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.4853",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:08,200 label=person count=1 confidence=0.4853 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L31",
+      "timestamp_sec": 8.0,
+      "end_sec": 10.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:08,200 label=chair count=6 confidence=0.6718 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "6",
+        "confidence": "0.6718",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:08,200 label=chair count=6 confidence=0.6718 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L32",
+      "timestamp_sec": 8.0,
+      "end_sec": 10.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:08,200 label=dining table count=1 confidence=0.2741 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.2741",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:08,200 label=dining table count=1 confidence=0.2741 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L33",
+      "timestamp_sec": 8.0,
+      "end_sec": 10.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:08,200 label=person count=3 confidence=0.8591 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8591",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:08,200 label=person count=3 confidence=0.8591 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L35",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:09,567 label=person count=1 confidence=0.3065 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.3065",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:09,567 label=person count=1 confidence=0.3065 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L36",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:09,567 label=chair count=6 confidence=0.6829 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "6",
+        "confidence": "0.6829",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:09,567 label=chair count=6 confidence=0.6829 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L37",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:09,567 label=dining table count=1 confidence=0.3019 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.3019",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:09,567 label=dining table count=1 confidence=0.3019 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L38",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:09,567 label=person count=3 confidence=0.8855 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8855",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:09,567 label=person count=3 confidence=0.8855 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L40",
+      "timestamp_sec": 10.0,
+      "end_sec": 12.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:10,933 label=person count=2 confidence=0.8234 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8234",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:10,933 label=person count=2 confidence=0.8234 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L41",
+      "timestamp_sec": 10.0,
+      "end_sec": 12.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:10,933 label=chair count=6 confidence=0.6966 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "6",
+        "confidence": "0.6966",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:10,933 label=chair count=6 confidence=0.6966 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L42",
+      "timestamp_sec": 10.0,
+      "end_sec": 12.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:10,933 label=dining table count=1 confidence=0.2833 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.2833",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:10,933 label=dining table count=1 confidence=0.2833 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L43",
+      "timestamp_sec": 10.0,
+      "end_sec": 12.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:10,933 label=person count=2 confidence=0.8875 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8875",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:10,933 label=person count=2 confidence=0.8875 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L45",
+      "timestamp_sec": 12.0,
+      "end_sec": 14.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:12,300 label=person count=1 confidence=0.2535 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.2535",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:12,300 label=person count=1 confidence=0.2535 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L46",
+      "timestamp_sec": 12.0,
+      "end_sec": 14.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:12,300 label=chair count=6 confidence=0.7224 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "6",
+        "confidence": "0.7224",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:12,300 label=chair count=6 confidence=0.7224 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L47",
+      "timestamp_sec": 12.0,
+      "end_sec": 14.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:12,300 label=dining table count=1 confidence=0.2735 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.2735",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:12,300 label=dining table count=1 confidence=0.2735 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L48",
+      "timestamp_sec": 12.0,
+      "end_sec": 14.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:12,300 label=person count=3 confidence=0.9031 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.9031",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:12,300 label=person count=3 confidence=0.9031 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L50",
+      "timestamp_sec": 13.0,
+      "end_sec": 15.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:13,667 label=person count=1 confidence=0.5506 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.5506",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:13,667 label=person count=1 confidence=0.5506 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L51",
+      "timestamp_sec": 13.0,
+      "end_sec": 15.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:13,667 label=chair count=5 confidence=0.7157 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.7157",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:13,667 label=chair count=5 confidence=0.7157 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L52",
+      "timestamp_sec": 13.0,
+      "end_sec": 15.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:13,667 label=dining table count=1 confidence=0.3111 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.3111",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:13,667 label=dining table count=1 confidence=0.3111 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L53",
+      "timestamp_sec": 13.0,
+      "end_sec": 15.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:13,667 label=person count=3 confidence=0.8899 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8899",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:13,667 label=person count=3 confidence=0.8899 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L55",
+      "timestamp_sec": 15.0,
+      "end_sec": 17.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:15,033 label=person count=1 confidence=0.7005 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7005",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:15,033 label=person count=1 confidence=0.7005 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L56",
+      "timestamp_sec": 15.0,
+      "end_sec": 17.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:15,033 label=chair count=6 confidence=0.6453 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "6",
+        "confidence": "0.6453",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:15,033 label=chair count=6 confidence=0.6453 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L57",
+      "timestamp_sec": 15.0,
+      "end_sec": 17.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:15,033 label=dining table count=1 confidence=0.2604 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.2604",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:15,033 label=dining table count=1 confidence=0.2604 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L58",
+      "timestamp_sec": 15.0,
+      "end_sec": 17.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:15,033 label=person count=3 confidence=0.8996 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8996",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:15,033 label=person count=3 confidence=0.8996 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L60",
+      "timestamp_sec": 16.0,
+      "end_sec": 18.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:16,400 label=person count=2 confidence=0.8034 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8034",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:16,400 label=person count=2 confidence=0.8034 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L61",
+      "timestamp_sec": 16.0,
+      "end_sec": 18.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:16,400 label=chair count=5 confidence=0.6755 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.6755",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:16,400 label=chair count=5 confidence=0.6755 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L62",
+      "timestamp_sec": 16.0,
+      "end_sec": 18.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:16,400 label=person count=2 confidence=0.8844 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8844",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:16,400 label=person count=2 confidence=0.8844 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L64",
+      "timestamp_sec": 17.0,
+      "end_sec": 19.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:17,767 label=person count=1 confidence=0.5849 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.5849",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:17,767 label=person count=1 confidence=0.5849 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L65",
+      "timestamp_sec": 17.0,
+      "end_sec": 19.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:17,767 label=chair count=5 confidence=0.6592 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.6592",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:17,767 label=chair count=5 confidence=0.6592 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L66",
+      "timestamp_sec": 17.0,
+      "end_sec": 19.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:17,767 label=person count=3 confidence=0.8477 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8477",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:17,767 label=person count=3 confidence=0.8477 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L68",
+      "timestamp_sec": 19.0,
+      "end_sec": 21.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:19,133 label=person count=1 confidence=0.6022 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.6022",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:19,133 label=person count=1 confidence=0.6022 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L69",
+      "timestamp_sec": 19.0,
+      "end_sec": 21.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:19,133 label=chair count=5 confidence=0.6436 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.6436",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:19,133 label=chair count=5 confidence=0.6436 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L70",
+      "timestamp_sec": 19.0,
+      "end_sec": 21.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:19,133 label=dining table count=1 confidence=0.2574 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dining",
+        "count": "1",
+        "confidence": "0.2574",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:19,133 label=dining table count=1 confidence=0.2574 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L71",
+      "timestamp_sec": 19.0,
+      "end_sec": 21.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:19,133 label=person count=3 confidence=0.8532 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8532",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:19,133 label=person count=3 confidence=0.8532 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L73",
+      "timestamp_sec": 20.0,
+      "end_sec": 22.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:20,500 label=person count=1 confidence=0.2687 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.2687",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:20,500 label=person count=1 confidence=0.2687 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L74",
+      "timestamp_sec": 20.0,
+      "end_sec": 22.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:20,500 label=chair count=4 confidence=0.634 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "4",
+        "confidence": "0.634",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:20,500 label=chair count=4 confidence=0.634 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L75",
+      "timestamp_sec": 20.0,
+      "end_sec": 22.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:20,500 label=person count=3 confidence=0.8638 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8638",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:20,500 label=person count=3 confidence=0.8638 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L77",
+      "timestamp_sec": 21.0,
+      "end_sec": 23.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:21,867 label=person count=1 confidence=0.8178 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8178",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:21,867 label=person count=1 confidence=0.8178 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L78",
+      "timestamp_sec": 21.0,
+      "end_sec": 23.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:21,867 label=chair count=5 confidence=0.6266 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.6266",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:21,867 label=chair count=5 confidence=0.6266 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L79",
+      "timestamp_sec": 21.0,
+      "end_sec": 23.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:21,867 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8508",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:21,867 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L81",
+      "timestamp_sec": 23.0,
+      "end_sec": 25.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:23,233 label=person count=2 confidence=0.8449 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8449",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:23,233 label=person count=2 confidence=0.8449 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L82",
+      "timestamp_sec": 23.0,
+      "end_sec": 25.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:23,233 label=chair count=5 confidence=0.6372 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "5",
+        "confidence": "0.6372",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:23,233 label=chair count=5 confidence=0.6372 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L83",
+      "timestamp_sec": 23.0,
+      "end_sec": 25.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:23,233 label=person count=2 confidence=0.8442 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8442",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:23,233 label=person count=2 confidence=0.8442 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L85",
+      "timestamp_sec": 24.0,
+      "end_sec": 26.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:24,600 label=person count=2 confidence=0.8437 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8437",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:24,600 label=person count=2 confidence=0.8437 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L86",
+      "timestamp_sec": 24.0,
+      "end_sec": 26.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:24,600 label=chair count=4 confidence=0.6055 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "4",
+        "confidence": "0.6055",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:24,600 label=chair count=4 confidence=0.6055 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L87",
+      "timestamp_sec": 24.0,
+      "end_sec": 26.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:24,600 label=person count=2 confidence=0.8499 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8499",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:24,600 label=person count=2 confidence=0.8499 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L89",
+      "timestamp_sec": 25.0,
+      "end_sec": 27.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:25,967 label=person count=2 confidence=0.8535 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8535",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:25,967 label=person count=2 confidence=0.8535 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L90",
+      "timestamp_sec": 25.0,
+      "end_sec": 27.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:25,967 label=chair count=4 confidence=0.6043 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "4",
+        "confidence": "0.6043",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:25,967 label=chair count=4 confidence=0.6043 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L91",
+      "timestamp_sec": 25.0,
+      "end_sec": 27.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:25,967 label=person count=2 confidence=0.8421 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8421",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:25,967 label=person count=2 confidence=0.8421 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L93",
+      "timestamp_sec": 27.0,
+      "end_sec": 29.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:27,333 label=person count=1 confidence=0.7314 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7314",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:27,333 label=person count=1 confidence=0.7314 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L94",
+      "timestamp_sec": 27.0,
+      "end_sec": 29.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:27,333 label=chair count=4 confidence=0.5847 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "4",
+        "confidence": "0.5847",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:27,333 label=chair count=4 confidence=0.5847 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L95",
+      "timestamp_sec": 27.0,
+      "end_sec": 29.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:27,333 label=person count=3 confidence=0.837 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.837",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:27,333 label=person count=3 confidence=0.837 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L97",
+      "timestamp_sec": 28.0,
+      "end_sec": 30.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:28,700 label=person count=1 confidence=0.7 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:28,700 label=person count=1 confidence=0.7 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L98",
+      "timestamp_sec": 28.0,
+      "end_sec": 30.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:28,700 label=chair count=4 confidence=0.6413 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "4",
+        "confidence": "0.6413",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:28,700 label=chair count=4 confidence=0.6413 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L99",
+      "timestamp_sec": 28.0,
+      "end_sec": 30.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:28,700 label=person count=3 confidence=0.8578 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8578",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:28,700 label=person count=3 confidence=0.8578 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L101",
+      "timestamp_sec": 30.0,
+      "end_sec": 32.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:30,067 label=person count=1 confidence=0.6957 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.6957",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:30,067 label=person count=1 confidence=0.6957 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L102",
+      "timestamp_sec": 30.0,
+      "end_sec": 32.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:30,067 label=chair count=4 confidence=0.6079 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "4",
+        "confidence": "0.6079",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:30,067 label=chair count=4 confidence=0.6079 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L103",
+      "timestamp_sec": 30.0,
+      "end_sec": 32.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:30,067 label=person count=3 confidence=0.8362 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8362",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:30,067 label=person count=3 confidence=0.8362 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L105",
+      "timestamp_sec": 31.0,
+      "end_sec": 33.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "front_board",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:31,433 label=person count=1 confidence=0.7102 zone=front_board source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.7102",
+        "zone": "front_board",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:31,433 label=person count=1 confidence=0.7102 zone=front_board source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L106",
+      "timestamp_sec": 31.0,
+      "end_sec": 33.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:31,433 label=chair count=4 confidence=0.6588 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "chair",
+        "count": "4",
+        "confidence": "0.6588",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:31,433 label=chair count=4 confidence=0.6588 zone=student_area source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L107",
+      "timestamp_sec": 31.0,
+      "end_sec": 33.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "student_area",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:31,433 label=person count=3 confidence=0.8304 zone=student_area source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "3",
+        "confidence": "0.8304",
+        "zone": "student_area",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:31,433 label=person count=3 confidence=0.8304 zone=student_area source=yolo26n.pt:real_frames"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "log_L10",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L10",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L101",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L101",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L102",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L102",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L103",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L103",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L105",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L105",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L106",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L106",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L107",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L107",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L11",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L11",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L12",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L12",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L13",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L13",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L15",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L15",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L16",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L16",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L17",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L17",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L18",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L18",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L2",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L20",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L20",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L21",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L21",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L22",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L22",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L23",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L23",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L25",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L25",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L26",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L26",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L27",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L27",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L28",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L28",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L3",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L30",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L30",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L31",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L31",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L32",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L32",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L33",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L33",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L35",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L35",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L36",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L36",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L37",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L37",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L38",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L38",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L4",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L40",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L40",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L41",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L41",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L42",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L42",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L43",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L43",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L45",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L45",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L46",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L46",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L47",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L47",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L48",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L48",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L50",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L50",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L51",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L51",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L52",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L52",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L53",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L53",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L55",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L55",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L56",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L56",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L57",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L57",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L58",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L58",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L6",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L6",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L60",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L60",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L61",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L61",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L62",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L62",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L64",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L64",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L65",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L65",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L66",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L66",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L68",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L68",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L69",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L69",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L7",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L7",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L70",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L70",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dining table"
+    },
+    {
+      "source": "log_L71",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L71",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L73",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L73",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L74",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L74",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L75",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L75",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L77",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L77",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L78",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L78",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L79",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L79",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L8",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L8",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L81",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L81",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L82",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L82",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L83",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L83",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L85",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L85",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L86",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L86",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L87",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L87",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L89",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L89",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L90",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L90",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L91",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L91",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L93",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L93",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L94",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L94",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L95",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L95",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L97",
+      "relation": "AT_ZONE",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "log_L97",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L98",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L98",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:chair"
+    },
+    {
+      "source": "log_L99",
+      "relation": "AT_ZONE",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "log_L99",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "object:chair",
+      "relation": "DETECTED_IN",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "object:dining table",
+      "relation": "DETECTED_IN",
+      "target": "zone:student_area"
+    },
+    {
+      "source": "object:person",
+      "relation": "DETECTED_IN",
+      "target": "zone:front_board"
+    },
+    {
+      "source": "object:person",
+      "relation": "DETECTED_IN",
+      "target": "zone:student_area"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "log_L2",
+      "claim": "00:00:00,000 label=person count=1 confidence=0.7748 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 0.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L3",
+      "claim": "00:00:00,000 label=chair count=5 confidence=0.5412 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 0.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L4",
+      "claim": "00:00:00,000 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 0.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L6",
+      "claim": "00:00:01,367 label=person count=1 confidence=0.7826 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 1.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L7",
+      "claim": "00:00:01,367 label=chair count=5 confidence=0.6476 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 1.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L8",
+      "claim": "00:00:01,367 label=person count=3 confidence=0.8391 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 1.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L10",
+      "claim": "00:00:02,733 label=person count=1 confidence=0.7852 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 2.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L11",
+      "claim": "00:00:02,733 label=chair count=5 confidence=0.6666 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 2.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L12",
+      "claim": "00:00:02,733 label=dining table count=1 confidence=0.2842 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 2.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L13",
+      "claim": "00:00:02,733 label=person count=3 confidence=0.8683 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 2.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L15",
+      "claim": "00:00:04,100 label=person count=1 confidence=0.7491 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 4.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L16",
+      "claim": "00:00:04,100 label=chair count=3 confidence=0.4818 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 4.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L17",
+      "claim": "00:00:04,100 label=dining table count=1 confidence=0.4468 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 4.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L18",
+      "claim": "00:00:04,100 label=person count=3 confidence=0.8402 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 4.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L20",
+      "claim": "00:00:05,467 label=person count=1 confidence=0.6263 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 5.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L21",
+      "claim": "00:00:05,467 label=chair count=5 confidence=0.683 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 5.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L22",
+      "claim": "00:00:05,467 label=dining table count=1 confidence=0.332 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 5.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L23",
+      "claim": "00:00:05,467 label=person count=3 confidence=0.8802 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 5.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L25",
+      "claim": "00:00:06,833 label=person count=1 confidence=0.6905 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 6.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L26",
+      "claim": "00:00:06,833 label=chair count=6 confidence=0.6835 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 6.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L27",
+      "claim": "00:00:06,833 label=dining table count=1 confidence=0.326 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 6.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L28",
+      "claim": "00:00:06,833 label=person count=3 confidence=0.8915 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 6.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L30",
+      "claim": "00:00:08,200 label=person count=1 confidence=0.4853 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 8.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L31",
+      "claim": "00:00:08,200 label=chair count=6 confidence=0.6718 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 8.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L32",
+      "claim": "00:00:08,200 label=dining table count=1 confidence=0.2741 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 8.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L33",
+      "claim": "00:00:08,200 label=person count=3 confidence=0.8591 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 8.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L35",
+      "claim": "00:00:09,567 label=person count=1 confidence=0.3065 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 9.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L36",
+      "claim": "00:00:09,567 label=chair count=6 confidence=0.6829 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 9.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L37",
+      "claim": "00:00:09,567 label=dining table count=1 confidence=0.3019 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 9.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L38",
+      "claim": "00:00:09,567 label=person count=3 confidence=0.8855 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 9.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L40",
+      "claim": "00:00:10,933 label=person count=2 confidence=0.8234 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 10.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L41",
+      "claim": "00:00:10,933 label=chair count=6 confidence=0.6966 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 10.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L42",
+      "claim": "00:00:10,933 label=dining table count=1 confidence=0.2833 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 10.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L43",
+      "claim": "00:00:10,933 label=person count=2 confidence=0.8875 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 10.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L45",
+      "claim": "00:00:12,300 label=person count=1 confidence=0.2535 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 12.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L46",
+      "claim": "00:00:12,300 label=chair count=6 confidence=0.7224 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 12.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L47",
+      "claim": "00:00:12,300 label=dining table count=1 confidence=0.2735 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 12.0,
+      "zone": "student_area",
+      "status": "PARTIAL_GROUNDING",
+      "supporting_evidence": [
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L48",
+      "claim": "00:00:12,300 label=person count=3 confidence=0.9031 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 12.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L50",
+      "claim": "00:00:13,667 label=person count=1 confidence=0.5506 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 13.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L51",
+      "claim": "00:00:13,667 label=chair count=5 confidence=0.7157 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 13.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L52",
+      "claim": "00:00:13,667 label=dining table count=1 confidence=0.3111 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 13.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L53",
+      "claim": "00:00:13,667 label=person count=3 confidence=0.8899 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 13.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L55",
+      "claim": "00:00:15,033 label=person count=1 confidence=0.7005 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 15.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L56",
+      "claim": "00:00:15,033 label=chair count=6 confidence=0.6453 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 15.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L57",
+      "claim": "00:00:15,033 label=dining table count=1 confidence=0.2604 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 15.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:dining table",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L58",
+      "claim": "00:00:15,033 label=person count=3 confidence=0.8996 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 15.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L60",
+      "claim": "00:00:16,400 label=person count=2 confidence=0.8034 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 16.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L61",
+      "claim": "00:00:16,400 label=chair count=5 confidence=0.6755 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 16.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L62",
+      "claim": "00:00:16,400 label=person count=2 confidence=0.8844 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 16.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L64",
+      "claim": "00:00:17,767 label=person count=1 confidence=0.5849 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 17.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L65",
+      "claim": "00:00:17,767 label=chair count=5 confidence=0.6592 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 17.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L66",
+      "claim": "00:00:17,767 label=person count=3 confidence=0.8477 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 17.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L68",
+      "claim": "00:00:19,133 label=person count=1 confidence=0.6022 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 19.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L69",
+      "claim": "00:00:19,133 label=chair count=5 confidence=0.6436 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 19.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L70",
+      "claim": "00:00:19,133 label=dining table count=1 confidence=0.2574 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 19.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:dining table",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L71",
+      "claim": "00:00:19,133 label=person count=3 confidence=0.8532 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 19.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L73",
+      "claim": "00:00:20,500 label=person count=1 confidence=0.2687 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 20.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L74",
+      "claim": "00:00:20,500 label=chair count=4 confidence=0.634 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 20.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L75",
+      "claim": "00:00:20,500 label=person count=3 confidence=0.8638 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 20.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L77",
+      "claim": "00:00:21,867 label=person count=1 confidence=0.8178 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 21.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L78",
+      "claim": "00:00:21,867 label=chair count=5 confidence=0.6266 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 21.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L79",
+      "claim": "00:00:21,867 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 21.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L81",
+      "claim": "00:00:23,233 label=person count=2 confidence=0.8449 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 23.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L82",
+      "claim": "00:00:23,233 label=chair count=5 confidence=0.6372 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 23.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L83",
+      "claim": "00:00:23,233 label=person count=2 confidence=0.8442 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 23.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L85",
+      "claim": "00:00:24,600 label=person count=2 confidence=0.8437 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 24.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L86",
+      "claim": "00:00:24,600 label=chair count=4 confidence=0.6055 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 24.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L87",
+      "claim": "00:00:24,600 label=person count=2 confidence=0.8499 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 24.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L89",
+      "claim": "00:00:25,967 label=person count=2 confidence=0.8535 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 25.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L90",
+      "claim": "00:00:25,967 label=chair count=4 confidence=0.6043 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 25.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:chair",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L91",
+      "claim": "00:00:25,967 label=person count=2 confidence=0.8421 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 25.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "object:person",
+        "object_detection"
+      ]
+    },
+    {
+      "event_id": "log_L93",
+      "claim": "00:00:27,333 label=person count=1 confidence=0.7314 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 27.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L94",
+      "claim": "00:00:27,333 label=chair count=4 confidence=0.5847 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 27.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L95",
+      "claim": "00:00:27,333 label=person count=3 confidence=0.837 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 27.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L97",
+      "claim": "00:00:28,700 label=person count=1 confidence=0.7 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 28.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L98",
+      "claim": "00:00:28,700 label=chair count=4 confidence=0.6413 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 28.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L99",
+      "claim": "00:00:28,700 label=person count=3 confidence=0.8578 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 28.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L101",
+      "claim": "00:00:30,067 label=person count=1 confidence=0.6957 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 30.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L102",
+      "claim": "00:00:30,067 label=chair count=4 confidence=0.6079 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 30.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L103",
+      "claim": "00:00:30,067 label=person count=3 confidence=0.8362 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 30.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L105",
+      "claim": "00:00:31,433 label=person count=1 confidence=0.7102 zone=front_board source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 31.0,
+      "zone": "front_board",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L106",
+      "claim": "00:00:31,433 label=chair count=4 confidence=0.6588 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 31.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:chair",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L107",
+      "claim": "00:00:31,433 label=person count=3 confidence=0.8304 zone=student_area source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 31.0,
+      "zone": "student_area",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    }
+  ],
+  "retrieval_results": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 32.8,
+      "source": "visual_tags",
+      "text": "motion keyframe zone front_board student_area STATIC BURST TRANSITION ACTIVE person object chair dining table classroom teacher students presentation lecture",
+      "bm25_score": 4.977,
+      "tfidf_score": 0.2975,
+      "score": 0.9
+    },
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "source": "log",
+      "text": "00:00:00,000 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "bm25_score": 1.0083,
+      "tfidf_score": 0.1062,
+      "score": 0.2798
+    },
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "source": "log",
+      "text": "00:00:00,000 label=person count=1 confidence=0.7748 zone=front_board source=yolo26n.pt:real_frames",
+      "bm25_score": 1.0083,
+      "tfidf_score": 0.1003,
+      "score": 0.2699
+    },
+    {
+      "start_sec": 21.0,
+      "end_sec": 23.0,
+      "source": "log",
+      "text": "00:00:21,867 label=person count=3 confidence=0.8508 zone=student_area source=yolo26n.pt:real_frames",
+      "bm25_score": 1.0083,
+      "tfidf_score": 0.098,
+      "score": 0.2661
+    },
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "source": "log",
+      "text": "00:00:02,733 label=person count=3 confidence=0.8683 zone=student_area source=yolo26n.pt:real_frames",
+      "bm25_score": 1.0083,
+      "tfidf_score": 0.0974,
+      "score": 0.2651
+    }
+  ],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 234,
+    "zones": [
+      "front_board",
+      "student_area"
+    ],
+    "frames_analyzed": 24,
+    "latency_ms": 667.332
+  },
+  "telemetry": {
+    "total_ms": 11550.178,
+    "probe_ms": 5862.413,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 115.528,
+      "roi_zone_tracking": 77.556,
+      "visual_anomaly_scoring": 0.0,
+      "on_screen_text_detection": 0.0,
+      "action_state_indexing": 123.538,
+      "transcript_log_alignment": 0.542,
+      "multimodal_bm25_tfidf_retrieval": 8.148,
+      "rule_schema_event_parsing": 2.269,
+      "entity_graph_linking": 15.76,
+      "grounding_consistency_check": 10.022
+    },
+    "frames_skipped_ratio": 0.7917,
+    "grounding_match_rate": 0.994,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 667.332,
+    "object_detections": 234,
+    "active_feature_count": 8,
+    "skipped_feature_count": 2
+  },
+  "retrieval_stats": {
+    "documents_indexed": 108,
+    "query": "person zone worker shopper classroom",
+    "scorer": "BM25+TFIDF",
+    "results": 5
+  },
+  "grounding_stats": {
+    "checks": 83,
+    "grounded": 82,
+    "partial": 1,
+    "ungrounded": 0,
+    "grounding_match_rate": 0.994,
+    "window_sec": 2.5
+  }
+}

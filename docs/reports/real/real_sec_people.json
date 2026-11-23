@@ -1,0 +1,1017 @@
+{
+  "video_id": "real_sec_people",
+  "industry": "Retail, Security & Smart Spaces",
+  "description": "Real fixed-camera pedestrian monitoring footage used for public-space analytics.",
+  "duration_sec": 49.667,
+  "processed_fps": 12.0,
+  "media": {
+    "video_id": "real_sec_people",
+    "industry": "Retail, Security & Smart Spaces",
+    "media_available": true,
+    "source": "real_file",
+    "probe_error": "",
+    "fps": 12.0,
+    "width": 768,
+    "height": 432,
+    "frame_count": 596,
+    "duration_sec": 49.667,
+    "motion_energy": 5.5056,
+    "edge_density": 0.0168,
+    "text_region_density": 0.053,
+    "roi_presence": true,
+    "transcript_available": false,
+    "log_available": true,
+    "transcript_source": "none",
+    "log_source": "file:people_detection.json",
+    "use_real": true,
+    "ingest_status": "ok",
+    "sidecar_sources": [
+      "file:people_detection.json"
+    ],
+    "has_audio_stream": false
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "visual_anomaly_scoring",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "on_screen_text_detection",
+      "status": "SKIPPED",
+      "reason": "NO_TEXT_REGION"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 2,
+      "timestamp_sec": 4.0,
+      "motion_score": 18.5122,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.4499
+    },
+    {
+      "frame_index": 3,
+      "timestamp_sec": 6.0,
+      "motion_score": 15.488,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 16.0,
+      "motion_score": 5.3087,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 2,
+      "max_confidence": 0.8718
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 18.0,
+      "motion_score": 11.3552,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 2,
+      "max_confidence": 0.8554
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 30.0,
+      "motion_score": 11.0782,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 3,
+      "max_confidence": 0.9123
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 32.0,
+      "motion_score": 15.715,
+      "object_labels": [
+        "person"
+      ],
+      "object_count": 3,
+      "max_confidence": 0.8705
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 34.0,
+      "motion_score": 12.2255,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "walkway_left",
+      "kind": "box",
+      "bounds_px": [
+        15,
+        108,
+        268,
+        397
+      ],
+      "mean_energy": 6.0248,
+      "peak_energy": 19.6728,
+      "peak_timestamp_sec": 18.0,
+      "active_timestamps": [
+        4.0,
+        6.0,
+        16.0,
+        18.0,
+        20.0,
+        30.0,
+        32.0,
+        34.0
+      ],
+      "active_frames": 8,
+      "object_count": 5,
+      "object_labels": [
+        "person"
+      ],
+      "object_timestamps": [
+        16.0,
+        18.0,
+        30.0,
+        32.0
+      ],
+      "max_confidence": 0.9123
+    },
+    {
+      "zone_id": "walkway_center",
+      "kind": "box",
+      "bounds_px": [
+        268,
+        86,
+        522,
+        397
+      ],
+      "mean_energy": 6.0996,
+      "peak_energy": 22.2802,
+      "peak_timestamp_sec": 4.0,
+      "active_timestamps": [
+        4.0,
+        6.0,
+        18.0,
+        30.0,
+        32.0,
+        44.0,
+        46.0
+      ],
+      "active_frames": 7,
+      "object_count": 7,
+      "object_labels": [
+        "dog",
+        "person"
+      ],
+      "object_timestamps": [
+        2.0,
+        4.0,
+        16.0,
+        30.0,
+        44.0
+      ],
+      "max_confidence": 0.8841
+    },
+    {
+      "zone_id": "walkway_right",
+      "kind": "box",
+      "bounds_px": [
+        522,
+        108,
+        752,
+        397
+      ],
+      "mean_energy": 5.8889,
+      "peak_energy": 27.1507,
+      "peak_timestamp_sec": 32.0,
+      "active_timestamps": [
+        4.0,
+        6.0,
+        30.0,
+        32.0,
+        34.0
+      ],
+      "active_frames": 5,
+      "object_count": 2,
+      "object_labels": [
+        "person"
+      ],
+      "object_timestamps": [
+        32.0
+      ],
+      "max_confidence": 0.8705
+    }
+  ],
+  "anomalies": [
+    {
+      "frame_index": 1,
+      "timestamp_sec": 2.0,
+      "score": 0.4092,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "person",
+          "confidence": 0.5837,
+          "zone_id": "walkway_center"
+        }
+      ]
+    },
+    {
+      "frame_index": 2,
+      "timestamp_sec": 4.0,
+      "score": 17.1567,
+      "colour_outlier_pixels": 0,
+      "z_score": 8.3513,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 16.0,
+      "score": 0.4974,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "person",
+          "confidence": 0.8718,
+          "zone_id": "walkway_left"
+        }
+      ]
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 18.0,
+      "score": 7.9859,
+      "colour_outlier_pixels": 0,
+      "z_score": 3.4408,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 30.0,
+      "score": 10.7332,
+      "colour_outlier_pixels": 0,
+      "z_score": 4.9118,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 32.0,
+      "score": 9.8797,
+      "colour_outlier_pixels": 0,
+      "z_score": 4.4548,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 22,
+      "timestamp_sec": 44.0,
+      "score": 0.6985,
+      "colour_outlier_pixels": 0,
+      "z_score": 2.6,
+      "kind": "size_outlier",
+      "object_evidence": [
+        {
+          "label": "person",
+          "confidence": 0.5261,
+          "zone_id": "walkway_center"
+        }
+      ]
+    }
+  ],
+  "text_regions": [],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 8.278,
+      "state": "CONGESTION",
+      "motion_mean": 8.0922,
+      "object_count": 3,
+      "top_labels": [
+        "person",
+        "dog"
+      ]
+    },
+    {
+      "start_sec": 8.278,
+      "end_sec": 16.556,
+      "state": "QUIET",
+      "motion_mean": 2.1875,
+      "object_count": 2,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 16.556,
+      "end_sec": 24.834,
+      "state": "FLOW",
+      "motion_mean": 5.7771,
+      "object_count": 2,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 24.834,
+      "end_sec": 33.111,
+      "state": "CONGESTION",
+      "motion_mean": 7.3453,
+      "object_count": 6,
+      "top_labels": [
+        "person"
+      ]
+    },
+    {
+      "start_sec": 33.111,
+      "end_sec": 41.389,
+      "state": "FLOW",
+      "motion_mean": 4.2069,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 41.389,
+      "end_sec": 49.667,
+      "state": "FLOW",
+      "motion_mean": 3.4017,
+      "object_count": 1,
+      "top_labels": [
+        "person"
+      ]
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "log",
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "text": "00:00:02,000 label=dog count=1 confidence=0.4382 zone=walkway_center source=yolo26n.pt:real_frames",
+      "line_no": 1
+    },
+    {
+      "source": "log",
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "text": "00:00:02,000 label=person count=1 confidence=0.4744 zone=walkway_center source=yolo26n.pt:real_frames",
+      "line_no": 2
+    },
+    {
+      "source": "log",
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "text": "00:00:06,000 label=person count=1 confidence=0.3509 zone=walkway_right source=yolo26n.pt:real_frames",
+      "line_no": 3
+    },
+    {
+      "source": "log",
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "text": "00:00:16,000 label=person count=1 confidence=0.8197 zone=walkway_center source=yolo26n.pt:real_frames",
+      "line_no": 4
+    },
+    {
+      "source": "log",
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "text": "00:00:16,000 label=person count=1 confidence=0.8897 zone=walkway_left source=yolo26n.pt:real_frames",
+      "line_no": 5
+    },
+    {
+      "source": "log",
+      "start_sec": 18.0,
+      "end_sec": 20.0,
+      "text": "00:00:18,000 label=person count=2 confidence=0.8659 zone=walkway_left source=yolo26n.pt:real_frames",
+      "line_no": 6
+    },
+    {
+      "source": "log",
+      "start_sec": 30.0,
+      "end_sec": 32.0,
+      "text": "00:00:30,000 label=person count=2 confidence=0.8544 zone=walkway_center source=yolo26n.pt:real_frames",
+      "line_no": 7
+    },
+    {
+      "source": "log",
+      "start_sec": 30.0,
+      "end_sec": 32.0,
+      "text": "00:00:30,000 label=person count=1 confidence=0.9083 zone=walkway_left source=yolo26n.pt:real_frames",
+      "line_no": 8
+    },
+    {
+      "source": "log",
+      "start_sec": 32.0,
+      "end_sec": 34.0,
+      "text": "00:00:32,000 label=person count=1 confidence=0.8715 zone=walkway_left source=yolo26n.pt:real_frames",
+      "line_no": 9
+    },
+    {
+      "source": "log",
+      "start_sec": 32.0,
+      "end_sec": 34.0,
+      "text": "00:00:32,000 label=person count=2 confidence=0.8846 zone=walkway_right source=yolo26n.pt:real_frames",
+      "line_no": 10
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "log_L1",
+      "timestamp_sec": 2.0,
+      "end_sec": 4.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_center",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:02,000 label=dog count=1 confidence=0.4382 zone=walkway_center source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "dog",
+        "count": "1",
+        "confidence": "0.4382",
+        "zone": "walkway_center",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:02,000 label=dog count=1 confidence=0.4382 zone=walkway_center source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L2",
+      "timestamp_sec": 2.0,
+      "end_sec": 4.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_center",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:02,000 label=person count=1 confidence=0.4744 zone=walkway_center source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.4744",
+        "zone": "walkway_center",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:02,000 label=person count=1 confidence=0.4744 zone=walkway_center source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L3",
+      "timestamp_sec": 6.0,
+      "end_sec": 8.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_right",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:06,000 label=person count=1 confidence=0.3509 zone=walkway_right source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.3509",
+        "zone": "walkway_right",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:06,000 label=person count=1 confidence=0.3509 zone=walkway_right source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L4",
+      "timestamp_sec": 16.0,
+      "end_sec": 18.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_center",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:16,000 label=person count=1 confidence=0.8197 zone=walkway_center source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8197",
+        "zone": "walkway_center",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:16,000 label=person count=1 confidence=0.8197 zone=walkway_center source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L5",
+      "timestamp_sec": 16.0,
+      "end_sec": 18.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_left",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:16,000 label=person count=1 confidence=0.8897 zone=walkway_left source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8897",
+        "zone": "walkway_left",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:16,000 label=person count=1 confidence=0.8897 zone=walkway_left source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L6",
+      "timestamp_sec": 18.0,
+      "end_sec": 20.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_left",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:18,000 label=person count=2 confidence=0.8659 zone=walkway_left source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8659",
+        "zone": "walkway_left",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:18,000 label=person count=2 confidence=0.8659 zone=walkway_left source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L7",
+      "timestamp_sec": 30.0,
+      "end_sec": 32.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_center",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:30,000 label=person count=2 confidence=0.8544 zone=walkway_center source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8544",
+        "zone": "walkway_center",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:30,000 label=person count=2 confidence=0.8544 zone=walkway_center source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L8",
+      "timestamp_sec": 30.0,
+      "end_sec": 32.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_left",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:30,000 label=person count=1 confidence=0.9083 zone=walkway_left source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.9083",
+        "zone": "walkway_left",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:30,000 label=person count=1 confidence=0.9083 zone=walkway_left source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L9",
+      "timestamp_sec": 32.0,
+      "end_sec": 34.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_left",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:32,000 label=person count=1 confidence=0.8715 zone=walkway_left source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "1",
+        "confidence": "0.8715",
+        "zone": "walkway_left",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:32,000 label=person count=1 confidence=0.8715 zone=walkway_left source=yolo26n.pt:real_frames"
+    },
+    {
+      "event_id": "log_L10",
+      "timestamp_sec": 32.0,
+      "end_sec": 34.0,
+      "entity": "",
+      "action": "",
+      "status": "",
+      "zone": "walkway_right",
+      "defect": "",
+      "step": null,
+      "claim": "00:00:32,000 label=person count=2 confidence=0.8846 zone=walkway_right source=yolo26n.pt:real_frames",
+      "fields": {
+        "label": "person",
+        "count": "2",
+        "confidence": "0.8846",
+        "zone": "walkway_right",
+        "source": "yolo26n.pt"
+      },
+      "raw_text": "00:00:32,000 label=person count=2 confidence=0.8846 zone=walkway_right source=yolo26n.pt:real_frames"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "log_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_center"
+    },
+    {
+      "source": "log_L1",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:dog"
+    },
+    {
+      "source": "log_L10",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_right"
+    },
+    {
+      "source": "log_L10",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_center"
+    },
+    {
+      "source": "log_L2",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_right"
+    },
+    {
+      "source": "log_L3",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_center"
+    },
+    {
+      "source": "log_L4",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L5",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_left"
+    },
+    {
+      "source": "log_L5",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L6",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_left"
+    },
+    {
+      "source": "log_L6",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L7",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_center"
+    },
+    {
+      "source": "log_L7",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L8",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_left"
+    },
+    {
+      "source": "log_L8",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "log_L9",
+      "relation": "AT_ZONE",
+      "target": "zone:walkway_left"
+    },
+    {
+      "source": "log_L9",
+      "relation": "SUPPORTED_BY_OBJECT",
+      "target": "object:person"
+    },
+    {
+      "source": "object:dog",
+      "relation": "DETECTED_IN",
+      "target": "zone:walkway_center"
+    },
+    {
+      "source": "object:person",
+      "relation": "DETECTED_IN",
+      "target": "zone:walkway_center"
+    },
+    {
+      "source": "object:person",
+      "relation": "DETECTED_IN",
+      "target": "zone:walkway_left"
+    },
+    {
+      "source": "object:person",
+      "relation": "DETECTED_IN",
+      "target": "zone:walkway_right"
+    },
+    {
+      "source": "zone:walkway_center",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:walkway"
+    },
+    {
+      "source": "zone:walkway_left",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:walkway"
+    },
+    {
+      "source": "zone:walkway_right",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:walkway"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "log_L1",
+      "claim": "00:00:02,000 label=dog count=1 confidence=0.4382 zone=walkway_center source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 2.0,
+      "zone": "walkway_center",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object:dog",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L2",
+      "claim": "00:00:02,000 label=person count=1 confidence=0.4744 zone=walkway_center source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 2.0,
+      "zone": "walkway_center",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L3",
+      "claim": "00:00:06,000 label=person count=1 confidence=0.3509 zone=walkway_right source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 6.0,
+      "zone": "walkway_right",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L4",
+      "claim": "00:00:16,000 label=person count=1 confidence=0.8197 zone=walkway_center source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 16.0,
+      "zone": "walkway_center",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L5",
+      "claim": "00:00:16,000 label=person count=1 confidence=0.8897 zone=walkway_left source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 16.0,
+      "zone": "walkway_left",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L6",
+      "claim": "00:00:18,000 label=person count=2 confidence=0.8659 zone=walkway_left source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 18.0,
+      "zone": "walkway_left",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L7",
+      "claim": "00:00:30,000 label=person count=2 confidence=0.8544 zone=walkway_center source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 30.0,
+      "zone": "walkway_center",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L8",
+      "claim": "00:00:30,000 label=person count=1 confidence=0.9083 zone=walkway_left source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 30.0,
+      "zone": "walkway_left",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L9",
+      "claim": "00:00:32,000 label=person count=1 confidence=0.8715 zone=walkway_left source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 32.0,
+      "zone": "walkway_left",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L10",
+      "claim": "00:00:32,000 label=person count=2 confidence=0.8846 zone=walkway_right source=yolo26n.pt:real_frames",
+      "expected_timestamp_sec": 32.0,
+      "zone": "walkway_right",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object:person",
+        "object_detection",
+        "zone_motion"
+      ]
+    }
+  ],
+  "retrieval_results": [
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "source": "log",
+      "text": "00:00:02,000 label=person count=1 confidence=0.4744 zone=walkway_center source=yolo26n.pt:real_frames",
+      "bm25_score": 0.3601,
+      "tfidf_score": 0.2466,
+      "score": 1.0
+    },
+    {
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "source": "log",
+      "text": "00:00:16,000 label=person count=1 confidence=0.8197 zone=walkway_center source=yolo26n.pt:real_frames",
+      "bm25_score": 0.3601,
+      "tfidf_score": 0.2466,
+      "score": 1.0
+    },
+    {
+      "start_sec": 16.0,
+      "end_sec": 18.0,
+      "source": "log",
+      "text": "00:00:16,000 label=person count=1 confidence=0.8897 zone=walkway_left source=yolo26n.pt:real_frames",
+      "bm25_score": 0.3601,
+      "tfidf_score": 0.2466,
+      "score": 1.0
+    },
+    {
+      "start_sec": 30.0,
+      "end_sec": 32.0,
+      "source": "log",
+      "text": "00:00:30,000 label=person count=1 confidence=0.9083 zone=walkway_left source=yolo26n.pt:real_frames",
+      "bm25_score": 0.3601,
+      "tfidf_score": 0.2466,
+      "score": 1.0
+    },
+    {
+      "start_sec": 32.0,
+      "end_sec": 34.0,
+      "source": "log",
+      "text": "00:00:32,000 label=person count=1 confidence=0.8715 zone=walkway_left source=yolo26n.pt:real_frames",
+      "bm25_score": 0.3601,
+      "tfidf_score": 0.2466,
+      "score": 1.0
+    }
+  ],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 14,
+    "zones": [
+      "walkway_left",
+      "walkway_center",
+      "walkway_right"
+    ],
+    "frames_analyzed": 25,
+    "latency_ms": 655.256
+  },
+  "telemetry": {
+    "total_ms": 1853.446,
+    "probe_ms": 401.701,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 15.913,
+      "roi_zone_tracking": 14.724,
+      "visual_anomaly_scoring": 679.068,
+      "on_screen_text_detection": 0.0,
+      "action_state_indexing": 17.273,
+      "transcript_log_alignment": 0.068,
+      "multimodal_bm25_tfidf_retrieval": 2.435,
+      "rule_schema_event_parsing": 0.113,
+      "entity_graph_linking": 0.235,
+      "grounding_consistency_check": 0.105
+    },
+    "frames_skipped_ratio": 0.72,
+    "grounding_match_rate": 1.0,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 655.256,
+    "object_detections": 14,
+    "active_feature_count": 9,
+    "skipped_feature_count": 1
+  },
+  "retrieval_stats": {
+    "documents_indexed": 11,
+    "query": "person zone worker shopper classroom",
+    "scorer": "BM25+TFIDF",
+    "results": 5
+  },
+  "grounding_stats": {
+    "checks": 10,
+    "grounded": 10,
+    "partial": 0,
+    "ungrounded": 0,
+    "grounding_match_rate": 1.0,
+    "window_sec": 2.5
+  }
+}

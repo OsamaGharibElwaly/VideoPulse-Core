@@ -1,0 +1,551 @@
+{
+  "video_id": "mfg_02_assembly_station",
+  "industry": "Manufacturing & Industrial Operations",
+  "description": "Manual assembly station with work/pause cycles, an assembly zone and an SOP step checklist.",
+  "duration_sec": 12.0,
+  "processed_fps": 12.0,
+  "media": {
+    "video_id": "mfg_02_assembly_station",
+    "industry": "Manufacturing & Industrial Operations",
+    "media_available": true,
+    "source": "file",
+    "probe_error": "",
+    "fps": 12.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 144,
+    "duration_sec": 12.0,
+    "motion_energy": 1.5405,
+    "edge_density": 0.0111,
+    "text_region_density": 0.0326,
+    "roi_presence": true,
+    "transcript_available": false,
+    "log_available": true,
+    "transcript_source": "none",
+    "log_source": "file",
+    "use_real": false,
+    "ingest_status": "REAL_VIDEO_NOT_FOUND",
+    "sidecar_sources": [],
+    "has_audio_stream": null
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "visual_anomaly_scoring",
+      "status": "SKIPPED",
+      "reason": "HIGH_MOTION_VARIANCE"
+    },
+    {
+      "feature": "on_screen_text_detection",
+      "status": "SKIPPED",
+      "reason": "NO_TEXT_REGION"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 1,
+      "timestamp_sec": 0.5,
+      "motion_score": 2.2981,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 4,
+      "timestamp_sec": 2.0,
+      "motion_score": 1.9154,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 2.5,
+      "motion_score": 2.2981,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "motion_score": 1.9154,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "motion_score": 2.2981,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "motion_score": 1.9154,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 13,
+      "timestamp_sec": 6.5,
+      "motion_score": 2.2981,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 8.0,
+      "motion_score": 1.9154,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "motion_score": 2.2981,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "motion_score": 1.9154,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 21,
+      "timestamp_sec": 10.5,
+      "motion_score": 2.2981,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "assembly_zone",
+      "kind": "box",
+      "bounds_px": [
+        64,
+        72,
+        256,
+        192
+      ],
+      "mean_energy": 4.921,
+      "peak_energy": 7.6605,
+      "peak_timestamp_sec": 0.5,
+      "active_timestamps": [
+        0.5,
+        2.0,
+        2.5,
+        4.0,
+        4.5,
+        6.0,
+        6.5,
+        8.0,
+        8.5,
+        10.0,
+        10.5
+      ],
+      "active_frames": 11,
+      "object_count": 0,
+      "object_labels": [],
+      "object_timestamps": [],
+      "max_confidence": 0.0
+    }
+  ],
+  "anomalies": [],
+  "text_regions": [],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "state": "MOVING",
+      "motion_mean": 1.0773,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "state": "MOVING",
+      "motion_mean": 1.5561,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "state": "MOVING",
+      "motion_mean": 1.5561,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "state": "MOVING",
+      "motion_mean": 1.5561,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "state": "MOVING",
+      "motion_mean": 1.5561,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "state": "MOVING",
+      "motion_mean": 1.5561,
+      "object_count": 0,
+      "top_labels": []
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:01 step=1 action=position status=DONE zone=assembly_zone",
+      "line_no": 1
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:04 step=2 action=tighten status=DONE zone=assembly_zone",
+      "line_no": 2
+    },
+    {
+      "source": "log",
+      "start_sec": 7.0,
+      "end_sec": 9.0,
+      "text": "00:07 step=3 action=inspect status=PENDING zone=assembly_zone",
+      "line_no": 3
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:09 step=4 action=seal status=DONE zone=assembly_zone",
+      "line_no": 4
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "log_L1",
+      "timestamp_sec": 1.0,
+      "end_sec": 3.0,
+      "entity": "",
+      "action": "position",
+      "status": "DONE",
+      "zone": "assembly_zone",
+      "defect": "",
+      "step": 1,
+      "claim": "00:01 step=1 action=position status=DONE zone=assembly_zone",
+      "fields": {
+        "step": "1",
+        "action": "position",
+        "status": "DONE",
+        "zone": "assembly_zone"
+      },
+      "raw_text": "00:01 step=1 action=position status=DONE zone=assembly_zone"
+    },
+    {
+      "event_id": "log_L2",
+      "timestamp_sec": 4.0,
+      "end_sec": 6.0,
+      "entity": "",
+      "action": "tighten",
+      "status": "DONE",
+      "zone": "assembly_zone",
+      "defect": "",
+      "step": 2,
+      "claim": "00:04 step=2 action=tighten status=DONE zone=assembly_zone",
+      "fields": {
+        "step": "2",
+        "action": "tighten",
+        "status": "DONE",
+        "zone": "assembly_zone"
+      },
+      "raw_text": "00:04 step=2 action=tighten status=DONE zone=assembly_zone"
+    },
+    {
+      "event_id": "log_L3",
+      "timestamp_sec": 7.0,
+      "end_sec": 9.0,
+      "entity": "",
+      "action": "inspect",
+      "status": "PENDING",
+      "zone": "assembly_zone",
+      "defect": "",
+      "step": 3,
+      "claim": "00:07 step=3 action=inspect status=PENDING zone=assembly_zone",
+      "fields": {
+        "step": "3",
+        "action": "inspect",
+        "status": "PENDING",
+        "zone": "assembly_zone"
+      },
+      "raw_text": "00:07 step=3 action=inspect status=PENDING zone=assembly_zone"
+    },
+    {
+      "event_id": "log_L4",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "",
+      "action": "seal",
+      "status": "DONE",
+      "zone": "assembly_zone",
+      "defect": "",
+      "step": 4,
+      "claim": "00:09 step=4 action=seal status=DONE zone=assembly_zone",
+      "fields": {
+        "step": "4",
+        "action": "seal",
+        "status": "DONE",
+        "zone": "assembly_zone"
+      },
+      "raw_text": "00:09 step=4 action=seal status=DONE zone=assembly_zone"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "log_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:assembly_zone"
+    },
+    {
+      "source": "log_L1",
+      "relation": "HAS_ACTION",
+      "target": "act:position"
+    },
+    {
+      "source": "log_L1",
+      "relation": "HAS_STATUS",
+      "target": "stat:DONE"
+    },
+    {
+      "source": "log_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:assembly_zone"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_ACTION",
+      "target": "act:tighten"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_STATUS",
+      "target": "stat:DONE"
+    },
+    {
+      "source": "log_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:assembly_zone"
+    },
+    {
+      "source": "log_L3",
+      "relation": "HAS_ACTION",
+      "target": "act:inspect"
+    },
+    {
+      "source": "log_L3",
+      "relation": "HAS_STATUS",
+      "target": "stat:PENDING"
+    },
+    {
+      "source": "log_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:assembly_zone"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_ACTION",
+      "target": "act:seal"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_STATUS",
+      "target": "stat:DONE"
+    },
+    {
+      "source": "zone:assembly_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:assembly"
+    },
+    {
+      "source": "zone:assembly_zone",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:step"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "log_L1",
+      "claim": "00:01 step=1 action=position status=DONE zone=assembly_zone",
+      "expected_timestamp_sec": 1.0,
+      "zone": "assembly_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L2",
+      "claim": "00:04 step=2 action=tighten status=DONE zone=assembly_zone",
+      "expected_timestamp_sec": 4.0,
+      "zone": "assembly_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L3",
+      "claim": "00:07 step=3 action=inspect status=PENDING zone=assembly_zone",
+      "expected_timestamp_sec": 7.0,
+      "zone": "assembly_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L4",
+      "claim": "00:09 step=4 action=seal status=DONE zone=assembly_zone",
+      "expected_timestamp_sec": 9.0,
+      "zone": "assembly_zone",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "keyframe",
+        "zone_motion"
+      ]
+    }
+  ],
+  "retrieval_results": [
+    {
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "source": "log",
+      "text": "00:01 step=1 action=position status=DONE zone=assembly_zone",
+      "bm25_score": 0.1103,
+      "tfidf_score": 0.2114,
+      "score": 1.0
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "source": "log",
+      "text": "00:04 step=2 action=tighten status=DONE zone=assembly_zone",
+      "bm25_score": 0.1103,
+      "tfidf_score": 0.2114,
+      "score": 1.0
+    },
+    {
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "source": "log",
+      "text": "00:09 step=4 action=seal status=DONE zone=assembly_zone",
+      "bm25_score": 0.1103,
+      "tfidf_score": 0.2114,
+      "score": 1.0
+    },
+    {
+      "start_sec": 7.0,
+      "end_sec": 9.0,
+      "source": "log",
+      "text": "00:07 step=3 action=inspect status=PENDING zone=assembly_zone",
+      "bm25_score": 0.1103,
+      "tfidf_score": 0.2008,
+      "score": 0.9749
+    },
+    {
+      "start_sec": 0.0,
+      "end_sec": 12.0,
+      "source": "visual_tags",
+      "text": "motion keyframe zone assembly_zone MOVING assembly station sop step operator workpause",
+      "bm25_score": 0.1056,
+      "tfidf_score": 0.1617,
+      "score": 0.7751
+    }
+  ],
+  "detector": {
+    "mode": "yolo",
+    "reason": "weights:yolo26n.pt",
+    "model": "yolo26n.pt",
+    "detections": 0,
+    "zones": [
+      "assembly_zone"
+    ],
+    "frames_analyzed": 24,
+    "latency_ms": 710.818
+  },
+  "telemetry": {
+    "total_ms": 869.898,
+    "probe_ms": 56.418,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 2.945,
+      "roi_zone_tracking": 3.171,
+      "visual_anomaly_scoring": 0.0,
+      "on_screen_text_detection": 0.0,
+      "action_state_indexing": 4.165,
+      "transcript_log_alignment": 0.045,
+      "multimodal_bm25_tfidf_retrieval": 2.39,
+      "rule_schema_event_parsing": 0.079,
+      "entity_graph_linking": 0.136,
+      "grounding_consistency_check": 0.043
+    },
+    "frames_skipped_ratio": 0.5417,
+    "grounding_match_rate": 1.0,
+    "detector_mode": "yolo",
+    "detector_reason": "weights:yolo26n.pt",
+    "detector_model": "yolo26n.pt",
+    "detector_latency_ms": 710.818,
+    "object_detections": 0,
+    "active_feature_count": 8,
+    "skipped_feature_count": 2
+  },
+  "retrieval_stats": {
+    "documents_indexed": 5,
+    "query": "defect alert slide step",
+    "scorer": "BM25+TFIDF",
+    "results": 5
+  },
+  "grounding_stats": {
+    "checks": 4,
+    "grounded": 4,
+    "partial": 0,
+    "ungrounded": 0,
+    "grounding_match_rate": 1.0,
+    "window_sec": 2.5
+  }
+}

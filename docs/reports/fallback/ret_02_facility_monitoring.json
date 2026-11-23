@@ -1,0 +1,682 @@
+{
+  "video_id": "ret_02_facility_monitoring",
+  "industry": "Retail, Security & Smart Spaces",
+  "description": "Static facility camera over a doorway and restricted bay with isolated events and a security log.",
+  "duration_sec": 12.0,
+  "processed_fps": 12.0,
+  "media": {
+    "video_id": "ret_02_facility_monitoring",
+    "industry": "Retail, Security & Smart Spaces",
+    "media_available": true,
+    "source": "file",
+    "probe_error": "",
+    "fps": 12.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 144,
+    "duration_sec": 12.0,
+    "motion_energy": 0.6492,
+    "edge_density": 0.0184,
+    "text_region_density": 0.0,
+    "roi_presence": true,
+    "transcript_available": false,
+    "log_available": true,
+    "transcript_source": "none",
+    "log_source": "file",
+    "use_real": false,
+    "ingest_status": "REAL_VIDEO_NOT_FOUND",
+    "sidecar_sources": [],
+    "has_audio_stream": null
+  },
+  "executed_features": [
+    "motion_keyframe_extraction",
+    "roi_zone_tracking",
+    "visual_anomaly_scoring",
+    "action_state_indexing",
+    "transcript_log_alignment",
+    "multimodal_bm25_tfidf_retrieval",
+    "rule_schema_event_parsing",
+    "entity_graph_linking",
+    "grounding_consistency_check"
+  ],
+  "skipped_features": [
+    {
+      "feature": "on_screen_text_detection",
+      "status": "SKIPPED",
+      "reason": "NO_TEXT_REGION"
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "motion_score": 1.3291,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.5955
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "motion_score": 2.7711,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.5955
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 4.5,
+      "motion_score": 1.4321,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "motion_score": 0.5535,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.95
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "motion_score": 1.1638,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.5955
+    },
+    {
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "motion_score": 2.3441,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.5955
+    },
+    {
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "motion_score": 2.345,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_count": 1,
+      "max_confidence": 0.5942
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 10.0,
+      "motion_score": 1.304,
+      "object_labels": [],
+      "object_count": 0,
+      "max_confidence": 0.0
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "doorway",
+      "kind": "box",
+      "bounds_px": [
+        112,
+        36,
+        208,
+        204
+      ],
+      "mean_energy": 1.3934,
+      "peak_energy": 12.591,
+      "peak_timestamp_sec": 4.0,
+      "active_timestamps": [
+        3.5,
+        4.0,
+        4.5,
+        8.5,
+        9.0
+      ],
+      "active_frames": 5,
+      "object_count": 3,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_timestamps": [
+        3.5,
+        4.0,
+        6.0
+      ],
+      "max_confidence": 0.95
+    },
+    {
+      "zone_id": "restricted_bay",
+      "kind": "box",
+      "bounds_px": [
+        208,
+        48,
+        304,
+        192
+      ],
+      "mean_energy": 1.047,
+      "peak_energy": 9.1753,
+      "peak_timestamp_sec": 9.0,
+      "active_timestamps": [
+        8.5,
+        9.0,
+        9.5,
+        10.0
+      ],
+      "active_frames": 4,
+      "object_count": 3,
+      "object_labels": [
+        "moving_object"
+      ],
+      "object_timestamps": [
+        8.5,
+        9.0,
+        9.5
+      ],
+      "max_confidence": 0.5955
+    }
+  ],
+  "anomalies": [
+    {
+      "frame_index": 7,
+      "timestamp_sec": 3.5,
+      "score": 1.3723,
+      "colour_outlier_pixels": 0,
+      "z_score": 61.5073,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 4.0,
+      "score": 1.4906,
+      "colour_outlier_pixels": 0,
+      "z_score": 67.2986,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 6.0,
+      "score": 0.5486,
+      "colour_outlier_pixels": 0,
+      "z_score": 21.175,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 8.5,
+      "score": 1.2275,
+      "colour_outlier_pixels": 0,
+      "z_score": 54.4136,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 18,
+      "timestamp_sec": 9.0,
+      "score": 1.2273,
+      "colour_outlier_pixels": 0,
+      "z_score": 54.4053,
+      "kind": "scene_change"
+    },
+    {
+      "frame_index": 19,
+      "timestamp_sec": 9.5,
+      "score": 1.2786,
+      "colour_outlier_pixels": 0,
+      "z_score": 56.9184,
+      "kind": "scene_change"
+    }
+  ],
+  "text_regions": [],
+  "action_states": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 2.0,
+      "state": "QUIET",
+      "motion_mean": 0.0567,
+      "object_count": 0,
+      "top_labels": []
+    },
+    {
+      "start_sec": 2.0,
+      "end_sec": 4.0,
+      "state": "FLOW",
+      "motion_mean": 0.4039,
+      "object_count": 2,
+      "top_labels": [
+        "moving_object"
+      ]
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "state": "CONGESTION",
+      "motion_mean": 1.0959,
+      "object_count": 2,
+      "top_labels": [
+        "moving_object"
+      ]
+    },
+    {
+      "start_sec": 6.0,
+      "end_sec": 8.0,
+      "state": "QUIET",
+      "motion_mean": 0.3019,
+      "object_count": 1,
+      "top_labels": [
+        "moving_object"
+      ]
+    },
+    {
+      "start_sec": 8.0,
+      "end_sec": 10.0,
+      "state": "CONGESTION",
+      "motion_mean": 1.4959,
+      "object_count": 3,
+      "top_labels": [
+        "moving_object"
+      ]
+    },
+    {
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "state": "FLOW",
+      "motion_mean": 0.3784,
+      "object_count": 0,
+      "top_labels": []
+    }
+  ],
+  "aligned_segments": [
+    {
+      "source": "log",
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "text": "00:01 location=doorway alert=NONE status=NORMAL zone=doorway",
+      "line_no": 1
+    },
+    {
+      "source": "log",
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "text": "00:04 location=doorway alert=MOTION status=ALERT zone=restricted_bay",
+      "line_no": 2
+    },
+    {
+      "source": "log",
+      "start_sec": 7.0,
+      "end_sec": 9.0,
+      "text": "00:07 location=corridor alert=NONE status=NORMAL zone=doorway",
+      "line_no": 3
+    },
+    {
+      "source": "log",
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "text": "00:09 location=restricted_bay alert=ENTRY status=ALERT zone=restricted_bay",
+      "line_no": 4
+    }
+  ],
+  "parsed_events": [
+    {
+      "event_id": "log_L1",
+      "timestamp_sec": 1.0,
+      "end_sec": 3.0,
+      "entity": "doorway",
+      "action": "NONE",
+      "status": "NORMAL",
+      "zone": "doorway",
+      "defect": "",
+      "step": null,
+      "claim": "00:01 location=doorway alert=NONE status=NORMAL zone=doorway",
+      "fields": {
+        "location": "doorway",
+        "alert": "NONE",
+        "status": "NORMAL",
+        "zone": "doorway"
+      },
+      "raw_text": "00:01 location=doorway alert=NONE status=NORMAL zone=doorway"
+    },
+    {
+      "event_id": "log_L2",
+      "timestamp_sec": 4.0,
+      "end_sec": 6.0,
+      "entity": "doorway",
+      "action": "MOTION",
+      "status": "ALERT",
+      "zone": "restricted_bay",
+      "defect": "",
+      "step": null,
+      "claim": "00:04 location=doorway alert=MOTION status=ALERT zone=restricted_bay",
+      "fields": {
+        "location": "doorway",
+        "alert": "MOTION",
+        "status": "ALERT",
+        "zone": "restricted_bay"
+      },
+      "raw_text": "00:04 location=doorway alert=MOTION status=ALERT zone=restricted_bay"
+    },
+    {
+      "event_id": "log_L3",
+      "timestamp_sec": 7.0,
+      "end_sec": 9.0,
+      "entity": "corridor",
+      "action": "NONE",
+      "status": "NORMAL",
+      "zone": "doorway",
+      "defect": "",
+      "step": null,
+      "claim": "00:07 location=corridor alert=NONE status=NORMAL zone=doorway",
+      "fields": {
+        "location": "corridor",
+        "alert": "NONE",
+        "status": "NORMAL",
+        "zone": "doorway"
+      },
+      "raw_text": "00:07 location=corridor alert=NONE status=NORMAL zone=doorway"
+    },
+    {
+      "event_id": "log_L4",
+      "timestamp_sec": 9.0,
+      "end_sec": 11.0,
+      "entity": "restricted_bay",
+      "action": "ENTRY",
+      "status": "ALERT",
+      "zone": "restricted_bay",
+      "defect": "",
+      "step": null,
+      "claim": "00:09 location=restricted_bay alert=ENTRY status=ALERT zone=restricted_bay",
+      "fields": {
+        "location": "restricted_bay",
+        "alert": "ENTRY",
+        "status": "ALERT",
+        "zone": "restricted_bay"
+      },
+      "raw_text": "00:09 location=restricted_bay alert=ENTRY status=ALERT zone=restricted_bay"
+    }
+  ],
+  "graph_edges": [
+    {
+      "source": "log_L1",
+      "relation": "AT_ZONE",
+      "target": "zone:doorway"
+    },
+    {
+      "source": "log_L1",
+      "relation": "HAS_ACTION",
+      "target": "act:NONE"
+    },
+    {
+      "source": "log_L1",
+      "relation": "HAS_STATUS",
+      "target": "stat:NORMAL"
+    },
+    {
+      "source": "log_L1",
+      "relation": "MENTIONS",
+      "target": "ent:doorway"
+    },
+    {
+      "source": "log_L2",
+      "relation": "AT_ZONE",
+      "target": "zone:restricted_bay"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_ACTION",
+      "target": "act:MOTION"
+    },
+    {
+      "source": "log_L2",
+      "relation": "HAS_STATUS",
+      "target": "stat:ALERT"
+    },
+    {
+      "source": "log_L2",
+      "relation": "MENTIONS",
+      "target": "ent:doorway"
+    },
+    {
+      "source": "log_L3",
+      "relation": "AT_ZONE",
+      "target": "zone:doorway"
+    },
+    {
+      "source": "log_L3",
+      "relation": "HAS_ACTION",
+      "target": "act:NONE"
+    },
+    {
+      "source": "log_L3",
+      "relation": "HAS_STATUS",
+      "target": "stat:NORMAL"
+    },
+    {
+      "source": "log_L3",
+      "relation": "MENTIONS",
+      "target": "ent:corridor"
+    },
+    {
+      "source": "log_L4",
+      "relation": "AT_ZONE",
+      "target": "zone:restricted_bay"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_ACTION",
+      "target": "act:ENTRY"
+    },
+    {
+      "source": "log_L4",
+      "relation": "HAS_STATUS",
+      "target": "stat:ALERT"
+    },
+    {
+      "source": "log_L4",
+      "relation": "MENTIONS",
+      "target": "ent:restricted_bay"
+    },
+    {
+      "source": "object:moving_object",
+      "relation": "DETECTED_IN",
+      "target": "zone:doorway"
+    },
+    {
+      "source": "object:moving_object",
+      "relation": "DETECTED_IN",
+      "target": "zone:restricted_bay"
+    },
+    {
+      "source": "zone:doorway",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:alert"
+    },
+    {
+      "source": "zone:doorway",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:corridor"
+    },
+    {
+      "source": "zone:doorway",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:doorway"
+    },
+    {
+      "source": "zone:restricted_bay",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:alert"
+    },
+    {
+      "source": "zone:restricted_bay",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:corridor"
+    },
+    {
+      "source": "zone:restricted_bay",
+      "relation": "OBSERVED_WITH",
+      "target": "tag:doorway"
+    }
+  ],
+  "grounding_checks": [
+    {
+      "event_id": "log_L1",
+      "claim": "00:01 location=doorway alert=NONE status=NORMAL zone=doorway",
+      "expected_timestamp_sec": 1.0,
+      "zone": "doorway",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L2",
+      "claim": "00:04 location=doorway alert=MOTION status=ALERT zone=restricted_bay",
+      "expected_timestamp_sec": 4.0,
+      "zone": "restricted_bay",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe"
+      ]
+    },
+    {
+      "event_id": "log_L3",
+      "claim": "00:07 location=corridor alert=NONE status=NORMAL zone=doorway",
+      "expected_timestamp_sec": 7.0,
+      "zone": "doorway",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    },
+    {
+      "event_id": "log_L4",
+      "claim": "00:09 location=restricted_bay alert=ENTRY status=ALERT zone=restricted_bay",
+      "expected_timestamp_sec": 9.0,
+      "zone": "restricted_bay",
+      "status": "GROUNDED",
+      "supporting_evidence": [
+        "action_state",
+        "anomaly_spike",
+        "keyframe",
+        "object_detection",
+        "zone_motion"
+      ]
+    }
+  ],
+  "retrieval_results": [
+    {
+      "start_sec": 4.0,
+      "end_sec": 6.0,
+      "source": "log",
+      "text": "00:04 location=doorway alert=MOTION status=ALERT zone=restricted_bay",
+      "bm25_score": 0.1509,
+      "tfidf_score": 0.449,
+      "score": 1.0
+    },
+    {
+      "start_sec": 9.0,
+      "end_sec": 11.0,
+      "source": "log",
+      "text": "00:09 location=restricted_bay alert=ENTRY status=ALERT zone=restricted_bay",
+      "bm25_score": 0.1509,
+      "tfidf_score": 0.393,
+      "score": 0.9376
+    },
+    {
+      "start_sec": 7.0,
+      "end_sec": 9.0,
+      "source": "log",
+      "text": "00:07 location=corridor alert=NONE status=NORMAL zone=doorway",
+      "bm25_score": 0.1081,
+      "tfidf_score": 0.2203,
+      "score": 0.6035
+    },
+    {
+      "start_sec": 1.0,
+      "end_sec": 3.0,
+      "source": "log",
+      "text": "00:01 location=doorway alert=NONE status=NORMAL zone=doorway",
+      "bm25_score": 0.1081,
+      "tfidf_score": 0.2136,
+      "score": 0.5959
+    },
+    {
+      "start_sec": 0.0,
+      "end_sec": 12.0,
+      "source": "visual_tags",
+      "text": "motion keyframe zone doorway restricted_bay anomaly scene_change QUIET FLOW CONGESTION moving_object object doorway corridor facility security log alert restricted bay",
+      "bm25_score": 0.0769,
+      "tfidf_score": 0.1174,
+      "score": 0.347
+    }
+  ],
+  "detector": {
+    "mode": "opencv_fallback",
+    "reason": "YOLO_WEIGHTS_UNAVAILABLE_OFFLINE",
+    "model": "__missing_weights__.pt",
+    "detections": 6,
+    "zones": [
+      "doorway",
+      "restricted_bay"
+    ],
+    "frames_analyzed": 24,
+    "latency_ms": 6.468
+  },
+  "telemetry": {
+    "total_ms": 181.886,
+    "probe_ms": 52.99,
+    "per_feature_ms": {
+      "motion_keyframe_extraction": 2.884,
+      "roi_zone_tracking": 2.415,
+      "visual_anomaly_scoring": 110.356,
+      "on_screen_text_detection": 0.0,
+      "action_state_indexing": 3.043,
+      "transcript_log_alignment": 0.042,
+      "multimodal_bm25_tfidf_retrieval": 2.164,
+      "rule_schema_event_parsing": 0.276,
+      "entity_graph_linking": 0.324,
+      "grounding_consistency_check": 0.051
+    },
+    "frames_skipped_ratio": 0.6667,
+    "grounding_match_rate": 1.0,
+    "detector_mode": "opencv_fallback",
+    "detector_reason": "YOLO_WEIGHTS_UNAVAILABLE_OFFLINE",
+    "detector_model": "__missing_weights__.pt",
+    "detector_latency_ms": 6.468,
+    "object_detections": 6,
+    "active_feature_count": 9,
+    "skipped_feature_count": 1
+  },
+  "retrieval_stats": {
+    "documents_indexed": 5,
+    "query": "alert",
+    "scorer": "BM25+TFIDF",
+    "results": 5
+  },
+  "grounding_stats": {
+    "checks": 4,
+    "grounded": 4,
+    "partial": 0,
+    "ungrounded": 0,
+    "grounding_match_rate": 1.0,
+    "window_sec": 2.5
+  }
+}
